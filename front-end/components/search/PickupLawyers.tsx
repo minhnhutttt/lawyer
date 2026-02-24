@@ -1,46 +1,44 @@
 'use client'
 
-import { cn } from "@/lib/utils"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
 
 export default function PickupLawyers() {
     const lawyersData = [
         {
-            href: '/',
+            href: '/lawyers/id',
             image: '/images/1601175_1.png',
-            name: '杉浦 正規',
+            name: '〇〇 〇〇',
             location: '愛知県'
         },
         {
-            href: '/',
+            href: '/lawyers/id',
             image: '/images/1601175_1.png',
-            name: '杉浦 正規',
+            name: '〇〇 〇〇',
             location: '愛知県'
         },
         {
-            href: '/',
+            href: '/lawyers/id',
             image: '/images/1601175_1.png',
-            name: '杉浦 正規',
+            name: '〇〇 〇〇',
             location: '愛知県'
         },
         {
-            href: '/',
+            href: '/lawyers/id',
             image: '/images/1601175_1.png',
-            name: '杉浦 正規',
+            name: '〇〇 〇〇',
             location: '愛知県'
         },
         {
-            href: '/',
+            href: '/lawyers/id',
             image: '/images/1601175_1.png',
-            name: '杉浦 正規',
+            name: '〇〇 〇〇',
             location: '愛知県'
         },
         {
-            href: '/',
+            href: '/lawyers/id',
             image: '/images/1601175_1.png',
-            name: '杉浦 正規',
+            name: '〇〇 〇〇',
             location: '愛知県'
         },
     ]

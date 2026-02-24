@@ -24,7 +24,7 @@ export default function Navigation() {
                 </div>
                 <div className="flex flex-col items-center">
                   <ul className="flex gap-3 max-lg:flex-wrap">
-                    <HeadLink href="/bbs/" text="法律相談を見る" />
+                    <HeadLink href="/questions" text="法律相談を見る" />
                     <HeadLink href="/bbs/question/" text="法律相談を投稿する" />
                   </ul>
                 </div>
@@ -43,7 +43,7 @@ export default function Navigation() {
                       </Link>
                     </li>
                     <li className="h-[42px] w-[132px]">
-                      <Link href="/login" className="w-full h-full flex items-center justify-center bg-white rounded-full text-[10px] font-bold gap-2">
+                      <Link href="https://bengoshicchi.jp/auth/login" className="w-full h-full flex items-center justify-center bg-white rounded-full text-[10px] font-bold gap-2">
                         <Image
                           src="/icons/shield.svg"
                           alt=""
@@ -60,8 +60,8 @@ export default function Navigation() {
               <div className="flex flex-col items-center md:pl-6">
                 <ul className="flex gap-3">
                   <li className="h-[42px] w-[132px]">
-                    <Link href="/login" className="w-full h-full flex items-center justify-center bg-[#e2e2e2] rounded-full text-[10px] font-bold gap-2">
-                      ログイン/会員登録
+                    <Link href="https://bengoshicchi.jp/auth/login" className="w-full h-full flex items-center justify-center bg-[#e2e2e2] rounded-full text-[10px] font-bold gap-2">
+                      弁護士専用ログイン
                     </Link>
                   </li>
                 </ul>

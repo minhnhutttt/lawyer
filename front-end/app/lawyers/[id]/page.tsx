@@ -129,11 +129,11 @@ export default function LawyersDetailPage() {
           <div className="flex max-md:flex-col items-center md:gap-8 relative">
             <div className="flex flex-col order-2 max-md:pb-4 max-md:px-6">
               <div className="relative max-md:order-2 max-md:mt-3">
-                <p className="text-[clamp(11px,2vw,14px)]">こうづき ゆうき</p>
-                <p className="text-[clamp(18px,4vw,27px)] font-bold">上月 裕紀<span className="text-[clamp(12px,2vw,16px)] ml-3">弁護士</span></p>
+                <p className="text-[clamp(11px,2vw,14px)]">たかはし べんご</p>
+                <p className="text-[clamp(18px,4vw,27px)] font-bold">高橋 弁吾<span className="text-[clamp(12px,2vw,16px)] ml-3">弁護士</span></p>
                 <div className="text-[#72706e] text-[clamp(12px,2vw,16px)]">
-                  <p>うららか法律事務所</p>
-                  <p>埼玉県さいたま市大宮区高鼻町1-56 ks'氷川の杜401</p>
+                  <p>弁吾法律事務所</p>
+                  <p>埼玉県さいたま市大宮区選択範囲のテキストを削除</p>
                 </div>
               </div>
               <div className="mt-3 border relative border-[#ededed] md:text-[14px] text-[12px] rounded-md p-3  before:border-l before:border-t before:border-[#ededed] before:h-[8px] before:absolute before:w-[8px] before:bg-white md:before:-left-[4px] before:top-[-5px] md:before:top-1/2 md:before:-rotate-45 before:rotate-45 md:before:-translate-y-1/2 max-md:order-1">
@@ -228,7 +228,7 @@ export default function LawyersDetailPage() {
                       </ExpandableSection>
                     </div>
                     <div className="mt-6">
-                      <h3 className="md:text-[20px] text-[18px] md:py-[14px] font-bold py-3 px-6 bg-[#ececec]">上月 裕紀 弁護士の取り扱う分野</h3>
+                      <h3 className="md:text-[20px] text-[18px] md:py-[14px] font-bold py-3 px-6 bg-[#ececec]">高橋 弁吾 弁護士の取り扱う分野</h3>
                       <div className="">
                         <AreasPracticeTab icon="/icons/resolve-01.svg" text="離婚・男女問題" solved>
                           <p className="mb-4">
@@ -330,7 +330,7 @@ export default function LawyersDetailPage() {
                       </div>
                     </div>
                     <div className="mt-6">
-                      <h3 className="md:text-[20px] text-[18px] md:py-[14px] font-bold py-3 px-6 bg-[#ececec]">上月 裕紀 弁護士の法律相談一覧</h3>
+                      <h3 className="md:text-[20px] text-[18px] md:py-[14px] font-bold py-3 px-6 bg-[#ececec]">高橋 弁吾 弁護士の法律相談一覧</h3>
                       <div className="mt-6 flex flex-col gap-4">
                         <Link href="/" className="border border-[#ededed] rounded-lg p-4">
                           <span className="mb-3 block">
@@ -381,7 +381,7 @@ export default function LawyersDetailPage() {
                       <Link href="#" className="flex justify-end relative w-full md:text-[16px] text-[14px] font-bold text-[#315dbb] py-2.5 px-6 after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 after:right-3">回答をもっと見る</Link>
                     </div>
                     <div className="mt-6">
-                      <h3 className="md:text-[20px] text-[18px] md:py-[14px] font-bold py-3 px-6 bg-[#ececec]">上月 裕紀 弁護士の解決事例一覧</h3>
+                      <h3 className="md:text-[20px] text-[18px] md:py-[14px] font-bold py-3 px-6 bg-[#ececec]">高橋 弁吾 弁護士の解決事例一覧</h3>
                       <div className="mt-6 flex flex-col gap-4">
                         <Link href="/" className="border border-[#ededed] rounded-lg p-6">
                           <span className="flex flex-col gap-2">
@@ -404,7 +404,7 @@ export default function LawyersDetailPage() {
               {tab === 1 && <div className="mt-6 max-xl:px-6">Tab 1 内容</div>}
               {tab === 2 && <div className="mt-6 max-xl:px-6">Tab 2 内容</div>}
               <div className="mt-6">
-                <h3 className="md:text-[20px] text-[18px] md:py-[14px] font-bold py-3 px-6 bg-[#ececec]">上月 裕紀 弁護士へ面談予約</h3>
+                <h3 className="md:text-[20px] text-[18px] md:py-[14px] font-bold py-3 px-6 bg-[#ececec]">高橋 弁吾 弁護士へ面談予約</h3>
                 <div className="mt-6">
                   <div className="rounded-md bg-[#ecf7f7] py-4 px-6 flex flex-col items-center">
                     <div className="flex justify-center items-center gap-3 mb-1.5">
@@ -412,9 +412,9 @@ export default function LawyersDetailPage() {
                       <p className="md:text-[14px] text-[12px] font-bold text-[#0c6969]">受付時間 10:00 22:00</p>
                     </div>
                     <div className="max-md:hidden flex items-center justify-center gap-2 md:text-[27px] font-bold before:mt-1 before:size-[24px] before:bg-[url(/icons/tel2.svg)] before:bg-contain before:bg-center before:bg-no-repeat">
-                      050-5223-3819
+                      050-1234-5678
                     </div>
-                    <Link href={`tel:050-5223-3819`} className="md:hidden flex items-center justify-center bg-[linear-gradient(180deg,_#ff8139,_#fa5e06)] rounded-[6px] text-[#fff] text-[clamp(14px,1vw,18px)] p-4 md:p-[20px] font-bold border border-[#d24e10]">
+                    <Link href={`tel:050-1234-5678`} className="md:hidden flex items-center justify-center bg-[linear-gradient(180deg,_#ff8139,_#fa5e06)] rounded-[6px] text-[#fff] text-[clamp(14px,1vw,18px)] p-4 md:p-[20px] font-bold border border-[#d24e10]">
                       <span className="flex items-center before:size-[17px] gap-2 before:bg-[url(/icons/tel.svg)] before:bg-contain before:bg-center before:bg-no-repeat text-[12px]">電話で問い合わせ</span>
                     </Link>
                   </div>
@@ -461,7 +461,7 @@ export default function LawyersDetailPage() {
                           <span className="md:text-[16px] text-[14px] font-bold">メールアドレス 折り返し先</span>
                         </div>
                         <div>
-                          <input type="text" className="px-4 py-3 rounded-md w-full md:text-[18px] text-[16px] border border-[#d9d9d9] bg-[#fafafa] [box-shadow:inset_3px_3px_4px_rgba(0,_0,_0,_.05)]" placeholder="例）info@bengo4.com" />
+                          <input type="text" className="px-4 py-3 rounded-md w-full md:text-[18px] text-[16px] border border-[#d9d9d9] bg-[#fafafa] [box-shadow:inset_3px_3px_4px_rgba(0,_0,_0,_.05)]" placeholder="例）bengoshicchi.com" />
                           <p className="text-[#72706e] md:text-[14px] text-[12px] mt-1.5">※ドメイン指定をされている方は解除してください。</p>
                         </div>
                       </div>
@@ -509,7 +509,7 @@ export default function LawyersDetailPage() {
                   </div>
                 </div>
               </div>
-              <p className="md:text-[16px] text-[14px] font-bold mb-4 max-md:hidden">上月 裕紀 弁護士へ面談予約</p>
+              <p className="md:text-[16px] text-[14px] font-bold mb-4 max-md:hidden">高橋 弁吾 弁護士へ面談予約</p>
               <div className="flex items-center  max-md:hidden">
                 <div className="relative mr-4 before:size-[20px] before:bg-[#f7723e] before:absolute before:-bottom-1 before:-right-1 before:rounded-full before:bg-[url(/icons/tel.svg)] before:bg-[size:60%] before:bg-center before:bg-no-repeat">
                   <Image src="/images/lawyers/741830_1.png" alt="" width={150} height={200} className="rounded-lg block w-[60px]" />
@@ -519,7 +519,7 @@ export default function LawyersDetailPage() {
                     <p className="flex items-center gap-1 md:text-[14px] text-[12px] font-bold before:mt-0.5 before:size-[14px] before:bg-[url(/icons/active.svg)] before:bg-contain before:bg-center before:bg-no-repeat text-[#0c6969]">現在営業中</p>
                     <p className="md:text-[14px] text-[12px] text-[#72706e]">10:00 22:00</p>
                   </div>
-                  <p className="md:text-[27px] text-[24px] font-bold">050-5223-3819</p>
+                  <p className="md:text-[27px] text-[24px] font-bold">050-1234-5678</p>
                 </div>
               </div>
               <div className="flex items-center w-full max-w-[244px] mx-auto gap-3 mt-4 max-md:hidden">
@@ -610,7 +610,7 @@ export default function LawyersDetailPage() {
             お気に入りに追加
           </Link>
           <p className="md:text-[18px] text-[16px] font-bold pt-6">
-            <span className="md:text-[14px] text-[12px]">上月 裕紀 弁護士にお世話になった方</span> <br />
+            <span className="md:text-[14px] text-[12px]">高橋 弁吾 弁護士にお世話になった方</span> <br />
             <span className="">「感謝の声」をおくりませんか？</span>
           </p>
           <Link href="#" className="w-full flex justify-center items-center max-w-[384px] mx-auto p-4 md:p-5 rounded-md md:text-[19px] bg-[linear-gradient(180deg,_#fff,_#fafafa)] border border-[#d9d9d9] text-[clamp(15px,1vw,20px)] font-bold hover:bg-[linear-gradient(180deg,_#faf9f9,_#f5f5f5)] duration-200">
@@ -623,9 +623,9 @@ export default function LawyersDetailPage() {
         <div className="mb-6">
           <h3 className="md:text-[20px] text-[18px] md:py-[14px] font-bold py-3 px-6 bg-[#ececec] mb-6">よくある質問</h3>
           <div className="bg-[#f6f6f6] rounded-[6px] divide-y">
-            <FaqITem question="上月 裕紀 弁護士の受付時間・定休日は？">
+            <FaqITem question="高橋 弁吾 弁護士の受付時間・定休日は？">
               <div className="">
-                上月 裕紀 弁護士の受付時間・定休日は、<br />
+                高橋 弁吾 弁護士の受付時間・定休日は、<br />
                 【受付時間】<br />
                 平日<br />
                 10:00 - 22:00<br />
@@ -637,12 +637,12 @@ export default function LawyersDetailPage() {
                 <br />
                 【備考】<br />
                 ※平日の事務所営業時間外（１８時～２２時）・土日・祝日にお問い合わせいただく場合には、お電話ではなくて、「Webで面談予約」「LINEで面談予約」からお問い合わせください。事務所営業時間外のお電話による問い合わせには折り返しのご連絡を差し上げておりませんのでご承知おきください。<br /><br />
-                <Link href="/" className="text-[#315dbb]">上月 裕紀 弁護士の情報を見る</Link>
+                <Link href="/" className="text-[#315dbb]">高橋 弁吾 弁護士の情報を見る</Link>
               </div>
             </FaqITem>
-            <FaqITem question="上月 裕紀 弁護士の受付時間・定休日は？">
+            <FaqITem question="高橋 弁吾 弁護士の受付時間・定休日は？">
               <div className="">
-                上月 裕紀 弁護士の受付時間・定休日は、<br />
+                高橋 弁吾 弁護士の受付時間・定休日は、<br />
                 【受付時間】<br />
                 平日<br />
                 10:00 - 22:00<br />
@@ -654,12 +654,12 @@ export default function LawyersDetailPage() {
                 <br />
                 【備考】<br />
                 ※平日の事務所営業時間外（１８時～２２時）・土日・祝日にお問い合わせいただく場合には、お電話ではなくて、「Webで面談予約」「LINEで面談予約」からお問い合わせください。事務所営業時間外のお電話による問い合わせには折り返しのご連絡を差し上げておりませんのでご承知おきください。<br /><br />
-                <Link href="/" className="text-[#315dbb]">上月 裕紀 弁護士の情報を見る</Link>
+                <Link href="/" className="text-[#315dbb]">高橋 弁吾 弁護士の情報を見る</Link>
               </div>
             </FaqITem>
-            <FaqITem question="上月 裕紀 弁護士の受付時間・定休日は？">
+            <FaqITem question="高橋 弁吾 弁護士の受付時間・定休日は？">
               <div className="">
-                上月 裕紀 弁護士の受付時間・定休日は、<br />
+                高橋 弁吾 弁護士の受付時間・定休日は、<br />
                 【受付時間】<br />
                 平日<br />
                 10:00 - 22:00<br />
@@ -671,7 +671,7 @@ export default function LawyersDetailPage() {
                 <br />
                 【備考】<br />
                 ※平日の事務所営業時間外（１８時～２２時）・土日・祝日にお問い合わせいただく場合には、お電話ではなくて、「Webで面談予約」「LINEで面談予約」からお問い合わせください。事務所営業時間外のお電話による問い合わせには折り返しのご連絡を差し上げておりませんのでご承知おきください。<br /><br />
-                <Link href="/" className="text-[#315dbb]">上月 裕紀 弁護士の情報を見る</Link>
+                <Link href="/" className="text-[#315dbb]">高橋 弁吾 弁護士の情報を見る</Link>
               </div>
             </FaqITem>
           </div>

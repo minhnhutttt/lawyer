@@ -260,9 +260,9 @@ export default function LawyersCards() {
       profile: {
         link: '/lawyers/id',
         image: '/images/lawyers/120842_1.png',
-        name: '大倉 浩',
+        name: '〇〇 〇〇',
         title: '弁護士',
-        lawFirm: '大倉浩法律事務所',
+        lawFirm: '〇〇法律事務所',
         records: '3',
       },
       actions: {
@@ -293,9 +293,9 @@ export default function LawyersCards() {
       profile: {
         link: '/lawyers/id',
         image: '/images/lawyers/120842_1.png',
-        name: '大倉 浩',
+        name: '〇〇 〇〇',
         title: '弁護士',
-        lawFirm: '大倉浩法律事務所',
+        lawFirm: '〇〇法律事務所',
         records: '3',
       },
       actions: {

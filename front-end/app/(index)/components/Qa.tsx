@@ -6,21 +6,21 @@ import { useState } from "react";
 export default function QA() {
     const qa = [
     {
-      link: '/',
+      link: '/questions/id/',
       title: '相続時の違法建築に関する税務署への通報の可能性は？',
       desc: '【相談の背景】 相続の相談時に税理士に違法建築の家のことを話してしまいました。 建ぺい率違反 【質問1】 固定資産税や税を納めていないなどに関連する恐れがあるのか分かり',
       answer: 1,
       lawyerAnswer: 1
     },
     {
-      link: '/',
+      link: '/questions/id/',
       title: '相続時の違法建築に関する税務署への通報の可能性は？',
       desc: '【相談の背景】 相続の相談時に税理士に違法建築の家のことを話してしまいました。 建ぺい率違反 【質問1】 固定資産税や税を納めていないなどに関連する恐れがあるのか分かり',
       answer: 1,
       lawyerAnswer: 1
     },
     {
-      link: '/',
+      link: '/questions/id/',
       title: '相続時の違法建築に関する税務署への通報の可能性は？',
       desc: '【相談の背景】 相続の相談時に税理士に違法建築の家のことを話してしまいました。 建ぺい率違反 【質問1】 固定資産税や税を納めていないなどに関連する恐れがあるのか分かり',
       answer: 1,
@@ -57,7 +57,7 @@ export default function QA() {
                 ))}
               </ul>
               <div className="flex justify-end py-2.5">
-                <ButtonLink link="/bbs">もっと見る</ButtonLink>
+                <ButtonLink link="/questions">もっと見る</ButtonLink>
               </div>
             </div>
   )

@@ -124,7 +124,7 @@ export default function Header() {
             />
             <span className="text-[10px] leading-none">閲覧履歴</span>
           </Link>
-          <Link href="/sp/private/view/question/" className="flex flex-col items-center gap-2 min-w-10">
+          <Link href="/sp/private/bookmark/question/" className="flex flex-col items-center gap-2 min-w-10">
             <Image
               src="/icons/favorite.svg"
               alt=""

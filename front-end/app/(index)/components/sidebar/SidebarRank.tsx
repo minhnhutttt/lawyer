@@ -99,65 +99,65 @@ export default function SidebarRank() {
         {
             rank: 1,
             image: '/images/111382_1.png',
-            name: '吉田 英樹',
+            name: '〇〇 〇〇',
             position: '弁護士',
             address: '大阪府',
             change: 'steady',
-            href: '/'
+            href: '/lawyers/id'
         },
         {
             rank: 2,
             image: '/images/111382_1.png',
-            name: '吉田 英樹',
+            name: '〇〇 〇〇',
             position: '弁護士',
             address: '大阪府',
             change: 'steady',
-            href: '/'
+            href: '/lawyers/id'
         },
         {
             rank: 3,
             image: '/images/111382_1.png',
-            name: '吉田 英樹',
+            name: '〇〇 〇〇',
             position: '弁護士',
             address: '大阪府',
             change: 'steady',
-            href: '/'
+            href: '/lawyers/id'
         },
         {
             rank: 4,
             image: '/images/111382_1.png',
-            name: '吉田 英樹',
+            name: '〇〇 〇〇',
             position: '弁護士',
             address: '大阪府',
             change: 'steady',
-            href: '/'
+            href: '/lawyers/id'
         },
         {
             rank: 5,
             image: '/images/111382_1.png',
-            name: '吉田 英樹',
+            name: '〇〇 〇〇',
             position: '弁護士',
             address: '大阪府',
             change: 'up',
-            href: '/'
+            href: '/lawyers/id'
         },
         {
             rank: 6,
             image: '/images/111382_1.png',
-            name: '吉田 英樹',
+            name: '〇〇 〇〇',
             position: '弁護士',
             address: '大阪府',
             change: 'down',
-            href: '/'
+            href: '/lawyers/id'
         },
         {
             rank: 7,
             image: '/images/111382_1.png',
-            name: '吉田 英樹',
+            name: '〇〇 〇〇',
             position: '弁護士',
             address: '大阪府',
             change: 'down',
-            href: '/'
+            href: '/lawyers/id'
         },
     ]
     return (
@@ -178,7 +178,7 @@ export default function SidebarRank() {
                 ))}
             </div>
             <div className="flex justify-end py-2.5">
-                <ButtonLink link="/ranking">弁護士ランキングをもっと見る</ButtonLink>
+                <ButtonLink link="/lawyers">弁護士ランキングをもっと見る</ButtonLink>
             </div>
         </div>
     )

@@ -1,6 +1,4 @@
-import ButtonLink from "@/components/common/ButtonLink";
 import TitleBar from "@/components/common/TitleBar";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -33,45 +31,45 @@ export default function SidebarPickup() {
     const pickup = [
         {
             image: '/images/1601175_1.png',
-            name: '吉田 英樹',
+            name: '〇〇 〇〇',
             position: '弁護士',
             address: '大阪府',
-            href: '/'
+            href: '/lawyers/id'
         },
         {
             image: '/images/1601175_1.png',
-            name: '吉田 英樹',
+            name: '〇〇 〇〇',
             position: '弁護士',
             address: '大阪府',
-            href: '/'
+            href: '/lawyers/id'
         },
         {
             image: '/images/1601175_1.png',
-            name: '吉田 英樹',
+            name: '〇〇 〇〇',
             position: '弁護士',
             address: '大阪府',
-            href: '/'
+            href: '/lawyers/id'
         },
         {
             image: '/images/1601175_1.png',
-            name: '吉田 英樹',
+            name: '〇〇 〇〇',
             position: '弁護士',
             address: '大阪府',
-            href: '/'
+            href: '/lawyers/id'
         },
          {
             image: '/images/1601175_1.png',
-            name: '吉田 英樹',
+            name: '〇〇 〇〇',
             position: '弁護士',
             address: '大阪府',
-            href: '/'
+            href: '/lawyers/id'
         },
          {
             image: '/images/1601175_1.png',
-            name: '吉田 英樹',
+            name: '〇〇 〇〇',
             position: '弁護士',
             address: '大阪府',
-            href: '/'
+            href: '/lawyers/id'
         },
     ]
     return (

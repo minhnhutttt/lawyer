@@ -36,31 +36,31 @@ export default function Areas() {
       areas: [
         {
           area: '東京',
-          href: '/tokyo'
+          href: '/lawyers/'
         },
         {
           area: '神奈川',
-          href: '/kanagawa'
+          href: '/lawyers/'
         },
         {
           area: '埼玉',
-          href: '/saitama'
+          href: '/lawyers/'
         },
         {
           area: '千葉',
-          href: '/chiba'
+          href: '/lawyers/'
         },
         {
           area: '茨城',
-          href: '/ibaraki'
+          href: '/lawyers/'
         },
         {
           area: '栃木',
-          href: '/tochigi'
+          href: '/lawyers/'
         },
         {
           area: '群馬',
-          href: '/gunma'
+          href: '/lawyers/'
         },
       ],
       class: 'bottom-[44px] md:max-w-[88px] right-0'
@@ -70,27 +70,27 @@ export default function Areas() {
       areas: [
         {
           area: '大阪',
-          href: '/osaka'
+          href: '/lawyers/'
         },
         {
           area: '兵庫',
-          href: '/hyogo'
+          href: '/lawyers/'
         },
         {
           area: '京都',
-          href: '/kyoto'
+          href: '/lawyers/'
         },
         {
           area: '滋賀',
-          href: '/shiga'
+          href: '/lawyers/'
         },
         {
           area: '奈良',
-          href: '/nara'
+          href: '/lawyers/'
         },
         {
           area: '和歌山',
-          href: '/wakayama'
+          href: '/lawyers/'
         },
       ],
       class: 'left-[82px] top-[16px] md:w-[36px] md:justify-center'
@@ -100,19 +100,19 @@ export default function Areas() {
       areas: [
         {
           area: '愛知',
-          href: '/aichi'
+          href: '/lawyers/'
         },
         {
           area: '静岡',
-          href: '/shizuoka'
+          href: '/lawyers/'
         },
         {
           area: '岐阜',
-          href: '/gifu'
+          href: '/lawyers/'
         },
         {
           area: '三重',
-          href: '/mie'
+          href: '/lawyers/'
         },
       ],
       class: 'bottom-[45px] right-[124px] md:w-[62px]'
@@ -122,35 +122,35 @@ export default function Areas() {
       areas: [
         {
           area: '福岡',
-          href: '/fukuoka'
+          href: '/lawyers/'
         },
         {
           area: '佐賀',
-          href: '/saga'
+          href: '/lawyers/'
         },
         {
           area: '長崎',
-          href: '/nagasaki'
+          href: '/lawyers/'
         },
         {
           area: '熊本',
-          href: '/kumamoto'
+          href: '/lawyers/'
         },
         {
           area: '大分',
-          href: '/oita'
+          href: '/lawyers/'
         },
         {
           area: '宮崎',
-          href: '/miyazaki'
+          href: '/lawyers/'
         },
         {
           area: '鹿児島',
-          href: '/kagoshima'
+          href: '/lawyers/'
         },
         {
           area: '沖縄',
-          href: '/okinawa'
+          href: '/lawyers/'
         },
       ],
       class: 'bottom-0 left-0 md:w-[90px]'
@@ -160,31 +160,31 @@ export default function Areas() {
       areas: [
         {
           area: '北海道',
-          href: '/hokkaido'
+          href: '/lawyers/'
         },
         {
           area: '青森',
-          href: '/aomori'
+          href: '/lawyers/'
         },
         {
           area: '秋田',
-          href: '/akita'
+          href: '/lawyers/'
         },
         {
           area: '山形',
-          href: '/yamagata'
+          href: '/lawyers/'
         },
         {
           area: '岩手',
-          href: '/iwate'
+          href: '/lawyers/'
         },
         {
           area: '宮城',
-          href: '/miyagi'
+          href: '/lawyers/'
         },
         {
           area: '福島',
-          href: '/fukushima'
+          href: '/lawyers/'
         },
       ],
       class: 'top-[62px] right-2 md:w-[60px]'
@@ -194,23 +194,23 @@ export default function Areas() {
       areas: [
         {
           area: '広島',
-          href: '/hiroshima'
+          href: '/lawyers/'
         },
         {
           area: '岡山',
-          href: '/okayama'
+          href: '/lawyers/'
         },
         {
           area: '山口',
-          href: '/yamaguchi'
+          href: '/lawyers/'
         },
         {
           area: '島根',
-          href: '/shimane'
+          href: '/lawyers/'
         },
         {
           area: '鳥取',
-          href: '/tottori'
+          href: '/lawyers/'
         },
       ],
       class: 'top-[62px] left-3 md:w-[36px] md:justify-center'
@@ -220,27 +220,27 @@ export default function Areas() {
       areas: [
         {
           area: '長野',
-          href: '/nagano'
+          href: '/lawyers/'
         },
         {
           area: '山梨',
-          href: '/yamanashi'
+          href: '/lawyers/'
         },
         {
           area: '新潟',
-          href: '/nigata'
+          href: '/lawyers/'
         },
         {
           area: '富山',
-          href: '/toyama'
+          href: '/lawyers/'
         },
         {
           area: '石川',
-          href: '/ishikawa'
+          href: '/lawyers/'
         },
         {
           area: '福井',
-          href: '/fukui'
+          href: '/lawyers/'
         },
       ],
       class: 'top-[40px] left-[152px] md:w-[60px]'
@@ -250,19 +250,19 @@ export default function Areas() {
       areas: [
         {
           area: '香川',
-          href: '/kagawa'
+          href: '/lawyers/'
         },
         {
           area: '愛媛',
-          href: '/ehime'
+          href: '/lawyers/'
         },
         {
           area: '徳島',
-          href: '/tokushima'
+          href: '/lawyers/'
         },
         {
           area: '高知',
-          href: '/kochi'
+          href: '/lawyers/'
         },
       ],
       class: 'bottom-[24px] left-[126px] md:w-[56px]'

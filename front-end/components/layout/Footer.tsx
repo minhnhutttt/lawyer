@@ -8,7 +8,7 @@ export default function Footer() {
 
   const list = [
     {
-      href: '/fqa',
+      href: '/',
       text: 'よくあるお問い合わせ・ヘルプ',
     },
     {
@@ -16,23 +16,23 @@ export default function Footer() {
       text: 'お問い合わせ窓口',
     },
     {
-      href: '/rules',
+      href: 'https://sharp-wilbur.202-230-232-174.plesk.page/rules/general/',
       text: '利用規約・プライバシーの考え方',
     },
     {
-      href: '/behavioral',
+      href: '/',
       text: '外部送信規律事項の公表等について',
     },
     {
-      href: '/tokutei',
+      href: '/',
       text: '特定商取引法に関する表記',
     },
     {
-      href: '/corporate',
+      href: 'https://bengoshicchi.jp/about',
       text: '運営会社',
     },
     {
-      href: '/optout',
+      href: '/',
       text: 'オプトアウトに関する情報',
     },
   ]
@@ -54,7 +54,7 @@ export default function Footer() {
         </ul>
         {/* copyright */}
         <div className="pt-6 mt-12 text-sm ">
-          © Bengo4.com, Inc. 2005 - 2026
+          © べんごしっち, Inc. 2025
         </div>
         </div>
       </div>

@@ -106,10 +106,10 @@ export default function ArticlesPage() {
                   />
                 </span>
                 <span className="md:text-[27px] text-[20px] font-bold mb-2">
-                  羽賀研二氏が不同意わいせつ容疑で逮捕　起訴されたら、実刑になる可能性は？　過去2度の有罪判決
+                  「整形してるんですか？」職場で何度も聞かれうんざりする女性 ”悪気ない一言”がハラスメントになることも
                 </span>
                 <span className="md:text-[16px] text-[14px] text-[#716c6b] line-clamp-2 mb-4">
-                  タレントの羽賀研二氏が2月9日、沖縄県内の飲食店で女性2人にわいせつな行為をしたとして、不同意わいせ...
+                  職場で同僚や上司から「目がぱっちりした？整形したの？」と執拗に尋ねられ、精神的な苦痛を…
                 </span>
                 <span className="md:text-[14px] text-[12px] text-[#716c6b]">
                   2026年02月10日 12時27分...
@@ -118,29 +118,26 @@ export default function ArticlesPage() {
             </div>
           </div>
           <div className="md:[flex-basis:41.6666666667%] md:mt-10 md:max-w-[41.6666666667%] px-3 md:px-6 space-y-6">
-            <ArticleItemSide link="/articles/id" title="コインパーキングに7年放置で逮捕、「長期無断駐車」どうすれば…弁護士が教える撃退法" desc="神戸市内のコインパーキングで約7年にわたり、料金を支払わずに車を停め続け、管理会社の業務を妨害したと" time="2026年02月10日 12時27分" image="/images/articles/22686_2_1.jpg" />
-            <ArticleItemSide link="/articles/id" title="コインパーキングに7年放置で逮捕、「長期無断駐車」どうすれば…弁護士が教える撃退法" desc="神戸市内のコインパーキングで約7年にわたり、料金を支払わずに車を停め続け、管理会社の業務を妨害したと" time="2026年02月10日 12時27分" image="/images/articles/22686_2_1.jpg" />
+            <ArticleItemSide link="/articles/id" title="コインパーキングに7年放置で逮捕、「長期無断駐車」どうすれば…弁護士が教える撃退法" desc="神戸市内のコインパーキングで約7年にわたり、料金を支払わずに車を停め続け、管理会社の業務を妨害したと" time="2026年02月10日 12時27分" image="/images/articles/22686_2_11.jpg" />
+            <ArticleItemSide link="/articles/id" title="コインパーキングに7年放置で逮捕、「長期無断駐車」どうすれば…弁護士が教える撃退法" desc="神戸市内のコインパーキングで約7年にわたり、料金を支払わずに車を停め続け、管理会社の業務を妨害したと" time="2026年02月10日 12時27分" image="/images/articles/22686_2_11.jpg" />
           </div>
         </div>
         <div className="flex flex-start flex-wrap max-md:flex-col">
           <div className="mt-10 md:[flex-basis:66.6666666667%] md:max-w-[66.6666666667%] flex-col flex gap-4 mb-[56px]">
             <div className="flex flex-wrap">
-              <ArticleItem link="/articles/id" title="コインパーキングに7年放置で逮捕、「長期無断駐車」どうすれば…弁護士が教える撃退法" desc="神戸市内のコインパーキングで約7年にわたり、料金を支払わずに車を停め続け、管理会社の業務を妨害したと" time="2026年02月10日 12時27分" image="/images/articles/22686_2_1.jpg" />
-              <ArticleItem link="/articles/id" title="コインパーキングに7年放置で逮捕、「長期無断駐車」どうすれば…弁護士が教える撃退法" desc="神戸市内のコインパーキングで約7年にわたり、料金を支払わずに車を停め続け、管理会社の業務を妨害したと" time="2026年02月10日 12時27分" image="/images/articles/22686_2_1.jpg" />
-              <ArticleItem link="/articles/id" title="コインパーキングに7年放置で逮捕、「長期無断駐車」どうすれば…弁護士が教える撃退法" desc="神戸市内のコインパーキングで約7年にわたり、料金を支払わずに車を停め続け、管理会社の業務を妨害したと" time="2026年02月10日 12時27分" image="/images/articles/22686_2_1.jpg" />
-              <ArticleItem link="/articles/id" title="コインパーキングに7年放置で逮捕、「長期無断駐車」どうすれば…弁護士が教える撃退法" desc="神戸市内のコインパーキングで約7年にわたり、料金を支払わずに車を停め続け、管理会社の業務を妨害したと" time="2026年02月10日 12時27分" image="/images/articles/22686_2_1.jpg" />
-              <ArticleItem link="/articles/id" title="コインパーキングに7年放置で逮捕、「長期無断駐車」どうすれば…弁護士が教える撃退法" desc="神戸市内のコインパーキングで約7年にわたり、料金を支払わずに車を停め続け、管理会社の業務を妨害したと" time="2026年02月10日 12時27分" image="/images/articles/22686_2_1.jpg" />
-              <ArticleItem link="/articles/id" title="コインパーキングに7年放置で逮捕、「長期無断駐車」どうすれば…弁護士が教える撃退法" desc="神戸市内のコインパーキングで約7年にわたり、料金を支払わずに車を停め続け、管理会社の業務を妨害したと" time="2026年02月10日 12時27分" image="/images/articles/22686_2_1.jpg" />
+              <ArticleItem link="/articles/id" title="コインパーキングに7年放置で逮捕、「長期無断駐車」どうすれば…弁護士が教える撃退法" desc="神戸市内のコインパーキングで約7年にわたり、料金を支払わずに車を停め続け、管理会社の業務を妨害したと" time="2026年02月10日 12時27分" image="/images/articles/22686_2_11.jpg" />
+              <ArticleItem link="/articles/id" title="コインパーキングに7年放置で逮捕、「長期無断駐車」どうすれば…弁護士が教える撃退法" desc="神戸市内のコインパーキングで約7年にわたり、料金を支払わずに車を停め続け、管理会社の業務を妨害したと" time="2026年02月10日 12時27分" image="/images/articles/22686_2_11.jpg" />
+              <ArticleItem link="/articles/id" title="コインパーキングに7年放置で逮捕、「長期無断駐車」どうすれば…弁護士が教える撃退法" desc="神戸市内のコインパーキングで約7年にわたり、料金を支払わずに車を停め続け、管理会社の業務を妨害したと" time="2026年02月10日 12時27分" image="/images/articles/22686_2_11.jpg" />
+              <ArticleItem link="/articles/id" title="コインパーキングに7年放置で逮捕、「長期無断駐車」どうすれば…弁護士が教える撃退法" desc="神戸市内のコインパーキングで約7年にわたり、料金を支払わずに車を停め続け、管理会社の業務を妨害したと" time="2026年02月10日 12時27分" image="/images/articles/22686_2_11.jpg" />
+              <ArticleItem link="/articles/id" title="コインパーキングに7年放置で逮捕、「長期無断駐車」どうすれば…弁護士が教える撃退法" desc="神戸市内のコインパーキングで約7年にわたり、料金を支払わずに車を停め続け、管理会社の業務を妨害したと" time="2026年02月10日 12時27分" image="/images/articles/22686_2_11.jpg" />
+              <ArticleItem link="/articles/id" title="コインパーキングに7年放置で逮捕、「長期無断駐車」どうすれば…弁護士が教える撃退法" desc="神戸市内のコインパーキングで約7年にわたり、料金を支払わずに車を停め続け、管理会社の業務を妨害したと" time="2026年02月10日 12時27分" image="/images/articles/22686_2_11.jpg" />
             </div>
-            <Link href="/articles/id" className="border-t border-[#e9e5e4] py-6 flex relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 after:right-4 md:text-[18px] text-[16px] font-bold text-[#315dbb] px-6">
+            <Link href="/articles/" className="border-t border-[#e9e5e4] py-6 flex relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 after:right-4 md:text-[18px] text-[16px] font-bold text-[#315dbb] px-6">
               もっと見る
             </Link>
           </div>
           <ArticlesRanks />
         </div>
-      </div>
-      <div className="mx-auto max-w-7xl px-6 py-12 flex justify-center">
-        <Link href="/articles/id" className="flex relative w-full max-w-[900px] items-center justify-center bg-[#fbf9f8] rounded-full [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] py-4 px-6 md:text-[18px] text-[16px] after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 mdLafter:right-8 after:right-4">弁護士ドットコムニュースについて</Link>
       </div>
     </div>
   )

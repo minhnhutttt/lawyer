@@ -13,7 +13,7 @@ export default function SlidebarNews() {
   return (
     <div className="my-[30px]">
               <TitleBar>
-                弁護士ドットコムニュース
+                べんごしっちニュース
               </TitleBar>
               <div className=" mt-[5px] mb-[15px] p-1.5">
                 <div className="flex items-start gap-3">

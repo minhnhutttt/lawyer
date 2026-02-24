@@ -26,7 +26,7 @@ export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
                   aria-label="Home"
                 >
                   <Home className="w-3 h-3" />
-                  弁護士ドットコム
+                  べんごしっち
                 </Link>
                 <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
             </li>

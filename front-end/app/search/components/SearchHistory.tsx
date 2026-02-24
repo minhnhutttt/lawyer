@@ -4,13 +4,14 @@ import Link from "next/link";
 import { useState } from "react";
 
 interface SearchHistoryItem {
+  link: string;
   image: string;
   name: string;
   introduction: string
 }
 
-const HistoryItem = ({ image, name, introduction }: SearchHistoryItem) => (
-  <Link href="/" className="flex md:flex-[0_0_33.33333%] flex-[0_0_75%] [box-shadow:0_0_0_1px_rgba(54,_50,_49,_.08),_0_2px_2px_1px_rgba(54,_50,_49,_.06)] rounded-lg p-4 md:flex-col items-center">
+const HistoryItem = ({ link, image, name, introduction }: SearchHistoryItem) => (
+  <Link href={link} className="flex md:flex-[0_0_33.33333%] flex-[0_0_75%] [box-shadow:0_0_0_1px_rgba(54,_50,_49,_.08),_0_2px_2px_1px_rgba(54,_50,_49,_.06)] rounded-lg p-4 md:flex-col items-center">
     <figure className="w-[52px] md:mb-3">
       <Image src={image} alt="" width={150} height={200} className="rounded max-md:-m-2" />
     </figure>
@@ -67,8 +68,8 @@ export default function SearchHistory() {
               </div>
               <div className="mb-[22px] py-2">
                 <div className="flex gap-4 md:flex-wrap max-md:overflow-auto">
-                  <HistoryItem image="/images/124266_1.png" name="日下部 眞史" introduction="埼玉県 さいたま市浦和区常盤9-19-5 岩端ビル2-B" />
-                  <HistoryItem image="/images/124266_1.png" name="日下部 眞史" introduction="埼玉県 さいたま市浦和区常盤9-19-5 岩端ビル2-B" />
+                  <HistoryItem link="/lawyers/id" image="/images/124266_1.png" name="〇〇 〇〇" introduction="埼玉県 さいたま市浦和区常盤選択範囲のテキストを削除" />
+                  <HistoryItem link="/lawyers/id" image="/images/124266_1.png" name="〇〇 〇〇" introduction="埼玉県 さいたま市浦和区常盤選択範囲のテキストを削除" />
                 </div>
               </div>
               <Link href="/" className="relative flex items-center justify-center border border-[#bbb3af] font-bold [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] rounded-full w-full max-w-[400px] mx-auto py-4 md:py-4 px-5 md:px-8 bg-white md:text-[18px] text-[16px] after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 after:right-4">閲覧履歴をもっと見る

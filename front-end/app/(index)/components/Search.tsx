@@ -123,7 +123,7 @@ export default function Search() {
                   </button>
                 </div>
                 <div className="max-md:mt-2">
-                  <ButtonLink link="/bbs">法律相談トップ</ButtonLink>
+                  <ButtonLink link="/questions">法律相談トップ</ButtonLink>
                 </div>
               </div>
               <div className="flex text-[13px] mt-1.5">

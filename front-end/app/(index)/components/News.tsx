@@ -7,22 +7,22 @@ import { useState } from "react";
 
   export const news = [
     {
-      href: '/',
+      href: '/articles/id',
       text: '「児童ポルノはコピーできる金、使わない馬鹿いる？」小児性愛者が語る異様な執念、自作の”仲間判別テスト”の正体',
       new: true
     },
     {
-      href: '/',
+      href: '/articles/id',
       text: '「整形してるんですか？」職場で何度も聞かれうんざりする女性　”悪気ない一言”がハラスメントになることも',
       new: true
     },
     {
-      href: '/',
+      href: '/articles/id',
       text: '高市首相ポスターにスプレー被害か、大阪市議が「絶対にやめて」…落書きはどんな罪に？',
       new: true
     },
     {
-      href: '/',
+      href: '/articles/id',
       text: '「犯罪は僕の宿命です」「成人とのセックスは拷問」小児性愛者の独白　記者に明かした“恐るべき”言葉とは',
       new: false
     },
@@ -31,37 +31,37 @@ import { useState } from "react";
   export const ranks = [
     {
       top: 1,
-      href: '/',
+      href: '/articles/id',
       change: 'up',
       text: 'ミスドで「トレーに載せたドーナツをまた戻す」 SNS投稿に賛否、衛生面で許せない？ 運営会社が回答'
     },
     {
       top: 2,
-      href: '/',
+      href: '/articles/id',
       change: 'down',
       text: '「とんでもヘアメにされて震えた」美容室でイメージと違う髪型に…泣き寝入りするしかないのか'
     },
     {
       top: 3,
-      href: '/',
+      href: '/articles/id',
       change: 'up',
       text: '高市首相ポスターにスプレー被害か、大阪市議が「絶対にやめて」…落書きはどんな罪に？'
     },
     {
       top: 4,
-      href: '/',
+      href: '/articles/id',
       change: 'up',
       text: '「犯罪は僕の宿命です」「成人とのセックスは拷問」小児性愛者の独白　記者に明かした“恐るべき”言葉とは'
     },
     {
       top: 5,
-      href: '/',
+      href: '/articles/id',
       change: 'up',
       text: '選挙期間中の「さなえちゃんクッキー」販売で波紋、販売店の対応分かれる　公選法違反の可能性は？'
     },
     {
       top: 6,
-      href: '/',
+      href: '/articles/id',
       change: 'up',
       text: 'ミスドで「トレーに載せたドーナツをまた戻す」 SNS投稿に賛否、衛生面で許せない？ 運営会社が回答'
     },
@@ -144,7 +144,7 @@ export default function News() {
   return (
     <div className="my-[30px]">
               <TitleBar icon="/images/icn-interview_2x.webp" right="今話題の出来事を法律観点で解説するニュースコンテンツ">
-                弁護士ドットコムニュース
+                べんごしっちニュース
               </TitleBar>
               <div className=" mt-[5px] mb-[15px] p-1.5">
                 <div className="flex items-start gap-3">
@@ -187,7 +187,7 @@ export default function News() {
                           ))}
                         </ul>
                         <div className="flex justify-end py-2.5">
-                          <ButtonLink link="/topic">もっと見る</ButtonLink>
+                          <ButtonLink link="/articles">もっと見る</ButtonLink>
                         </div>
                       </div>
                       :

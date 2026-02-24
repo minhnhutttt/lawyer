@@ -6,28 +6,28 @@ import { useState } from "react";
 export default function Lawyers() {
     const lawyers = [
     {
-      link: '/',
-      image: '/images/283023_1.webp',
+      link: '/lawyers/id',
+      image: '/images/283023_1.jpg',
       intro: '行動力と粘り強さを武器に解決策を見出す。過去を責めず、不安な心に優しく寄り添うことがモットー',
-      name: '原田 龍明',
+      name: '〇〇 〇〇',
       office: '安佐合同法律事務所',
-      address: '広島県広島市安佐南区緑井5丁目17-5 グランデュア緑井403'
+      address: '広島県広島市'
     },
     {
-      link: '/',
-      image: '/images/283023_1.webp',
+      link: '/lawyers/id',
+      image: '/images/283023_1.jpg',
       intro: '行動力と粘り強さを武器に解決策を見出す。過去を責めず、不安な心に優しく寄り添うことがモットー',
-      name: '原田 龍明',
+      name: '〇〇 〇〇',
       office: '安佐合同法律事務所',
-      address: '広島県広島市安佐南区緑井5丁目17-5 グランデュア緑井403'
+      address: '広島県広島市'
     },
     {
-      link: '/',
-      image: '/images/283023_1.webp',
+      link: '/lawyers/id',
+      image: '/images/283023_1.jpg',
       intro: '行動力と粘り強さを武器に解決策を見出す。過去を責めず、不安な心に優しく寄り添うことがモットー',
-      name: '原田 龍明',
+      name: '〇〇 〇〇',
       office: '安佐合同法律事務所',
-      address: '広島県広島市安佐南区緑井5丁目17-5 グランデュア緑井403'
+      address: '広島県広島市'
     },
   ]
   return (

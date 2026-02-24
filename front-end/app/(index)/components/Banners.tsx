@@ -23,32 +23,12 @@ export default function Banners() {
                       </Link>
                     </span>
                   </Link>
-                  <Link href="/" className="block mt-5">
+                  <Link href="/estimate" className="block mt-5">
                     <Image
                       src="/images/bnr.png"
                       alt=""
                       width={640}
                       height={84}
-                      className="w-[640px]"
-                      priority
-                    />
-                  </Link>
-                  <Link href="/" className="block mt-5">
-                    <Image
-                      src="/images/bnr_zeiri4_640_90.gif"
-                      alt=""
-                      width={640}
-                      height={90}
-                      className="w-[640px]"
-                      priority
-                    />
-                  </Link>
-                  <Link href="/" className="block mt-5">
-                    <Image
-                      src="/images/img_link.png"
-                      alt=""
-                      width={640}
-                      height={110}
                       className="w-[640px]"
                       priority
                     />
