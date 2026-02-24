@@ -13,7 +13,7 @@ export default function EstimateQuotation({ type = 1, className }: QuotationProp
 
   const selectDatas = [
     {
-      iconUrl: '/icons/icn-area2_g_1x.png',
+      iconUrl: '/icons/icn-map.svg',
       title: '地域',
       options:
         [
@@ -142,7 +142,7 @@ export default function EstimateQuotation({ type = 1, className }: QuotationProp
               boxShadow: "inset -1px -1px #d8d8d8, inset 0 0 0 1px #e9e9e9, inset 2px 2px #fff"
             }}
             href="/bbs/">
-            <Image src="/icons/icn-bbs_1x.png" alt="" width={15} height={15} className="mr-1 inline-block" />
+            <Image src="/icons/icn-q.svg" alt="" width={15} height={15} className="mr-1 inline-block" />
             みんなの法律相談を見る
           </Link>
         </div>

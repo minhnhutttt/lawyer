@@ -16,13 +16,13 @@ export default function Lawyer() {
       title: "はるか法律事務所",
       address: "埼玉県さいたま市大宮区吉敷町1-62 マレーS・Tビル403",
       focusAreas: [
-        { iconUrl: "/icons/f2_color.png", text: "交通事故" },
-        { iconUrl: "/icons/f3_color.png", text: "離婚・男女問題" },
-        { iconUrl: "/icons/f4_color.png", text: "遺産相続" },
-        { iconUrl: "/icons/f5_color.png", text: "労働問題" },
-        { iconUrl: "/icons/f6_color.png", text: "債権回収" },
-        { iconUrl: "/icons/f12_color.png", text: "不動産・建築" },
-        { iconUrl: "/icons/f13_color.png", text: "企業法務・顧問弁護士" },
+        { iconUrl: "/icons/f2_color.svg", text: "交通事故" },
+        { iconUrl: "/icons/f3_color.svg", text: "離婚・男女問題" },
+        { iconUrl: "/icons/f4_color.svg", text: "遺産相続" },
+        { iconUrl: "/icons/f5_color.svg", text: "労働問題" },
+        { iconUrl: "/icons/f6_color.svg", text: "債権回収" },
+        { iconUrl: "/icons/f12_color.svg", text: "不動産・建築" },
+        { iconUrl: "/icons/f13_color.svg", text: "企業法務・顧問弁護士" },
       ],
       isWishlisted: true,
     },
@@ -32,9 +32,9 @@ export default function Lawyer() {
       title: "うららか法律事務所",
       address: "埼玉県さいたま市大宮区高鼻町1-56 ks'氷川の杜401",
       focusAreas: [
-        { iconUrl: "/icons/f3_color.png", text: "離婚・男女問題" },
-        { iconUrl: "/icons/f5_color.png", text: "労働問題" },
-        { iconUrl: "/icons/f13_color.png", text: "犯罪・刑事事件" },
+        { iconUrl: "/icons/f3_color.svg", text: "離婚・男女問題" },
+        { iconUrl: "/icons/f5_color.svg", text: "労働問題" },
+        { iconUrl: "/icons/f13_color.svg", text: "犯罪・刑事事件" },
       ],
       btnList: [
         { type: "booking", phone: "050-5223-3819" },
@@ -47,7 +47,7 @@ export default function Lawyer() {
       title: "埼玉所沢法律事務所",
       address: "埼玉県 所沢市くすのき台3-1-13 烏山ビル2階",
       focusAreas: [
-        { iconUrl: "/icons/f1_color.png", text: "借金・債務整理" },
+        { iconUrl: "/icons/f1_color.svg", text: "借金・債務整理" },
       ],
       btnList: [
         { type: "call", phone: "04-2946-9980" },

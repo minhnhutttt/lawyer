@@ -224,7 +224,7 @@ export default function Header() {
                       <Link
                         href="/"
                         onClick={() => setOpen(false)}
-                        className="flex items-center justify-center w-full bg-[#0276AE] rounded-full text-xs font-bold px-4 py-3 text-white relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-white after:top-1/2 after:right-4 before:size-[14px] before:bg-[url(/icons/link-p.svg)] before:bg-cover before:absolute before:left-4"
+                        className="flex items-center justify-center w-full bg-[#0276AE] rounded-full text-xs font-bold px-4 py-3 text-white relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-white after:top-1/2 after:right-4 before:size-[14px] before:bg-cover before:absolute before:left-4"
                       >
                         プレミアムサービスについて見る
                       </Link>

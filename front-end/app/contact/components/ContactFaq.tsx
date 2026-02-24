@@ -24,7 +24,7 @@ export default function Contact({ faqs = defaultFaqs, className = '' }: FaqProps
         {faqs.map((faq, index) => (
           <li key={index} className="flex items-start gap-2 border-b border-[#ddd] py-[8px]">
             <span className="flex-shrink-0 w-[18px] h-[18px] flex items-center justify-center">
-              <Image src="/icons/icon_faq.png" alt="Q" width={18} height={18} />
+              <Image src="/icons/icon_faq.svg" alt="Q" width={18} height={18} />
             </span>
             <Link href={faq.href} className="text-[#005ebb] hover:underline text-sm">
               {faq.question}
