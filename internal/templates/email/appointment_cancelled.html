@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>予約キャンセルのお知らせ</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            margin-bottom: 30px;
+        }
+        .content {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .details {
+            background-color: #fff;
+            padding: 15px;
+            border-left: 4px solid #ff9500;
+            margin: 20px 0;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>予約キャンセルのお知らせ</h2>
+    </div>
+    
+    <div class="content">
+        <p><strong>{{.LawyerName}}</strong> 様</p>
+        
+        <p>以下の予約がクライアントによってキャンセルされましたので、お知らせいたします。</p>
+        
+        <div class="details">
+            <p>🗓 予約の詳細:</p>
+            <ul>
+                <li>日付: <strong>{{.AppointmentDate}}</strong></li>
+                <li>時間: <strong>{{.AppointmentTime}}</strong></li>
+                <li>クライアント: <strong>{{.ClientName}}</strong></li>
+                <li>理由: <strong>{{.CancelReason}}</strong></li>
+            </ul>
+        </div>
+        
+        <p>対応は不要ですが、ご不明な点がありましたらサポートまでご連絡いただくか、マイページの予約履歴をご確認ください。</p>
+        
+        <p>ご理解のほどよろしくお願いいたします。</p>
+        
+        <p>べんごしっちサポートチーム</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>新しい弁護士プロフィールが承認待ちです</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #f0f0f0;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .content {
+            padding: 20px 0;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .button {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #333 !important;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .info {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>【要確認】新しい弁護士プロフィールが承認待ちです</h2>
+        </div>
+        
+        <div class="content">
+            <p>管理者様</p>
+            
+            <p>新しい弁護士がプロフィールをすべて入力し、現在認証待ちの状態です。</p>
+            
+            <div class="info">
+                <p><strong>👤 弁護士名:</strong> {{.LawyerName}}</p>
+                <p><strong>📧 メールアドレス:</strong> {{.LawyerEmail}}</p>
+                <p><strong>🏢 事務所名称:</strong> {{.OfficeName}}</p>
+                <p><strong>📍 事務所住所:</strong> {{.OfficeAddress}}</p>
+            </div>
+            
+            <p>以下の管理画面より、プロフィールをご確認のうえ、認証手続きをお願いいたします。</p>
+            
+            <p style="text-align: center;">
+                <a href="{{.AdminURL}}" class="button">🔗 管理画面へアクセス</a>
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>よろしくお願いいたします。<br>べんごしっち通知システム</p>
+        </div>
+    </div>
+</body>
+</html>

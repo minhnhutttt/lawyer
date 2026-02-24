@@ -1,0 +1,12 @@
+---
+# Staging-specific settings
+frontend_domain: stg.bengoshicchi.jp
+backend_domain: api.stg.bengoshicchi.jp
+is_production: false
+certbot_email: support@stg.bengoshicchi.jp
+
+# Basic Authentication
+enable_basic_auth: true
+nginx_basic_auth_user: admin
+# Generated with: htpasswd -nb admin m5dJWAd@TSk#huA^
+nginx_basic_auth_password_hash: "$apr1$Tvus6E.1$OcxvwO30ZVpOcDlA/24C1."

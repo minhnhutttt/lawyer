@@ -1,0 +1,14 @@
+{
+  "title": "Admin Dashboard",
+  "menu": {
+    "dashboard": "Dashboard",
+    "user.management": "User Management",
+    "lawyer.management": "Lawyer Management",
+    "review.management": "Review Management",
+    "appointment.management": "Appointment Management",
+    "article.management": "Article Management",
+    "q&a.management": "Q&A Management",
+    "settings": "Settings"
+  },
+  "greeting": "Hello, {{name}}"
+}

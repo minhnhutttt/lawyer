@@ -1,0 +1,34 @@
+{
+  "title": "法律相談",
+  "newQuestion": "質問をする",
+  "searchPlaceholder": "質問を検索...",
+  "allCategories": "すべて",
+  "postedBy": "{{name}}によって投稿されました",
+  "anonymous": "匿名ユーザー",
+  "answers": " 件の回答",
+  "answerCount": "件の回答",
+  "askQuestion": "質問をする",
+  "view": "表示",
+  "views": "{count} 件の閲覧",
+  "status": {
+    "open": "受付中",
+    "answered": "回答済み",
+    "closed": "終了"
+  },
+  "foundResults": "{{count}} 件の質問が見つかりました",
+  "empty": "質問が見つかりませんでした。",
+  "errorLoading": "質問の読み込みに失敗しました。もう一度お試しください。",
+  "pagination": {
+    "previous": "前へ",
+    "next": "次へ"
+  },
+  "editQuestion": "質問を編集",
+  "saveChanges": "変更を保存",
+  "cancel": "キャンセル",
+  "titleRequired": "タイトルは必須です",
+  "titleMinLength": "タイトルは少なくとも{{length}}文字必要です",
+  "contentRequired": "内容は必須です",
+  "contentMinLength": "内容は少なくとも{{length}}文字必要です",
+  "updateError": "質問の更新に失敗しました",
+  "content": "内容"
+}

@@ -1,0 +1,21 @@
+---
+- name: Deploy Lawyer Application
+  hosts: "{{ deploy_env }}_servers"
+  become: true
+  vars_files:
+    - vars/main.yml
+    - vars/{{ deploy_env }}.yml
+  tasks:
+    - name: Include common tasks
+      vars:
+        deploy_env: "{{ deploy_env }}"
+        skip_ssl: "{{ skip_ssl | default(false) }}"
+        deploy_component: "{{ deploy_component | default('all') }}"
+      include_tasks: tasks/common.yml
+      
+    - name: Include environment-specific tasks
+      vars:
+        deploy_env: "{{ deploy_env }}"
+        skip_ssl: "{{ skip_ssl | default(false) }}"
+        deploy_component: "{{ deploy_component | default('all') }}"
+      include_tasks: "tasks/{{ deploy_env }}.yml"

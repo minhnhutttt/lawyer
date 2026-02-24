@@ -1,0 +1,17 @@
+{
+  "title": "ダッシュボード概要",
+  "totalUsers": "総ユーザー数",
+  "totalLawyers": "総弁護士数",
+  "totalQuestions": "総質問数",
+  "totalMessages": "総メッセージ数",
+  "users": "ユーザー",
+  "lawyers": "弁護士",
+  "questions": "法律相談",
+  "messages": "メッセージ",
+  "stats": {
+    "users": "ユーザー統計",
+    "lawyers": "弁護士統計",
+    "questions": "質問統計",
+    "messages": "メッセージ統計"
+  }
+} 

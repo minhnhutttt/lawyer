@@ -1,0 +1,88 @@
+{
+  "email": {
+    "required": "Email is required",
+    "invalid": "Please enter a valid email address",
+    "maxLength": "Email must not exceed 255 characters",
+    "unique": "Email address is already in use"
+  },
+  "password": {
+    "required": "Password is required",
+    "minLength": "Password must be at least 8 characters long",
+    "format": "Password must contain at least one uppercase letter, one lowercase letter, and one number",
+    "currentEmpty": "Current password can not be empty",
+    "newEmpty": "New password can not be empty"
+  },
+  "confirmPassword": {
+    "required": "Please confirm your password",
+    "mismatch": "Passwords do not match"
+  },
+  "nickname": {
+    "required": "Nickname is required for client accounts",
+    "minLength": "Nickname must be at least 1 character",
+    "maxLength": "Nickname must not exceed 50 characters"
+  },
+  "acceptTerms": {
+    "required": "You must accept the Terms of Service"
+  },
+  "lawyerProfile": {
+    "required": "Lawyer profile is required"
+  },
+  "firstName": {
+    "required": "First name is required",
+    "maxLength": "First name must not exceed 50 characters"
+  },
+  "lastName": {
+    "required": "Last name is required",
+    "maxLength": "Last name must not exceed 50 characters"
+  },
+  "dateOfBirth": {
+    "required": "Date of birth is required"
+  },
+  "gender": {
+    "required": "Gender selection is required"
+  },
+  "affiliation": {
+    "required": "Affiliation is required",
+    "maxLength": "Affiliation must not exceed 100 characters"
+  },
+  "phone": {
+    "required": "Phone number is required",
+    "format": "Phone number must be 10-11 digits"
+  },
+  "fax": {
+    "format": "Fax number must be 10-11 digits"
+  },
+  "birthDate": {
+    "required": "Birth date is required",
+    "ageRestriction": "You must be at least 20 years old"
+  },
+  "registrationNumber": {
+    "required": "Registration number is required",
+    "format": "Registration number must be 5 digits"
+  },
+  "officeName": {
+    "required": "Office name is required",
+    "maxLength": "Office name must not exceed 100 characters"
+  },
+  "profileText": {
+    "required": "Profile text is required"
+  },
+  "officeAddress": {
+    "required": "Office address is required",
+    "maxLength": "Office address must not exceed 200 characters"
+  },
+  "specialties": {
+    "required": "At least one specialty must be selected"
+  },
+  "notes": {
+    "maxLength": "Notes must not exceed 1000 characters"
+  },
+  "experienceYears": {
+    "required": "Years of experience is required",
+    "format": "Please enter a valid number for years of experience"
+  },
+  "certificationDocument": {
+    "required": "Certification document is required",
+    "fileType": "Document must be PDF, JPEG, or PNG format and not exceed 5MB"
+  }
+}

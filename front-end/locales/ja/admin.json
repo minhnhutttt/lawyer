@@ -1,0 +1,14 @@
+{
+  "title": "管理画面",
+  "menu": {
+    "dashboard": "ダッシュボード",
+    "user.management": "ユーザー管理",
+    "lawyer.management": "弁護士管理",
+    "review.management": "レビュー管理",
+    "appointment.management": "チャット予約管理",
+    "article.management": "記事管理",
+    "q&a.management": "法律相談管理",
+    "settings": "設定"
+  },
+  "greeting": "ようこそ、{{name}}さん"
+}

@@ -1,0 +1,20 @@
+{
+  "reviewTitle": "Rate & Review",
+  "ratingLabel": "Rating",
+  "ratingLawyer": "Rate your experience with {{name}}",
+  "commentLabel": "Comment (Optional)",
+  "commentPlaceholder": "Share your experience with this lawyer...",
+  "invalidRating": "Please select a valid rating",
+  "reviewSubmitted": "Your review has been submitted successfully",
+  "submitError": "There was an error submitting your review. Please try again.",
+  "anonymousUser": "Anonymous User",
+  "noComment": "No comment provided",
+  "fetchError": "Failed to load reviews",
+  "statusApproved": "Approved",
+  "statusPending": "Pending",
+  "rating1": "Poor",
+  "rating2": "Fair",
+  "rating3": "Good",
+  "rating4": "Very Good",
+  "rating5": "Excellent"
+}

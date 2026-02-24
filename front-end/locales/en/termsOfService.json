@@ -1,0 +1,97 @@
+{
+  "title": "Terms of Service for Bengoshicchi",
+  "introduction": "These Terms of Service (\"Terms\") govern the use of Bengoshicchi (\"Service\") provided by the operator (\"Provider\") and apply to all individuals who use the Service (\"Users\").",
+  "chapter1": {
+    "title": "Chapter 1: General Provisions",
+    "article1": {
+      "title": "Article 1 (Definitions)",
+      "service": "Service: The website and application provided by the Provider that connects general users and lawyer users and offers online legal consultation support.",
+      "provider": "Provider: The corporation or individual that operates and manages the Service.",
+      "generalUser": "General User: A user who seeks legal consultation using the Service.",
+      "lawyerUser": "Lawyer User: A user who holds a valid Japanese attorney license and has been registered after undergoing the Provider's screening process.",
+      "registeredUser": "Registered User: General Users and Lawyer Users whose registration is completed in accordance with Article 4."
+    },
+    "article2": {
+      "title": "Article 2 (Scope of Application)",
+      "content": "These Terms set forth the conditions for using the Service and the rights and obligations between the Provider and Registered Users."
+    },
+    "article3": {
+      "title": "Article 3 (Amendment of Terms)",
+      "content": "The Provider may amend these Terms without prior notice, and the amended Terms will become effective when displayed on the Service."
+    }
+  },
+  "chapter2": {
+    "title": "Chapter 2: Registration & Account Management",
+    "article4": {
+      "title": "Article 4 (User Registration)",
+      "content1": "Registration is required and free of charge.",
+      "content2": "Applicants apply in the prescribed manner, and registration is complete upon approval.",
+      "content3": "The Provider may refuse or cancel registration for:",
+      "reason1": "False information",
+      "reason2": "Prior violations",
+      "reason3": "Antisocial forces"
+    },
+    "article5": {
+      "title": "Article 5 (Changes to Registration Information)",
+      "content": "Registered Users shall promptly notify the Provider of any changes; failure to do so is at the User's risk."
+    },
+    "article6": {
+      "title": "Article 6 (Account Management)",
+      "content1": "Users must manage their IDs and passwords and not transfer them.",
+      "content2": "Users bear responsibility for unauthorized account use."
+    }
+  },
+  "chapter3": {
+    "title": "Chapter 3: Service Use",
+    "article7": {
+      "title": "Article 7 (Service Content)",
+      "content": "The Provider offers online consultation between Users and Lawyer Users and may change or suspend the Service without notice."
+    },
+    "article8": {
+      "title": "Article 8 (Obligations of General Users)",
+      "content1": "Provide accurate and truthful information.",
+      "content2": "Bear responsibility for actions based on consultation."
+    },
+    "article9": {
+      "title": "Article 9 (Obligations of Lawyer Users)",
+      "content1": "Guarantee truthful qualification information.",
+      "content2": "Comply with professional ethics and laws."
+    }
+  },
+  "chapter4": {
+    "title": "Chapter 4: Intellectual Property & Liability",
+    "article10": {
+      "title": "Article 10 (Intellectual Property Rights)",
+      "content": "All rights belong to the Provider or rightful owners; unauthorized use is prohibited."
+    },
+    "article11": {
+      "title": "Article 11 (Disclaimer)",
+      "content1": "No liability for delays, interruptions, or errors.",
+      "content2": "No liability for actions based on consultations."
+    },
+    "article12": {
+      "title": "Article 12 (Limitation of Liability)",
+      "content": "Liability is limited to direct and ordinary damages, up to JPY 50,000 per User, except for intentional misconduct or gross negligence."
+    }
+  },
+  "chapter5": {
+    "title": "Chapter 5: Miscellaneous",
+    "article13": {
+      "title": "Article 13 (Suspension & Cancellation)",
+      "content": "The Provider may suspend or cancel registration without notice for violations."
+    },
+    "article14": {
+      "title": "Article 14 (Privacy)",
+      "content": "Personal information is managed according to the Privacy Policy."
+    },
+    "article15": {
+      "title": "Article 15 (Exclusion of Antisocial Forces)",
+      "content": "Users warrant they are not part of antisocial forces."
+    },
+    "article16": {
+      "title": "Article 16 (Governing Law & Jurisdiction)",
+      "content": "These Terms are governed by Japanese law, and disputes are subject to the Tokyo District Court."
+    }
+  },
+  "effectiveDate": "Effective Date: April 14, 2025"
+}

@@ -1,0 +1,98 @@
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review]
+  issue_comment:
+jobs:
+  check_github_runner_availability:
+    name: Check GitHub Runner Availability
+    runs-on: ubuntu-latest
+    outputs:
+      github_runner_available: ${{ steps.check.outputs.github_runner_available }}
+    steps:
+      - name: Check GitHub Runner Availability
+        id: check
+        run: |
+          echo "github_runner_available=true" >> $GITHUB_OUTPUT
+        continue-on-error: true
+
+  pr_agent_job:
+    if: ${{ github.event.sender.type != 'Bot' }}
+    needs: check_github_runner_availability
+    runs-on: ${{ needs.check_github_runner_availability.outputs.github_runner_available == 'true' && 'ubuntu-latest' || 'self-hosted' }}
+    permissions:
+      issues: write
+      pull-requests: write
+      contents: write
+    name: Run pr agent on every pull request, respond to user comments
+    steps:
+      - name: Check if GEMINI_API_KEY exists
+        id: check_secret
+        run: |
+          if [ -n "${{ secrets.GEMINI_API_KEY }}" ]; then
+            echo "has_gemini_key=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_gemini_key=false" >> $GITHUB_OUTPUT
+          fi
+      - name: Check if PR comment which trigger PR agent is in ["/review", "/improve", "/describe"]
+        id: check_pr_commands
+        if: ${{ github.event_name == 'issue_comment' }}
+        run: |
+          if [[ "${{ github.event.comment.body }}" == *"/review"* || "${{ github.event.comment.body }}" == *"/improve"* || "${{ github.event.comment.body }}" == *"/describe"* ]]; then
+            echo "pr_command_correct=true" >> $GITHUB_OUTPUT
+          else
+            echo "pr_command_correct=false" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Set PR command check to true for non-comment events
+        id: set_pr_command_for_other_events
+        if: ${{ github.event_name != 'issue_comment' }}
+        run: echo "pr_command_correct=true" >> $GITHUB_OUTPUT
+
+      - name: PR Agent action step
+        id: pragent
+        if: ${{ steps.check_secret.outputs.has_gemini_key == 'true' && (github.event_name != 'issue_comment' || steps.check_pr_commands.outputs.pr_command_correct == 'true') }}
+        uses: qodo-ai/pr-agent@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GOOGLE_AI_STUDIO.GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_APP.PR_COMMANDS: "[\"/review\", \"/improve\", \"/describe\"]"
+          CONFIG.MODEL: "gemini/gemini-2.0-flash"
+          CONFIG.ENABLE_AUTO_APPROVAL: "true"
+          CONFIG.FALLBACK_MODELS: "[\"gemini/gemini-1.5-flash\"]"
+          PR_CODE_SUGGESTIONS.EXTRA_INSTRUCTIONS: |
+            # General guidelines for all code:
+              1. Check for security vulnerabilities and potential exploits
+              2. Ensure error handling is comprehensive and appropriate
+              3. Verify proper logging is implemented for debugging
+              4. Look for code that can be optimized for performance
+              5. Ensure configuration is properly externalized
+              6. Code should be well-documented with comments explaining "why" not just "what"
+              7. Look for proper test coverage
+              8. Check for hardcoded values that should be configurable
+            
+            # For Go code (Backend):
+              1. Follow Go best practices and idiomatic patterns
+              2. Use gofmt formatting (tabs for indentation)
+              3. Handle errors explicitly - don't use _ to ignore errors
+              4. Prefer composition over inheritance
+              5. Keep functions small and focused on a single responsibility
+              6. Use meaningful variable and function names
+              7. Verify proper context usage for cancellation and timeouts
+              8. Check for proper resource cleanup (defer statements)
+              9. Use pointers judiciously - prefer value types for small structs
+              10. Ensure concurrent code is safe and properly synchronized
+              11. Verify efficient memory usage and avoid unnecessary allocations
+            
+            # For JavaScript/TypeScript code (Frontend):
+              1. Use 2 spaces for indentation
+              2. Use single quotes for strings
+              3. Prefer const over let, avoid var
+              4. Remove console.log statements and debugging code
+              5. Ensure proper error handling for asynchronous operations
+              6. Follow React best practices if applicable (hooks rules, etc.)
+              7. Check for proper TypeScript type definitions
+              8. Ensure components are properly optimized for re-renders
+              9. Verify accessibility standards are followed
+              10. Ensure responsive design principles are applied
+              11. Check for proper state management patterns
+              12. Ensure CSS/styling follows project conventions

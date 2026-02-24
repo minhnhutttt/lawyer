@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>予約のステータスが変更されました</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .content {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+        }
+        .details {
+            margin: 20px 0;
+        }
+        .reason {
+            background-color: #fff;
+            padding: 15px;
+            border-left: 4px solid #0055a5;
+            margin: 15px 0;
+        }
+        h2 {
+            color: #0055a5;
+        }
+        .status {
+            font-weight: bold;
+            color: #0055a5;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>予約のステータスが変更されました</h2>
+    </div>
+    <div class="content">
+        <p>{{.UserName}} 様</p>
+        
+        <p>いつも当サービスをご利用いただき、誠にありがとうございます。ご予約中の面談について、管理者によってステータスが変更されたため、お知らせいたします。以下がご予約の詳細です。</p>
+        
+        <div class="details">
+            <p>🗓 予約の詳細:</p>
+            <ul>
+                <li>日付: <strong>{{.AppointmentDate}}</strong></li>
+                <li>時間: <strong>{{.AppointmentTime}}</strong></li>
+                <li>相手: <strong>{{.OtherPartyName}}</strong></li>
+            </ul>
+        </div>
+        
+        <p>🆕 新しい予約ステータス: <span class="status">{{.UpdatedStatus}}</span></p>
+        
+        <div class="reason">
+            <p>📄 変更理由:</p>
+            <p><strong>{{.AdminReason}}</strong></p>
+        </div>
+        
+        <p>変更内容をご確認いただくため、お早めにマイページにログインして詳細をご覧ください。</p>
+        
+        <p>ご不明な点がございましたら、サポートチームまでお気軽にお問い合わせください。</p>
+        
+        <p>今後ともどうぞよろしくお願いいたします。</p>
+        
+        <p>べんごしっちサポートチーム</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+{
+  "title": "Question Management",
+  "refresh": "Refresh",
+  "searchPlaceholder": "Search questions",
+  "viewTitle": "Question Details",
+  "noQuestions": "No questions found",
+  "successHide": "Question has been hidden successfully",
+  "successUnhide": "Question is now visible",
+  "notFound": "Question not found",
+  "questionDetails": "Question Details",
+  
+  "makeVisible": "Make Visible",
+  "makeHidden": "Hide Question",
+  "hidden": "Hidden",
+  "visible": "Visible",
+  "user": "User",
+  "answerCount": "Answers",
+  "date": "Date",
+  "visibility": "Visibility",
+  "viewDetails": "View Details",
+
+  "filter": "Filter",
+
+  "filters": {
+    "all": "All Questions",
+    "open": "Open",
+    "answered": "Answered",
+    "closed": "Closed"
+  },
+  
+  "table": {
+    "id": "ID",
+    "title": "Title",
+    "user": "User",
+    "status": "Status",
+    "answers": "Answers",
+    "date": "Date",
+    "visibility": "Visibility",
+    "actions": "Actions"
+  },
+
+  "status": {
+    "open": "Open",
+    "answered": "Answered",
+    "closed": "Closed"
+  },
+  
+  "actions": {
+    "hide": "Hide Question",
+    "show": "Show Question",
+    "view": "View Details"
+  },
+
+  "close": "Close"
+}

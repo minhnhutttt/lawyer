@@ -1,0 +1,55 @@
+{
+  "title": "法律相談管理",
+  "refresh": "更新",
+  "searchPlaceholder": "質問を検索",
+  "viewTitle": "質問詳細",
+  "noQuestions": "質問が見つかりません",
+  "successHide": "質問が非表示になりました",
+  "successUnhide": "質問が表示されるようになりました",
+  "notFound": "質問が見つかりません",
+  "questionDetails": "質問詳細",
+  
+  "makeVisible": "表示する",
+  "makeHidden": "非表示にする",
+  "hidden": "非表示",
+  "visible": "表示中",
+  "user": "ユーザー",
+  "answerCount": "回答数",
+  "date": "日付",
+  "visibility": "表示状態",
+  "viewDetails": "詳細を見る",
+
+  "filter": "フィルター",
+
+  "filters": {
+    "all": "すべての質問",
+    "open": "未回答",
+    "answered": "回答済み",
+    "closed": "クローズ済み"
+  },
+  
+  "table": {
+    "id": "ID",
+    "title": "タイトル",
+    "user": "ユーザー",
+    "status": "ステータス",
+    "answers": "回答",
+    "date": "日付",
+    "visibility": "表示状態",
+    "actions": "アクション"
+  },
+  
+  "status": {
+    "open": "未回答",
+    "answered": "回答済み",
+    "closed": "クローズ済み"
+  },
+  
+  "actions": {
+    "hide": "非表示にする",
+    "show": "表示する",
+    "view": "詳細を見る"
+  },
+
+  "close": "閉じる"
+}

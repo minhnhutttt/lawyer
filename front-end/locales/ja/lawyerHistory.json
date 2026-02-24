@@ -1,0 +1,30 @@
+{
+  "title": "弁護士変更履歴",
+  "noChanges": "変更履歴が見つかりません",
+  "field": "フィールド",
+  "oldValue": "旧値",
+  "newValue": "新値",
+  "by": "更新者",
+  "booleanValues": {
+    "yes": "はい",
+    "no": "いいえ"
+  },
+  "refresh": "更新",
+  "close": "閉じる",
+  "fields": {
+    "FullName": "氏名",
+    "Email": "メールアドレス",
+    "Phone": "電話番号",
+    "OfficeName": "事務所名",
+    "Address": "住所",
+    "Gender": "性別",
+    "FaxNumber": "ファックス番号",
+    "Affiliation": "所属",
+    "LawyerRegistrationNumber": "登録番号",
+    "ProfileText": "プロフィール文",
+    "Notes": "メモ",
+    "Status": "状態",
+    "Rating": "評価",
+    "Specialties": "専門分野"
+  }
+}

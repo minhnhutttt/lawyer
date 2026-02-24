@@ -1,0 +1,28 @@
+# AWS Region
+aws_region = "ap-northeast-1"
+
+# Project Information
+project_name = "lawyer-instance"
+
+# Instance Configuration
+lightsail_blueprint_id = "ubuntu_24_04"
+lightsail_bundle_id = "small_3_0"  # Medium instance for production
+key_name = "lawyer-production"  # Replace with your actual key pair name
+# user_data = <<-EOF
+# #!/bin/bash
+# echo "Instance initialization script goes here"
+# apt-get update
+# apt-get upgrade -y
+# # Add more setup commands as needed
+# EOF
+
+# Database Configuration
+db_name = "lawyerdb"
+db_username = "dbadmin"  # Use a secure username in production
+db_password = "ChangeMe123!"  # Use a secure password in production
+lightsail_db_blueprint_id = "postgres_17"
+lightsail_db_bundle_id = "micro_2_0"  # Medium DB for production
+
+# Bucket Configuration
+s3_bucket_name = ""  # Leave empty to auto-generate based on project and environment
+lightsail_bucket_bundle_id = "small_1_0"

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>メール認証</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { width: 100%; max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { text-align: center; margin-bottom: 20px; }
+        .content { background: #f9f9f9; padding: 20px; border-radius: 5px; }
+        .button { display: inline-block; background: #4CAF50; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; margin-top: 20px; }
+        .footer { margin-top: 20px; text-align: center; font-size: 12px; color: #777; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>メール認証</h1>
+        </div>
+        <div class="content">
+
+            <p>{{.Name}}様</p>
+            <p>この度は、{{.CompanyName}}にご登録いただき、誠にありがとうございます。</p>
+            <p>ご登録を完了いただくには、以下のボタンをクリックしてメールアドレスの確認をお願いいたします。</p>
+            <p style="text-align: center;">
+                <a href="{{.VerificationURL}}" class="button">メールアドレスを確認する</a>
+            </p>
+            <p>もしこのアカウント作成にお心当たりがない場合は、本メールを破棄していただきますようお願いいたします。</p>
+            <p>このリンクは24時間で有効期限が切れます。</p>
+            <p>{{.CompanyName}}サポートチーム</p>
+        </div>
+        <div class="footer">
+            <p>&copy; {{.CompanyName}}. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

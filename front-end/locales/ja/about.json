@@ -1,0 +1,69 @@
+{
+  "title": "会社情報",
+  "companyName": "株式会社テックイノベーション",
+  "companyNameLabel": "会社名",
+  "tokyoOffice": "東京本社",
+  "tokyoAddress": "〒106-0032\n東京都港区六本木6丁目10番1号\n六本木ヒルズ森タワー25階",
+  "osakaOffice": "大阪支社",
+  "osakaAddress": "〒530-0001\n大阪市北区梅田3丁目1番3号\n大阪ダイヤモンド地所ビル10階",
+  "fukuokaOffice": "福岡支社",
+  "fukuokaAddress": "〒812-0011\n福岡市博多区博多駅前2丁目20番1号\n大博多ビル4階",
+  "representatives": "代表者",
+  "representativesInfo": "代表取締役社長兼CEO 山田 太郎\n代表取締役CTO 佐藤 誠",
+  "established": "設立",
+  "establishedDate": "2010年4月1日",
+  "capital": "資本金",
+  "capitalAmount": "5億円",
+  "employees": "従業員数",
+  "employeesCount": "120名（2024年4月現在）",
+  "businessDescription": "事業内容",
+  "businessSummary": "独自特許AIなどを活用し、企業体験価値をDXする支援",
+  "businessItems": [
+    "ソフトウェア開発および販売",
+    "AIおよび機械学習ソリューションの提供",
+    "クラウドコンピューティングサービス",
+    "ITコンサルティング",
+    "システムインテグレーション",
+    "デジタルトランスフォーメーション支援"
+  ],
+  "companyHistory": "沿革",
+  "history": [
+    {
+      "date": "2010年4月",
+      "event": "株式会社テックイノベーション設立"
+    },
+    {
+      "date": "2012年10月",
+      "event": "クラウドサービス事業開始"
+    },
+    {
+      "date": "2015年6月",
+      "event": "大阪支社開設"
+    },
+    {
+      "date": "2017年9月",
+      "event": "AI研究開発部門設立"
+    },
+    {
+      "date": "2019年3月",
+      "event": "資本金を3億円に増資"
+    },
+    {
+      "date": "2021年7月",
+      "event": "福岡支社開設"
+    },
+    {
+      "date": "2023年4月",
+      "event": "資本金を5億円に増資"
+    },
+    {
+      "date": "2024年1月",
+      "event": "シンガポール支社開設"
+    }
+  ],
+  "access": "アクセス",
+  "tokyoAccess": "東京本社",
+  "tokyoDirections": "東京メトロ日比谷線「六本木駅」1C出口より徒歩3分",
+  "osakaAccess": "大阪支社",
+  "osakaDirections": "JR「大阪駅」より徒歩5分"
+}

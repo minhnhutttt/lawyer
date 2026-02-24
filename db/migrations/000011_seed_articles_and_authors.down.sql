@@ -1,0 +1,2 @@
+DELETE FROM articles WHERE id IN (1000, 1001, 1002);
+DELETE FROM users WHERE id IN (1, 2, 3);

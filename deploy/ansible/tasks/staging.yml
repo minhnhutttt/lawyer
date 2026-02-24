@@ -1,0 +1,33 @@
+---
+- name: Stop containers
+  shell: "cd {{ app_dir }} && DEPLOY_ENV={{ deploy_env }} docker-compose stop nginx"
+  become: true
+  when: skip_ssl == 'false'
+
+- name: Obtain SSL certificate for staging
+  command: >
+    certbot certonly --standalone 
+    -d {{ frontend_domain }} 
+    -d {{ backend_domain }} 
+    --non-interactive 
+    --agree-tos 
+    --email {{ certbot_email }}
+  when: skip_ssl == 'false'
+
+- name: Copy SSL certificates to Nginx directory
+  copy:
+    src: "/etc/letsencrypt/live/{{ frontend_domain }}/{{ item }}"
+    dest: "{{ app_dir }}/nginx/ssl/{{ item }}"
+    remote_src: true
+    mode: '0644'
+    owner: "{{ app_user }}"
+    group: "{{ app_group }}"
+  with_items:
+    - fullchain.pem
+    - privkey.pem
+  when: skip_ssl == 'false'
+
+- name: Restart containers to apply SSL configuration
+  shell: "cd {{ app_dir }} && DEPLOY_ENV={{ deploy_env }} docker-compose start nginx"
+  become: true
+  when: skip_ssl == 'false'

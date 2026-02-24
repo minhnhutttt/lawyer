@@ -1,0 +1,69 @@
+{
+  "title": "Privacy Policy for \"Bengoshicchi\"",
+  "intro": "This Privacy Policy (\"Policy\") describes how we collect, use, and protect personal information through our lawyer matching and inquiry service \"Bengoshicchi\" (\"Service\").",
+  "sections": [
+    {
+      "title": "1. Scope",
+      "content": "This Policy applies to all users (\"Users\") of the Service."
+    },
+    {
+      "title": "2. Definition of Personal Information",
+      "content": "\"Personal Information\" means any data that can identify an individual, such as name, email address, phone number, and address. It also includes IP addresses, cookies, and similar identifiers."
+    },
+    {
+      "title": "3. Methods of Collection",
+      "content": "We collect personal information in the following cases:",
+      "list": [
+        "When a User registers for the Service",
+        "When a User uses the inquiry form or chat feature",
+        "Automatically via cookies or server logs for usage analysis"
+      ]
+    },
+    {
+      "title": "4. Purpose of Use",
+      "content": "We use collected personal information for:",
+      "list": [
+        "Matching Users with lawyers and facilitating communication",
+        "Responding to inquiries and providing support",
+        "Improving and analyzing Service quality",
+        "Compliance with laws and regulations",
+        "Verifying identity and preventing fraudulent use"
+      ]
+    },
+    {
+      "title": "5. Third‑Party Disclosure",
+      "content": "We will not share personal information with third parties except in these cases:",
+      "list": [
+        "With User's consent",
+        "When disclosure is required by law (e.g., courts, police)",
+        "With service providers under contract to support the Service",
+        "When necessary to protect life or property in emergencies"
+      ]
+    },
+    {
+      "title": "6. Cookies and Similar Technologies",
+      "content": "We use cookies to enhance User experience and for analytics. You may disable cookies in your browser settings, but some Service features may not work properly."
+    },
+    {
+      "title": "7. Access, Correction, Deletion Requests",
+      "content": "Users may request disclosure, correction, suspension, or deletion of their personal information. To make a request, please contact:",
+      "contact": "Support Email: privacy@bengoshicchi.jp"
+    },
+    {
+      "title": "8. Security Measures",
+      "content": "We implement appropriate security measures—such as access controls, encryption, and staff training—to prevent data breaches, loss, alteration, or unauthorized access."
+    },
+    {
+      "title": "9. Outsourcing",
+      "content": "We may outsource certain operations related to Service maintenance. In such cases, we supervise contractors under contractual obligations to protect personal information."
+    },
+    {
+      "title": "10. Compliance with Laws",
+      "content": "We comply with the Personal Information Protection Law and related guidelines and handle personal data appropriately."
+    },
+    {
+      "title": "11. Policy Updates",
+      "content": "We may update this Policy without notice due to changes in laws or Service operations. Revised policies take effect upon posting on our website."
+    }
+  ]
+}

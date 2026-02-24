@@ -1,0 +1,13 @@
+.env
+.env*
+!**/frontend/.env*
+!.env.example
+node_modules
+.idea
+cmd/api
+!cmd/api/*.go
+front-end/.next
+vendor
+.DS_Store
+deploy/keys/*.pem
+tmp

@@ -1,0 +1,21 @@
+{
+  "backLink": "Back to Questions",
+  "pageTitle": "Ask a Legal Question",
+  "titleLabel": "Question Title",
+  "titlePlaceholder": "e.g., What are the legal requirements for starting a business?",
+  "titleHelpText": "Be specific and imagine you're asking a question to another person",
+  "bodyLabel": "Question Details",
+  "bodyPlaceholder": "Include all the information someone would need to answer your question...",
+  "termsAgree": "By submitting this question, you agree to our",
+  "termsLink": "Terms of Service",
+  "submitButton": "Post Your Question",
+  "submittingButton": "Submitting...",
+  "errors": {
+    "titleRequired": "Question title is required",
+    "titleMinLength": "Question title must be at least {{length}} characters",
+    "bodyRequired": "Question details are required",
+    "bodyMinLength": "Please provide more details (at least {{length}} characters)",
+    "unexpectedSuccess": "Question submitted, but an unexpected response was received.",
+    "apiError": "An error occurred while submitting your question. Please try again."
+  }
+}

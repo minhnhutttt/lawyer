@@ -1,0 +1,69 @@
+{
+  "title": "Company Information",
+  "companyName": "Tech Innovation Co., Ltd.",
+  "companyNameLabel": "Company Name",
+  "tokyoOffice": "Tokyo Headquarters",
+  "tokyoAddress": "Roppongi Hills Mori Tower 25F\n6-10-1 Roppongi, Minato-ku\nTokyo 106-0032, Japan",
+  "osakaOffice": "Osaka Office",
+  "osakaAddress": "Osaka Diamond Building 10F\n3-1-3 Umeda, Kita-ku\nOsaka 530-0001, Japan",
+  "fukuokaOffice": "Fukuoka Office",
+  "fukuokaAddress": "Daihakataビル 4F\n2-20-1 Hakata Ekimae, Hakata-ku\nFukuoka 812-0011, Japan",
+  "representatives": "Representatives",
+  "representativesInfo": "Taro Yamada, President & CEO\nMakoto Sato, CTO",
+  "established": "Established",
+  "establishedDate": "April 1, 2010",
+  "capital": "Capital",
+  "capitalAmount": "500 million yen",
+  "employees": "Employees",
+  "employeesCount": "120 (as of April 2024)",
+  "businessDescription": "Business Description",
+  "businessSummary": "Supporting corporate experience value transformation through proprietary AI technology",
+  "businessItems": [
+    "Software development and sales",
+    "AI and machine learning solutions",
+    "Cloud computing services",
+    "IT consulting",
+    "System integration",
+    "Digital transformation support"
+  ],
+  "companyHistory": "Company History",
+  "history": [
+    {
+      "date": "April 2010",
+      "event": "Established Tech Innovation Co., Ltd."
+    },
+    {
+      "date": "October 2012",
+      "event": "Launched cloud service business"
+    },
+    {
+      "date": "June 2015",
+      "event": "Opened Osaka office"
+    },
+    {
+      "date": "September 2017",
+      "event": "Established AI R&D division"
+    },
+    {
+      "date": "March 2019",
+      "event": "Increased capital to 300 million yen"
+    },
+    {
+      "date": "July 2021",
+      "event": "Opened Fukuoka office"
+    },
+    {
+      "date": "April 2023",
+      "event": "Increased capital to 500 million yen"
+    },
+    {
+      "date": "January 2024",
+      "event": "Opened Singapore office"
+    }
+  ],
+  "access": "Access",
+  "tokyoAccess": "Tokyo Headquarters",
+  "tokyoDirections": "3-minute walk from Roppongi Station (Tokyo Metro Hibiya Line), Exit 1C",
+  "osakaAccess": "Osaka Office",
+  "osakaDirections": "5-minute walk from Osaka Station (JR)"
+}

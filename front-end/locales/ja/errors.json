@@ -1,0 +1,30 @@
+{
+  "title": "エラー",
+  "backToHome": "ホームに戻る",
+  
+  "errorCodes": {
+    "INVALID_CREDENTIALS": "メールアドレスまたはパスワードが正しくありません。",
+    "TOKEN_EXPIRED": "セッションの有効期限が切れました。再度ログインしてください。",
+    "INVALID_TOKEN": "認証トークンが無効です。再度ログインしてください。",
+    "UNAUTHORIZED": "このリソースにアクセスするにはログインが必要です。",
+    "FORBIDDEN": "このリソースにアクセスする権限がありません。",
+    "EMAIL_NOT_VERIFIED": "メールアドレスが未認証です。認証メールをご確認ください。認証メールを再送信するには<a class='text-primary hover:text-primary-dark font-medium transition-colors underline' href='{{resend_link}}'>こちらをクリック</a>してください。",
+    "RESOURCE_NOT_FOUND": "要求されたリソースが見つかりませんでした。",
+    "RESOURCE_ALREADY_EXISTS": "このリソースはすでに存在します。",
+    "INVALID_REQUEST": "現在のパスワードが間違っています",
+    "VALIDATION_FAILED": "バリデーションに失敗しました。入力内容を確認して再試行してください。",
+    "MISSING_REQUIRED_FIELD": "必須項目が入力されていません。すべての必須項目を入力してください。",
+    "INTERNAL_SERVER_ERROR": "内部サーバーエラーが発生しました。後でもう一度お試しください。",
+    "DATABASE_ERROR": "データベースエラーが発生しました。後でもう一度お試しください。",
+    "OPERATION_FAILED": "アカウントが無効です。管理者に連絡してください。",
+    "QUOTA_EXCEEDED": "このリソースのクォータを超過しました。",
+    "INVALID_OPERATION": "この操作は許可されていません。",
+    "EMAIL_IS_ALREADY_IN_USE": "このアカウントはすでに存在します。",
+    "EMAIL_IS_ALREADY_VERIFIED": "このアカウントはすでに確認済みです。"
+  },
+
+  "reviewNotFound": "レビューが見つかりません",
+  "failedToLoad": "データの読み込みに失敗しました",
+  "failedToUpdate": "更新に失敗しました",
+  "loadQuestions": "質問の読み込みに失敗しました。後でもう一度お試しください。"
+}

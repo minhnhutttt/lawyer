@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新しい回答</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .content {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+        }
+        h2 {
+            color: #0055a5;
+        }
+        .question-title {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .lawyer-name {
+            font-weight: bold;
+        }
+        .view-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #0055a5;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .divider {
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>新しい回答があります</h2>
+    </div>
+    <div class="content">
+        <p>{{.UserNickname}} 様</p>
+        
+        <p>あなたの法律相談に対して、弁護士から新しい回答が投稿されました。</p>
+        
+        <p>📝 質問タイトル: <span class="question-title">{{.QuestionTitle}}</span></p>
+        <p>👤 回答者: <span class="lawyer-name">{{.LawyerName}}</span></p>
+        
+        <p>以下のリンクより、弁護士の回答をご確認いただけます。</p>
+        
+        <p>🔗 <a href="{{.AnswerURL}}" class="view-link">回答を見る</a></p>
+        
+        <div class="divider"></div>
+        
+        <p>このメールに心当たりがない場合や、ご不明な点がある場合はサポートまでご連絡ください。</p>
+        
+        <p>いつもべんごしっちをご利用いただきありがとうございます。</p>
+        
+        <p>べんごしっちサポートチーム</p>
+    </div>
+</body>
+</html>

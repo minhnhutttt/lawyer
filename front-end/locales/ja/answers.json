@@ -1,0 +1,21 @@
+{
+  "invalidId": "無効な質問IDです。",
+  "notFound": "質問が見つかりません。",
+  "errorLoading": "質問詳細または回答の読み込みに失敗しました。もう一度お試しください。",
+  "backLink": "質問一覧へ戻る",
+  "postedBy": "投稿者:",
+  "answerSingular": "件の回答",
+  "answerPlural": "弁護士からの回答　{{number}}件",
+  "noAnswersYet": "まだ回答がありません。最初の回答者になりましょう！",
+  "yourAnswer": "{{name}} 弁護士として回答する",
+  "answerPlaceholder": "ここに回答を入力してください...",
+  "submitAnswer": "回答を送信",
+  "verifiedLawyer": "認証済み弁護士",
+  "anonymous": "匿名",
+  "unknownUser": "不明なユーザー",
+  "saveAnswer": "回答を保存",
+  "cancel": "キャンセル",
+  "updateError": "回答の更新に失敗しました。もう一度お試しください。",
+  "loginRequired": "解答を観覧するにはログインしてください！",
+  "verificationRequired": "回答するには弁護士アカウントの認証が必要です。管理者による認証をお待ちください。"
+}

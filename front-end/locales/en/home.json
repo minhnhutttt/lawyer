@@ -1,0 +1,147 @@
+{
+  "hero": {
+    "title": "Lawyer Platform",
+    "subtitle": "Connect with legal experts"
+  },
+  "cta": {
+    "findLawyer": "Find a Lawyer",
+    "askQuestion": "Ask a Question",
+    "learnMore": "Learn more"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Connecting you with legal expertise whenever you need it"
+  },
+  "steps": {
+    "title": "How It Works",
+    "subtitle": "Get legal help in three simple steps",
+    "search": {
+      "title": "Search for a Lawyer",
+      "description": "Browse through our network of qualified lawyers and find the right expert for your legal needs."
+    },
+    "connect": {
+      "title": "Connect & Consult",
+      "description": "Connect with your chosen lawyer, discuss your case, and get professional legal advice."
+    },
+    "book": {
+      "title": "Book Appointment",
+      "description": "Schedule a consultation at your convenience, either online or in person."
+    }
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Hear from people who have found the right legal help"
+  },
+  "finalCta": {
+    "title": "Ready to get legal help?",
+    "subtitle": "Join thousands of clients who have found the right lawyer for their needs.",
+    "button": "Get Started Today"
+  },
+  "newCta": {
+    "bubble1": "No lawyer to consult with...",
+    "bubble2": "I want to consult casually first!",
+    "forYou": "For you",
+    "chatConsult": "A lawyer search site where you can consult via chat",
+    "siteName": "LawyerChat"
+  },
+  "serviceCards": {
+    "findLawyer": {
+      "title": "Find a Lawyer",
+      "description": "Easily find lawyers based on specialty, area, and performance."
+    },
+    "consultation": {
+      "title": "Legal Consultation",
+      "description": "Lawyers answer legal questions submitted by users."
+    },
+    "blog": {
+      "title": "Legal Blog",
+      "description": "Legal information articles to help you gather more detailed information."
+    },
+    "freeRegistration": "Free user registration is convenient"
+  },
+  "stepsGuide": {
+    "step1": {
+      "title": "Chat Appointments with Lawyers",
+      "canDo": "available"
+    },
+    "step2": {
+      "title": "Post to Legal Consultation",
+      "canDo": "available"
+    },
+    "step3": {
+      "title": "Browse Legal Consultation Answers",
+      "canDo": "available"
+    },
+    "registerButton": "Register for free and use LawyerChat"
+  },
+  "lawyerRegistration": {
+    "forLawyers": "For Lawyers",
+    "registerAsLawyer": "Register as a Lawyer on LawyerChat"
+  },
+  "features": {
+    "lawyers": {
+      "title": "Lawyers",
+      "description": "Find and connect with experienced legal professionals"
+    },
+    "questions": {
+      "title": "Questions",
+      "description": "Get expert answers to your legal questions from qualified lawyers"
+    },
+    "appointments": {
+      "title": "Appointments",
+      "description": "Schedule consultations easily with your chosen lawyer"
+    }
+  },
+  "articles": {
+    "title": "Latest Articles",
+    "subtitle": "Expert insights and guides from our legal professionals",
+    "readMore": "Read More",
+    "items": [
+      {
+        "id": 1,
+        "slug": "understanding-contract-law",
+        "title": "Understanding Contract Law: The Basics",
+        "summary": "A comprehensive guide to understanding the fundamentals of contract law and how it applies to everyday situations.",
+        "content": "Content goes here...",
+        "category": "Contract Law",
+        "thumbnail": "https://blog.ipleaders.in/wp-content/uploads/2020/08/unit-5-aspects-of-contract-law-negligence-in-business-assignment-1.jpg",
+        "author": {
+          "name": "John Smith",
+          "avatar": "/images/avatars/john-smith.jpg"
+        },
+        "createdAt": "2023-07-15T10:30:00Z",
+        "status": "published"
+      },
+      {
+        "id": 2,
+        "slug": "family-law-essentials",
+        "title": "Family Law Essentials: What You Need to Know",
+        "summary": "Navigate the complexities of family law with our essential guide covering divorce, custody, and property settlement.",
+        "content": "Content goes here...",
+        "category": "Family Law",
+        "thumbnail": "https://www.familylawsandiego.com/images/blog/iStock-155391642.1).jpg",
+        "author": {
+          "name": "Sarah Johnson",
+          "avatar": "/images/avatars/sarah-johnson.jpg"
+        },
+        "createdAt": "2023-08-05T14:45:00Z",
+        "status": "published"
+      },
+      {
+        "id": 3,
+        "slug": "intellectual-property-rights",
+        "title": "Protecting Your Intellectual Property Rights",
+        "summary": "Learn how to safeguard your creative works, inventions, and business assets through proper intellectual property protection.",
+        "content": "Content goes here...",
+        "category": "Intellectual Property",
+        "thumbnail": "https://image3.luatvietnam.vn/uploaded/images/original/2024/07/26/assessing-intellectual-property-rights-infringement-in-vietnam-2_2607160625.jpg",
+        "author": {
+          "name": "Michael Chen",
+          "avatar": "/images/avatars/michael-chen.jpg"
+        },
+        "createdAt": "2023-09-10T09:15:00Z",
+        "status": "published"
+      }
+    ]
+  }
+}

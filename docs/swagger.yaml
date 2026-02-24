@@ -1,0 +1,4291 @@
+definitions:
+  gin.H:
+    additionalProperties: {}
+    type: object
+  github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse:
+    properties:
+      code:
+        $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.ErrorCode'
+      error:
+        type: string
+    type: object
+  github_com_kotolino_lawyer_internal_handlers_responses.AppointmentResponse:
+    properties:
+      admin_reason:
+        type: string
+      cancel_reason:
+        type: string
+      chat_enabled:
+        type: boolean
+      client:
+        $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.UserProfile'
+      created_at:
+        type: string
+      description:
+        type: string
+      end_time:
+        type: string
+      id:
+        type: integer
+      is_viewed:
+        type: boolean
+      lawyer:
+        allOf:
+        - $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.LawyerBrief'
+        description: Lawyer information
+      notes:
+        type: string
+      reject_reason:
+        type: string
+      start_time:
+        type: string
+      status:
+        type: string
+      updated_at:
+        type: string
+      user_id:
+        type: integer
+    type: object
+  github_com_kotolino_lawyer_internal_handlers_responses.ErrorCode:
+    enum:
+    - INVALID_CREDENTIALS
+    - UNAUTHORIZED
+    - FORBIDDEN
+    - EMAIL_NOT_VERIFIED
+    - RESOURCE_NOT_FOUND
+    - RESOURCE_ALREADY_EXISTS
+    - INVALID_REQUEST
+    - VALIDATION_FAILED
+    - MISSING_REQUIRED_FIELD
+    - INTERNAL_SERVER_ERROR
+    - DATABASE_ERROR
+    - OPERATION_FAILED
+    - EMAIL_IS_ALREADY_IN_USE
+    - EMAIL_IS_ALREADY_VERIFIED
+    type: string
+    x-enum-varnames:
+    - ErrCodeInvalidCredentials
+    - ErrCodeUnauthorized
+    - ErrCodeForbidden
+    - ErrCodeEmailNotVerified
+    - ErrCodeResourceNotFound
+    - ErrCodeResourceAlreadyExists
+    - ErrCodeInvalidRequest
+    - ErrCodeValidationFailed
+    - ErrCodeMissingRequiredField
+    - ErrCodeInternalServer
+    - ErrCodeDatabaseError
+    - ErrCodeOperationFailed
+    - ErrCodeEmailIsAlreadyInUse
+    - ErrCodeEmailIsAlreadyVerified
+  github_com_kotolino_lawyer_internal_handlers_responses.LawyerBrief:
+    properties:
+      affiliation:
+        type: string
+      areas_of_expertise:
+        type: string
+      full_name:
+        type: string
+      id:
+        type: integer
+      office_name:
+        type: string
+      profile_image:
+        type: string
+      profile_text:
+        type: string
+      user_id:
+        type: integer
+    type: object
+  github_com_kotolino_lawyer_internal_handlers_responses.LawyerResponse:
+    properties:
+      address:
+        type: string
+      bar_association:
+        type: string
+      bar_number:
+        type: string
+      bio:
+        type: string
+      email:
+        type: string
+      experience_years:
+        type: integer
+      full_name:
+        type: string
+      id:
+        type: integer
+      languages:
+        items:
+          type: string
+        type: array
+      office_name:
+        type: string
+      profile_image:
+        type: string
+      rating:
+        type: number
+      review_count:
+        type: integer
+      specialties:
+        items:
+          type: string
+        type: array
+      user_id:
+        type: integer
+    type: object
+  github_com_kotolino_lawyer_internal_handlers_responses.PaginatedResponse:
+    properties:
+      data: {}
+      pagination:
+        $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.PaginationResponse'
+    type: object
+  github_com_kotolino_lawyer_internal_handlers_responses.PaginationResponse:
+    properties:
+      page:
+        type: integer
+      page_size:
+        type: integer
+      total_items:
+        type: integer
+      total_pages:
+        type: integer
+    type: object
+  github_com_kotolino_lawyer_internal_handlers_responses.ReviewResponse:
+    properties:
+      appointment_id:
+        type: integer
+      approved_status:
+        type: string
+      comment:
+        type: string
+      created_at:
+        type: string
+      hidden_reason:
+        type: string
+      id:
+        type: integer
+      is_hidden:
+        type: boolean
+      is_pin:
+        type: boolean
+      lawyer:
+        $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.LawyerResponse'
+      lawyer_id:
+        type: integer
+      rating:
+        type: integer
+      updated_at:
+        type: string
+      user:
+        $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.UserResponse'
+      user_id:
+        type: integer
+    type: object
+  github_com_kotolino_lawyer_internal_handlers_responses.UserProfile:
+    properties:
+      email:
+        type: string
+      id:
+        type: integer
+      nickname:
+        type: string
+      profile_image:
+        type: string
+      role:
+        type: string
+    type: object
+  github_com_kotolino_lawyer_internal_handlers_responses.UserResponse:
+    properties:
+      created_at:
+        type: string
+      email:
+        type: string
+      first_name:
+        type: string
+      has_new_appointment:
+        type: boolean
+      id:
+        type: integer
+      last_name:
+        type: string
+      nickname:
+        type: string
+      profile_image:
+        type: string
+      role:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  github_com_kotolino_lawyer_internal_models.Answer:
+    properties:
+      content:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: integer
+      is_accepted:
+        type: boolean
+      is_hidden:
+        type: boolean
+      lawyer:
+        $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Lawyer'
+      lawyer_id:
+        type: integer
+      question_id:
+        type: integer
+      updated_at:
+        type: string
+    type: object
+  github_com_kotolino_lawyer_internal_models.Attachment:
+    properties:
+      attachmentable_id:
+        type: integer
+      attachmentable_type:
+        type: string
+      created_at:
+        type: string
+      file_name:
+        type: string
+      file_path:
+        type: string
+      file_size:
+        type: integer
+      file_type:
+        type: string
+      id:
+        type: integer
+      updated_at:
+        type: string
+      uploaded_by:
+        type: integer
+    type: object
+  github_com_kotolino_lawyer_internal_models.Availability:
+    additionalProperties: true
+    type: object
+  github_com_kotolino_lawyer_internal_models.ChatMessage:
+    properties:
+      appointment_id:
+        type: integer
+      attachment:
+        allOf:
+        - $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Attachment'
+        description: polymorphic one-to-one attachment
+      content:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: integer
+      read:
+        type: boolean
+      receiver_id:
+        type: integer
+      sender_id:
+        type: integer
+      updated_at:
+        type: string
+    type: object
+  github_com_kotolino_lawyer_internal_models.Lawyer:
+    properties:
+      achievements:
+        type: string
+      active:
+        type: boolean
+      address:
+        type: string
+      affiliation:
+        type: string
+      areas_of_expertise:
+        type: string
+      availability:
+        $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Availability'
+      average_rating:
+        type: number
+      bar_association:
+        type: string
+      bar_number:
+        type: string
+      bio:
+        type: string
+      certification_document_path:
+        type: string
+      certifications:
+        type: string
+      created_at:
+        type: string
+      email:
+        type: string
+      experience_years:
+        type: integer
+      fax_number:
+        type: string
+      full_name:
+        type: string
+      id:
+        type: integer
+      languages:
+        items:
+          type: string
+        type: array
+      lawyer_registration_number:
+        type: string
+      notes:
+        type: string
+      office_name:
+        type: string
+      phone:
+        type: string
+      phone_number:
+        type: string
+      profile_text:
+        type: string
+      rating:
+        type: integer
+      review_count:
+        description: Additional calculated fields that don't exist in the database
+        type: integer
+      specialties:
+        items:
+          type: string
+        type: array
+      updated_at:
+        type: string
+      user:
+        $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.User'
+      user_id:
+        type: integer
+    type: object
+  github_com_kotolino_lawyer_internal_models.Question:
+    properties:
+      content:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: integer
+      is_hidden:
+        type: boolean
+      status:
+        type: string
+      title:
+        type: string
+      updated_at:
+        type: string
+      user:
+        $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.User'
+      user_id:
+        type: integer
+    type: object
+  github_com_kotolino_lawyer_internal_models.Review:
+    properties:
+      appointment_id:
+        type: integer
+      approved_status:
+        type: string
+      comment:
+        type: string
+      created_at:
+        type: string
+      hidden_reason:
+        type: string
+      id:
+        type: integer
+      is_hidden:
+        type: boolean
+      is_pin:
+        type: boolean
+      lawyer:
+        $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Lawyer'
+      lawyer_id:
+        type: integer
+      rating:
+        type: integer
+      updated_at:
+        type: string
+      user:
+        $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.User'
+      user_id:
+        type: integer
+    type: object
+  github_com_kotolino_lawyer_internal_models.User:
+    properties:
+      address:
+        type: string
+      age_group:
+        type: string
+      birth_date:
+        type: string
+      city:
+        type: string
+      country:
+        type: string
+      created_at:
+        type: string
+      email:
+        type: string
+      email_verified:
+        type: boolean
+      first_name:
+        type: string
+      gender:
+        type: string
+      id:
+        type: integer
+      is_active:
+        type: boolean
+      last_name:
+        type: string
+      nickname:
+        type: string
+      notes:
+        type: string
+      phone:
+        type: string
+      postal_code:
+        type: string
+      prefecture:
+        type: string
+      profile_image:
+        type: string
+      role:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  github_com_kotolino_lawyer_internal_models.UserRole:
+    enum:
+    - client
+    - lawyer
+    - admin
+    type: string
+    x-enum-varnames:
+    - RoleClient
+    - RoleLawyer
+    - RoleAdmin
+  github_com_kotolino_lawyer_internal_services.TimeSlot:
+    properties:
+      available:
+        type: boolean
+      time:
+        type: string
+    type: object
+  internal_handlers.AdminStatsResponse:
+    properties:
+      total_chats:
+        type: integer
+      total_lawyers:
+        type: integer
+      total_questions:
+        type: integer
+      total_users:
+        type: integer
+    type: object
+  internal_handlers.AnswerResponse:
+    properties:
+      content:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: integer
+      is_accepted:
+        type: boolean
+      lawyer:
+        allOf:
+        - $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.LawyerResponse'
+        description: New field for the lawyer object
+      lawyer_id:
+        type: integer
+      question_id:
+        type: integer
+      updated_at:
+        type: string
+    type: object
+  internal_handlers.ArticleResponse:
+    properties:
+      author:
+        $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.UserResponse'
+      author_id:
+        type: integer
+      category:
+        type: string
+      content:
+        type: string
+      id:
+        type: integer
+      published_at:
+        type: string
+      slug:
+        type: string
+      status:
+        type: string
+      summary:
+        type: string
+      thumbnail:
+        type: string
+      title:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  internal_handlers.AuthResponse:
+    properties:
+      token:
+        type: string
+      user:
+        $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.User'
+    type: object
+  internal_handlers.ChatMessageRequest:
+    properties:
+      content:
+        type: string
+      receiver_id:
+        type: integer
+    required:
+    - content
+    - receiver_id
+    type: object
+  internal_handlers.CreateAppointmentRequest:
+    properties:
+      description:
+        type: string
+      end_time:
+        type: string
+      lawyer_id:
+        type: integer
+      notes:
+        type: string
+      start_time:
+        type: string
+    required:
+    - end_time
+    - lawyer_id
+    - start_time
+    type: object
+  internal_handlers.CreateArticleRequest:
+    properties:
+      category:
+        type: string
+      content:
+        type: string
+      slug:
+        type: string
+      status:
+        type: string
+      summary:
+        type: string
+      thumbnail:
+        type: string
+      title:
+        type: string
+    required:
+    - category
+    - content
+    - slug
+    - status
+    - title
+    type: object
+  internal_handlers.CreateReviewRequest:
+    properties:
+      appointment_id:
+        type: integer
+      comment:
+        type: string
+      lawyer_id:
+        type: integer
+      rating:
+        maximum: 5
+        minimum: 1
+        type: integer
+    required:
+    - lawyer_id
+    - rating
+    type: object
+  internal_handlers.CreateUserRequest:
+    properties:
+      email:
+        type: string
+      first_name:
+        type: string
+      last_name:
+        type: string
+      password:
+        minLength: 6
+        type: string
+      role:
+        enum:
+        - client
+        - lawyer
+        type: string
+    required:
+    - email
+    - password
+    - role
+    type: object
+  internal_handlers.ForgotPasswordRequest:
+    properties:
+      email:
+        type: string
+    required:
+    - email
+    type: object
+  internal_handlers.LawyerProfileRequest:
+    properties:
+      affiliation:
+        type: string
+      date_of_birth:
+        type: string
+      first_name:
+        type: string
+      gender:
+        enum:
+        - male
+        - female
+        - other
+        type: string
+      last_name:
+        type: string
+      lawyer_registration_number:
+        type: string
+    required:
+    - date_of_birth
+    - first_name
+    - gender
+    - last_name
+    - lawyer_registration_number
+    type: object
+  internal_handlers.LawyerWithProfileImage:
+    properties:
+      achievements:
+        type: string
+      active:
+        type: boolean
+      address:
+        type: string
+      affiliation:
+        type: string
+      areas_of_expertise:
+        type: string
+      availability:
+        $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Availability'
+      average_rating:
+        type: number
+      bar_association:
+        type: string
+      bar_number:
+        type: string
+      bio:
+        type: string
+      certification_document_path:
+        type: string
+      certifications:
+        type: string
+      created_at:
+        type: string
+      email:
+        type: string
+      experience_years:
+        type: integer
+      fax_number:
+        type: string
+      full_name:
+        type: string
+      id:
+        type: integer
+      languages:
+        items:
+          type: string
+        type: array
+      lawyer_registration_number:
+        type: string
+      notes:
+        type: string
+      office_name:
+        type: string
+      phone:
+        type: string
+      phone_number:
+        type: string
+      profile_image:
+        type: string
+      profile_text:
+        type: string
+      rating:
+        type: integer
+      review_count:
+        description: Additional calculated fields that don't exist in the database
+        type: integer
+      specialties:
+        items:
+          type: string
+        type: array
+      updated_at:
+        type: string
+      user:
+        $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.User'
+      user_id:
+        type: integer
+    type: object
+  internal_handlers.LoginRequest:
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+    required:
+    - email
+    - password
+    type: object
+  internal_handlers.Notification:
+    properties:
+      content:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: integer
+      is_read:
+        type: boolean
+      type:
+        type: string
+      updated_at:
+        type: string
+      user_id:
+        type: integer
+    type: object
+  internal_handlers.PasswordUpdateRequest:
+    properties:
+      current_password:
+        type: string
+      new_password:
+        minLength: 6
+        type: string
+    required:
+    - current_password
+    - new_password
+    type: object
+  internal_handlers.PinReviewRequest:
+    properties:
+      is_pin:
+        type: boolean
+    required:
+    - is_pin
+    type: object
+  internal_handlers.PublicLawyerResponse:
+    properties:
+      address:
+        type: string
+      areas_of_expertise:
+        type: string
+      average_rating:
+        type: number
+      bar_association:
+        type: string
+      bio:
+        type: string
+      experience_years:
+        type: integer
+      full_name:
+        type: string
+      id:
+        type: integer
+      languages:
+        items:
+          type: string
+        type: array
+      office_name:
+        type: string
+      profile_image:
+        type: string
+      profile_text:
+        type: string
+      rating:
+        type: integer
+      review_count:
+        type: integer
+      specialties:
+        items:
+          type: string
+        type: array
+    type: object
+  internal_handlers.QuestionResponse:
+    properties:
+      answer_count:
+        type: integer
+      content:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: integer
+      is_hidden:
+        type: boolean
+      status:
+        type: string
+      title:
+        type: string
+      updated_at:
+        type: string
+      user:
+        $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.UserResponse'
+      user_id:
+        type: integer
+    type: object
+  internal_handlers.RegisterRequest:
+    properties:
+      email:
+        type: string
+      lawyer_profile:
+        $ref: '#/definitions/internal_handlers.LawyerProfileRequest'
+      nickname:
+        type: string
+      password:
+        minLength: 8
+        type: string
+      role:
+        $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.UserRole'
+    required:
+    - email
+    - password
+    - role
+    type: object
+  internal_handlers.RejectAppointmentRequest:
+    properties:
+      reason:
+        type: string
+    required:
+    - reason
+    type: object
+  internal_handlers.ResetPasswordRequest:
+    properties:
+      password:
+        minLength: 8
+        type: string
+      token:
+        type: string
+    required:
+    - password
+    - token
+    type: object
+  internal_handlers.UpdateAppointmentRequest:
+    properties:
+      admin_reason:
+        type: string
+      cancel_reason:
+        type: string
+      chat_enabled:
+        type: boolean
+      description:
+        type: string
+      end_time:
+        type: string
+      meeting_link:
+        type: string
+      notes:
+        type: string
+      start_time:
+        type: string
+      status:
+        enum:
+        - pending
+        - confirmed
+        - cancelled
+        - completed
+        - rejected
+        type: string
+    type: object
+  internal_handlers.UpdateArticleRequest:
+    properties:
+      category:
+        type: string
+      content:
+        type: string
+      slug:
+        type: string
+      status:
+        type: string
+      summary:
+        type: string
+      thumbnail:
+        type: string
+      title:
+        type: string
+    type: object
+  internal_handlers.UpdateQuestionHiddenRequest:
+    properties:
+      is_hidden:
+        type: boolean
+    required:
+    - is_hidden
+    type: object
+  internal_handlers.UpdateQuestionStatusRequest:
+    properties:
+      status:
+        type: string
+    required:
+    - status
+    type: object
+  internal_handlers.UpdateReviewRequest:
+    properties:
+      comment:
+        type: string
+      rating:
+        maximum: 5
+        minimum: 1
+        type: integer
+    required:
+    - rating
+    type: object
+  internal_handlers.UpdateReviewStatusRequest:
+    properties:
+      approved_status:
+        enum:
+        - approved
+        - rejected
+        - pending
+        type: string
+      hidden_reason:
+        type: string
+    required:
+    - approved_status
+    type: object
+  internal_handlers.UpdateUserRoleRequest:
+    properties:
+      role:
+        enum:
+        - client
+        - admin
+        type: string
+    required:
+    - role
+    type: object
+  internal_handlers.UpdateUserStatusRequest:
+    properties:
+      is_active:
+        type: boolean
+    type: object
+  internal_handlers.VerifyEmailResponse:
+    properties:
+      message:
+        type: string
+      success:
+        type: boolean
+    type: object
+  internal_handlers.attachmentBrief:
+    properties:
+      file_name:
+        type: string
+      file_path:
+        type: string
+      file_size:
+        type: integer
+      id:
+        type: integer
+    type: object
+  internal_handlers.chatResp:
+    properties:
+      appointment_id:
+        type: integer
+      attachment:
+        $ref: '#/definitions/internal_handlers.attachmentBrief'
+      content:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: integer
+      read:
+        type: boolean
+      receiver_id:
+        type: integer
+      sender_id:
+        type: integer
+      updated_at:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /admin/chart-data:
+    get:
+      description: Returns time-series data for the last 30 days for users, lawyers,
+        questions, and chat messages
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/gin.H'
+            - properties:
+                data:
+                  items:
+                    items:
+                      type: integer
+                    type: array
+                  type: array
+                labels:
+                  items:
+                    type: string
+                  type: array
+              type: object
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Admin access required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get admin chart data
+      tags:
+      - admin
+  /admin/stats:
+    get:
+      description: Returns aggregate statistics for the admin dashboard including
+        total users, lawyers, questions, and chats
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handlers.AdminStatsResponse'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Admin access required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get admin dashboard statistics
+      tags:
+      - admin
+  /answers/{id}:
+    delete:
+      description: Deletes an answer (must be the author)
+      parameters:
+      - description: Answer ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: Answer deleted
+          schema:
+            $ref: '#/definitions/gin.H'
+        "400":
+          description: Invalid answer ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Forbidden - must be a lawyer
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Delete answer
+      tags:
+      - answers
+    get:
+      description: Retrieves an answer by its ID
+      parameters:
+      - description: Answer ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Answer'
+        "400":
+          description: Invalid answer ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Answer not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Get answer by ID
+      tags:
+      - answers
+    put:
+      consumes:
+      - application/json
+      description: Updates an existing answer
+      parameters:
+      - description: Answer ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: New answer content
+        in: body
+        name: content
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handlers.AnswerResponse'
+        "400":
+          description: Invalid answer ID or request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Forbidden - must be the answer author
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Update answer
+      tags:
+      - answers
+  /answers/{id}/accept:
+    put:
+      description: Marks an answer as accepted by the question owner
+      parameters:
+      - description: Answer ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: Answer accepted
+          schema:
+            $ref: '#/definitions/gin.H'
+        "400":
+          description: Invalid answer ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Accept answer
+      tags:
+      - answers
+  /appointments:
+    get:
+      description: Retrieves a paginated list of appointments with optional filtering
+      parameters:
+      - default: 1
+        description: Page number
+        in: query
+        name: params[page]
+        type: integer
+      - default: 10
+        description: Number of items per page
+        in: query
+        name: params[limit]
+        type: integer
+      - description: Filter by status (pending, confirmed, cancelled, completed, rejected)
+        in: query
+        name: params[status]
+        type: string
+      - description: Search for client by name or email
+        in: query
+        name: params[client_search]
+        type: string
+      - description: Search for lawyer by name or email
+        in: query
+        name: params[lawyer_search]
+        type: string
+      - description: Filter by client ID
+        in: query
+        name: params[client_id]
+        type: integer
+      - description: Filter by start date (YYYY-MM-DD)
+        in: query
+        name: params[start_date]
+        type: string
+      - description: Filter by end date (YYYY-MM-DD)
+        in: query
+        name: params[end_date]
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.PaginatedResponse'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.AppointmentResponse'
+                  type: array
+              type: object
+        "400":
+          description: Invalid request parameters
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get appointments
+      tags:
+      - appointments
+    post:
+      consumes:
+      - application/json
+      description: Creates a new appointment
+      parameters:
+      - description: Appointment details
+        in: body
+        name: appointment
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handlers.CreateAppointmentRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.AppointmentResponse'
+        "400":
+          description: Invalid request or validation error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Lawyer not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "409":
+          description: Time slot not available
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Create new appointment
+      tags:
+      - appointments
+  /appointments/{id}:
+    delete:
+      description: Deletes an appointment by ID
+      parameters:
+      - description: Appointment ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success message
+          schema:
+            $ref: '#/definitions/gin.H'
+        "400":
+          description: Invalid appointment ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Forbidden - no access to delete this appointment
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Appointment not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Delete appointment
+      tags:
+      - appointments
+    get:
+      description: Retrieves details of a specific appointment by ID
+      parameters:
+      - description: Appointment ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.AppointmentResponse'
+        "400":
+          description: Invalid appointment ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Forbidden - no access to this appointment
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Appointment not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get appointment by ID
+      tags:
+      - appointments
+    put:
+      consumes:
+      - application/json
+      description: Updates an existing appointment
+      parameters:
+      - description: Appointment ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Updated appointment details
+        in: body
+        name: appointment
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handlers.UpdateAppointmentRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.AppointmentResponse'
+        "400":
+          description: Invalid request or validation error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Forbidden - no access to update this appointment
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Appointment not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "409":
+          description: Time slot not available
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Update appointment
+      tags:
+      - appointments
+  /appointments/{id}/attachments:
+    post:
+      consumes:
+      - multipart/form-data
+      description: Uploads and sends an attachment in a chat message
+      parameters:
+      - description: Appointment ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Receiver ID
+        in: formData
+        name: receiver_id
+        required: true
+        type: integer
+      - description: Attachment file
+        in: formData
+        name: file
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created message with attachment
+          schema:
+            $ref: '#/definitions/gin.H'
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Send attachment
+      tags:
+      - chat
+  /appointments/{id}/messages:
+    get:
+      description: Gets all chat messages for a specific appointment
+      parameters:
+      - description: Appointment ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/internal_handlers.chatResp'
+            type: array
+        "400":
+          description: Invalid appointment ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get chat messages
+      tags:
+      - chat
+    post:
+      consumes:
+      - application/json
+      description: Creates a new chat message for a specific appointment
+      parameters:
+      - description: Appointment ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Message details
+        in: body
+        name: message
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handlers.ChatMessageRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.ChatMessage'
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Create chat message
+      tags:
+      - chat
+  /appointments/{id}/reject:
+    post:
+      consumes:
+      - application/json
+      description: Rejects an appointment with a reason (lawyer or admin only)
+      parameters:
+      - description: Appointment ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Rejection details
+        in: body
+        name: rejection
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handlers.RejectAppointmentRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.AppointmentResponse'
+        "400":
+          description: Invalid request or already cancelled/rejected
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Forbidden - only lawyers or admins can reject
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Appointment or profile not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Reject appointment
+      tags:
+      - appointments
+  /appointments/available-slots:
+    get:
+      description: Gets available time slots for a lawyer on a specific date
+      parameters:
+      - description: Lawyer ID
+        in: query
+        name: lawyer_id
+        required: true
+        type: integer
+      - description: Date in YYYY-MM-DD format
+        in: query
+        name: date
+        required: true
+        type: string
+      - description: Timezone name (e.g. 'Asia/Tokyo')
+        in: query
+        name: timezone
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: List of available time slots
+          schema:
+            items:
+              $ref: '#/definitions/github_com_kotolino_lawyer_internal_services.TimeSlot'
+            type: array
+        "400":
+          description: Invalid parameters
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Lawyer not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Get available time slots
+      tags:
+      - appointments
+  /appointments/upcoming:
+    get:
+      description: Retrieves a list of upcoming appointments for the current user
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.AppointmentResponse'
+            type: array
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: User profile not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get upcoming appointments
+      tags:
+      - appointments
+  /articles:
+    get:
+      description: Retrieves a paginated list of articles with optional filtering
+      parameters:
+      - default: 1
+        description: Page number
+        in: query
+        name: page
+        type: integer
+      - default: 10
+        description: Number of items per page
+        in: query
+        name: limit
+        type: integer
+      - description: Filter by category
+        in: query
+        name: params[category]
+        type: string
+      - description: Search in title
+        in: query
+        name: params[query]
+        type: string
+      - description: Filter by status
+        in: query
+        name: status
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.PaginatedResponse'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/internal_handlers.ArticleResponse'
+                  type: array
+              type: object
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Get all articles
+      tags:
+      - articles
+    post:
+      consumes:
+      - application/json
+      description: Creates a new article
+      parameters:
+      - description: Article data
+        in: body
+        name: article
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handlers.CreateArticleRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/internal_handlers.ArticleResponse'
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Create new article
+      tags:
+      - articles
+  /articles/{id}:
+    delete:
+      description: Deletes article by ID
+      parameters:
+      - description: Article ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: Article deleted
+          schema:
+            $ref: '#/definitions/gin.H'
+        "400":
+          description: Invalid article ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Delete article
+      tags:
+      - articles
+    get:
+      description: Returns the article details by ID
+      parameters:
+      - description: Article ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handlers.ArticleResponse'
+        "400":
+          description: Invalid article ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Article not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Get article by ID
+      tags:
+      - articles
+    put:
+      consumes:
+      - application/json
+      description: Updates an existing article by ID
+      parameters:
+      - description: Article ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Updated article data
+        in: body
+        name: article
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handlers.UpdateArticleRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handlers.ArticleResponse'
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Article not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Update article
+      tags:
+      - articles
+  /articles/slug/{slug}:
+    get:
+      description: Returns the article details by slug
+      parameters:
+      - description: Article Slug
+        in: path
+        name: slug
+        required: true
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handlers.ArticleResponse'
+        "404":
+          description: Article not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Get article by slug
+      tags:
+      - articles
+  /attachments/{id}/url:
+    get:
+      description: Generates a presigned URL to download an attachment. Access control
+        is applied based on the attachment type.
+      parameters:
+      - description: Attachment ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Presigned URL to download the attachment
+          schema:
+            type: string
+        "400":
+          description: Invalid attachment ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Authentication required or access denied
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Attachment not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get attachment download URL
+      tags:
+      - attachments
+  /auth/forgot-password:
+    post:
+      consumes:
+      - application/json
+      description: Initiates the password reset process by sending an email with a
+        reset token
+      parameters:
+      - description: User email
+        in: body
+        name: email
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handlers.ForgotPasswordRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Email sent message
+          schema:
+            $ref: '#/definitions/gin.H'
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Forgot password
+      tags:
+      - auth
+  /auth/login:
+    post:
+      consumes:
+      - application/json
+      description: Authenticates a user and returns a token
+      parameters:
+      - description: Login credentials
+        in: body
+        name: credentials
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handlers.LoginRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handlers.AuthResponse'
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Invalid credentials or inactive account
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: User login
+      tags:
+      - auth
+  /auth/logout:
+    post:
+      description: Logs out the current user by invalidating their token
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Logged out successfully
+          schema:
+            $ref: '#/definitions/gin.H'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: User logout
+      tags:
+      - auth
+  /auth/me:
+    get:
+      description: Returns the profile of the currently authenticated user
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.UserResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get current user
+      tags:
+      - auth
+  /auth/register:
+    post:
+      consumes:
+      - application/json
+      description: Registers a new user (client or lawyer)
+      parameters:
+      - description: User registration details
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handlers.RegisterRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/internal_handlers.AuthResponse'
+        "400":
+          description: Invalid request or validation error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "409":
+          description: Email already exists
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: User registration
+      tags:
+      - auth
+  /auth/resend-verification-email:
+    post:
+      consumes:
+      - application/json
+      description: Resends the verification email to the user
+      parameters:
+      - description: User email
+        in: body
+        name: email
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handlers.ForgotPasswordRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Email sent message
+          schema:
+            $ref: '#/definitions/gin.H'
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: User not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Resend verification email
+      tags:
+      - auth
+  /auth/reset-password:
+    post:
+      consumes:
+      - application/json
+      description: Resets user password using the token received via email
+      parameters:
+      - description: Reset password data
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handlers.ResetPasswordRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Password reset success message
+          schema:
+            $ref: '#/definitions/gin.H'
+        "400":
+          description: Invalid request or expired token
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Reset password
+      tags:
+      - auth
+  /auth/verify-email:
+    get:
+      description: Verifies a user's email using the token sent by email
+      parameters:
+      - description: Verification token
+        in: query
+        name: token
+        required: true
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handlers.VerifyEmailResponse'
+        "400":
+          description: Invalid or expired token
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Verify email
+      tags:
+      - auth
+  /lawyers:
+    get:
+      description: Returns a paginated list of lawyers with search and sorting capabilities
+      parameters:
+      - default: 1
+        description: Page number
+        in: query
+        name: page
+        type: integer
+      - default: 10
+        description: Number of items per page
+        in: query
+        name: limit
+        type: integer
+      - description: Search term
+        in: query
+        name: search
+        type: string
+      - default: id
+        description: Field to sort by
+        in: query
+        name: sort_by
+        type: string
+      - default: asc
+        description: Sort direction ('asc' or 'desc')
+        in: query
+        name: sort_order
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.PaginatedResponse'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/internal_handlers.LawyerWithProfileImage'
+                  type: array
+              type: object
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get all lawyers
+      tags:
+      - lawyers
+    post:
+      consumes:
+      - application/json
+      description: Creates a new lawyer profile for a user
+      parameters:
+      - description: Lawyer profile data
+        in: body
+        name: lawyer
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Lawyer'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Lawyer'
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "409":
+          description: Lawyer profile already exists
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Create lawyer profile
+      tags:
+      - lawyers
+  /lawyers/{id}:
+    delete:
+      description: Deletes an existing lawyer profile
+      parameters:
+      - description: Lawyer ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success message
+          schema:
+            $ref: '#/definitions/gin.H'
+        "400":
+          description: Invalid lawyer ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Not authorized to delete this profile
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Lawyer profile not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Delete lawyer profile
+      tags:
+      - lawyers
+    get:
+      description: Returns a specific lawyer's details by ID
+      parameters:
+      - description: Lawyer ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Lawyer'
+        "400":
+          description: Invalid lawyer ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Lawyer not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get lawyer by ID
+      tags:
+      - lawyers
+    put:
+      consumes:
+      - application/json
+      description: Updates an existing lawyer profile
+      parameters:
+      - description: Lawyer ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Updated lawyer profile data
+        in: body
+        name: lawyer
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Lawyer'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Lawyer'
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Not authorized to update this profile
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Lawyer profile not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Update lawyer profile
+      tags:
+      - lawyers
+  /lawyers/{id}/answers:
+    get:
+      description: Retrieves all answers by a specific lawyer with pagination
+      parameters:
+      - description: Lawyer ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - default: 1
+        description: Page number
+        in: query
+        name: page
+        type: integer
+      - default: 10
+        description: Number of items per page
+        in: query
+        name: limit
+        type: integer
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.PaginatedResponse'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/internal_handlers.AnswerResponse'
+                  type: array
+              type: object
+        "400":
+          description: Invalid lawyer ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Get lawyer answers
+      tags:
+      - answers
+      - lawyers
+  /lawyers/{id}/reviews:
+    get:
+      description: Returns a paginated list of reviews for a specific lawyer
+      parameters:
+      - description: Lawyer ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - default: 1
+        description: Page number
+        in: query
+        name: page
+        type: integer
+      - default: 10
+        description: Number of items per page
+        in: query
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.PaginatedResponse'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Review'
+                  type: array
+              type: object
+        "400":
+          description: Invalid lawyer ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Get reviews for lawyer
+      tags:
+      - reviews
+  /lawyers/profile:
+    get:
+      description: Returns the lawyer profile for the currently authenticated user
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Lawyer'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Lawyer profile not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get current lawyer profile
+      tags:
+      - lawyers
+  /lawyers/upload-certification:
+    post:
+      consumes:
+      - multipart/form-data
+      description: Uploads a certification document for a lawyer profile
+      parameters:
+      - description: Lawyer ID (required for admin users only)
+        in: formData
+        name: lawyer_id
+        type: integer
+      - description: Certification document file
+        in: formData
+        name: certification
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success with certification path
+          schema:
+            $ref: '#/definitions/gin.H'
+        "400":
+          description: Invalid request or missing file
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Lawyer not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Upload lawyer certification
+      tags:
+      - lawyers
+  /me/answers:
+    get:
+      description: Retrieves all answers by the currently authenticated lawyer with
+        pagination
+      parameters:
+      - default: 1
+        description: Page number
+        in: query
+        name: page
+        type: integer
+      - default: 10
+        description: Number of items per page
+        in: query
+        name: limit
+        type: integer
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.PaginatedResponse'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/internal_handlers.AnswerResponse'
+                  type: array
+              type: object
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Forbidden - must be a lawyer
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Get my answers
+      tags:
+      - answers
+  /messages/{id}:
+    delete:
+      description: Deletes a specific chat message
+      parameters:
+      - description: Message ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Message deleted
+          schema:
+            $ref: '#/definitions/gin.H'
+        "400":
+          description: Invalid message ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Delete chat message
+      tags:
+      - chat
+  /messages/{id}/read:
+    post:
+      description: Marks a specific chat message as read
+      parameters:
+      - description: Message ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success message
+          schema:
+            $ref: '#/definitions/gin.H'
+        "400":
+          description: Invalid message ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Mark message as read
+      tags:
+      - chat
+  /messages/unread/count:
+    get:
+      description: Gets the count of unread messages for the current user
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Count of unread messages
+          schema:
+            $ref: '#/definitions/gin.H'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get unread message count
+      tags:
+      - chat
+  /notifications:
+    delete:
+      description: Deletes all notifications for the authenticated user
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/gin.H'
+            - properties:
+                message:
+                  type: string
+              type: object
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Delete all notifications
+      tags:
+      - notifications
+    get:
+      description: Returns a paginated list of notifications for the authenticated
+        user
+      parameters:
+      - default: 1
+        description: Page number
+        in: query
+        name: page
+        type: integer
+      - default: 10
+        description: Number of items per page
+        in: query
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.PaginatedResponse'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get all notifications
+      tags:
+      - notifications
+  /notifications/{id}:
+    delete:
+      description: Deletes a specific notification
+      parameters:
+      - description: Notification ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/gin.H'
+            - properties:
+                message:
+                  type: string
+              type: object
+        "400":
+          description: Invalid notification ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Notification not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Delete notification
+      tags:
+      - notifications
+    get:
+      description: Returns a specific notification by ID
+      parameters:
+      - description: Notification ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handlers.Notification'
+        "400":
+          description: Invalid notification ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Notification not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get notification by ID
+      tags:
+      - notifications
+  /notifications/{id}/read:
+    put:
+      description: Marks a specific notification as read
+      parameters:
+      - description: Notification ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/gin.H'
+            - properties:
+                message:
+                  type: string
+              type: object
+        "400":
+          description: Invalid notification ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Notification not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Mark notification as read
+      tags:
+      - notifications
+  /notifications/read-all:
+    put:
+      description: Marks all notifications for the authenticated user as read
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/gin.H'
+            - properties:
+                message:
+                  type: string
+              type: object
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Mark all notifications as read
+      tags:
+      - notifications
+  /notifications/unread/count:
+    get:
+      description: Returns the count of unread notifications for the authenticated
+        user
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/gin.H'
+            - properties:
+                count:
+                  type: integer
+              type: object
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get unread notification count
+      tags:
+      - notifications
+  /public/lawyers:
+    get:
+      description: Allows public users to search for lawyers without authentication
+      parameters:
+      - default: 1
+        description: Page number
+        in: query
+        name: page
+        type: integer
+      - default: 10
+        description: Number of items per page
+        in: query
+        name: limit
+        type: integer
+      - description: Search term in name or expertise
+        in: query
+        name: search
+        type: string
+      - description: Filter by specialty
+        in: query
+        name: specialty
+        type: string
+      - description: Filter by language
+        in: query
+        name: language
+        type: string
+      - description: Minimum years of experience
+        in: query
+        name: experience_min
+        type: integer
+      - description: Minimum rating
+        in: query
+        name: rating_min
+        type: integer
+      - default: id
+        description: Field to sort by
+        enum:
+        - name
+        - experience
+        - rating
+        in: query
+        name: sort_by
+        type: string
+      - default: asc
+        description: Sort direction ('asc' or 'desc')
+        in: query
+        name: sort_order
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.PaginatedResponse'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/internal_handlers.PublicLawyerResponse'
+                  type: array
+              type: object
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Public search for lawyers
+      tags:
+      - public
+  /public/lawyers/{id}:
+    get:
+      description: Returns public information for a specific lawyer without requiring
+        authentication
+      parameters:
+      - description: Lawyer ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Lawyer public profile
+          schema:
+            $ref: '#/definitions/gin.H'
+        "400":
+          description: Invalid lawyer ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Lawyer not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Public get lawyer by ID
+      tags:
+      - public
+  /questions:
+    get:
+      description: Retrieves a paginated list of questions with optional filtering
+      parameters:
+      - default: 1
+        description: Page number
+        in: query
+        name: params[page]
+        type: integer
+      - default: 10
+        description: Number of items per page
+        in: query
+        name: params[limit]
+        type: integer
+      - description: Filter by status
+        in: query
+        name: params[status]
+        type: string
+      - description: Filter by title
+        in: query
+        name: params[title]
+        type: string
+      - description: Filter by public/private status
+        in: query
+        name: params[is_public]
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.PaginatedResponse'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/internal_handlers.QuestionResponse'
+                  type: array
+              type: object
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Get all questions
+      tags:
+      - questions
+    post:
+      consumes:
+      - application/json
+      description: Creates a new question
+      parameters:
+      - description: Question details
+        in: body
+        name: question
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Question'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/internal_handlers.QuestionResponse'
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Create question
+      tags:
+      - questions
+  /questions/{id}:
+    delete:
+      description: Deletes an existing question
+      parameters:
+      - description: Question ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success message
+          schema:
+            $ref: '#/definitions/gin.H'
+        "400":
+          description: Invalid question ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Delete question
+      tags:
+      - questions
+    get:
+      description: Retrieves a specific question by its ID
+      parameters:
+      - description: Question ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handlers.QuestionResponse'
+        "400":
+          description: Invalid question ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Question not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Get question by ID
+      tags:
+      - questions
+    put:
+      consumes:
+      - application/json
+      description: Updates an existing question
+      parameters:
+      - description: Question ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Updated question details
+        in: body
+        name: question
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Question'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handlers.QuestionResponse'
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Question not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Update question
+      tags:
+      - questions
+  /questions/{id}/answers:
+    get:
+      description: Retrieves all answers for a specific question with pagination
+      parameters:
+      - description: Question ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - default: 1
+        description: Page number
+        in: query
+        name: page
+        type: integer
+      - default: 10
+        description: Number of items per page
+        in: query
+        name: limit
+        type: integer
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.PaginatedResponse'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/internal_handlers.AnswerResponse'
+                  type: array
+              type: object
+        "400":
+          description: Invalid question ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Get answers by question
+      tags:
+      - answers
+  /questions/{id}/status:
+    put:
+      consumes:
+      - application/json
+      description: Updates the status of an existing question (admins and question
+        owner only)
+      parameters:
+      - description: Question ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Status update
+        in: body
+        name: status
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handlers.UpdateQuestionStatusRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success message
+          schema:
+            $ref: '#/definitions/gin.H'
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Question not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Update question status
+      tags:
+      - questions
+  /questions/{id}/visibility:
+    put:
+      consumes:
+      - application/json
+      description: Updates the visibility (hidden/public) of a question (admin only)
+      parameters:
+      - description: Question ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Visibility update
+        in: body
+        name: visibility
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handlers.UpdateQuestionHiddenRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Question'
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Admin access required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Question not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Update question visibility
+      tags:
+      - questions
+  /questions/{question_id}/answers:
+    post:
+      consumes:
+      - application/json
+      description: Creates a new answer to a question
+      parameters:
+      - description: Question ID
+        in: path
+        name: question_id
+        required: true
+        type: integer
+      - description: Answer content
+        in: body
+        name: content
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/internal_handlers.AnswerResponse'
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Forbidden - must be a lawyer
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Create answer
+      tags:
+      - answers
+  /questions/me:
+    get:
+      description: Retrieves a paginated list of questions created by the authenticated
+        user
+      parameters:
+      - default: 1
+        description: Page number
+        in: query
+        name: page
+        type: integer
+      - default: 10
+        description: Number of items per page
+        in: query
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.PaginatedResponse'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/internal_handlers.QuestionResponse'
+                  type: array
+              type: object
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get my questions
+      tags:
+      - questions
+  /reviews:
+    get:
+      description: Returns a paginated list of reviews with optional filtering
+      parameters:
+      - default: 1
+        description: Page number
+        in: query
+        name: page
+        type: integer
+      - default: 10
+        description: Number of items per page
+        in: query
+        name: limit
+        type: integer
+      - description: Filter by lawyer ID
+        in: query
+        name: lawyer_id
+        type: integer
+      - description: Filter by user ID
+        in: query
+        name: user_id
+        type: integer
+      - description: Filter by approval status
+        in: query
+        name: status
+        type: string
+      - description: Search term
+        in: query
+        name: search
+        type: string
+      - default: created_at
+        description: Field to sort by
+        in: query
+        name: sort
+        type: string
+      - default: desc
+        description: Sort direction ('asc' or 'desc')
+        in: query
+        name: order
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.PaginatedResponse'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.ReviewResponse'
+                  type: array
+              type: object
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get all reviews
+      tags:
+      - reviews
+    post:
+      consumes:
+      - application/json
+      description: Creates a new review
+      parameters:
+      - description: Review details
+        in: body
+        name: review
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handlers.CreateReviewRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Review'
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Create review
+      tags:
+      - reviews
+  /reviews/{id}:
+    delete:
+      description: Deletes an existing review
+      parameters:
+      - description: Review ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/gin.H'
+            - properties:
+                message:
+                  type: string
+              type: object
+        "400":
+          description: Invalid review ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Review not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Delete review
+      tags:
+      - reviews
+    get:
+      description: Returns a specific review by ID
+      parameters:
+      - description: Review ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Review'
+        "400":
+          description: Invalid review ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Review not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get review by ID
+      tags:
+      - reviews
+    put:
+      consumes:
+      - application/json
+      description: Updates an existing review
+      parameters:
+      - description: Review ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Updated review details
+        in: body
+        name: review
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handlers.UpdateReviewRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Review'
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Review not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Update review
+      tags:
+      - reviews
+  /reviews/{id}/pin:
+    put:
+      consumes:
+      - application/json
+      description: Pins or unpins a review to highlight it (admin only)
+      parameters:
+      - description: Review ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Pin status
+        in: body
+        name: pin
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handlers.PinReviewRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Review'
+        "400":
+          description: Invalid request or cannot pin more than 3 reviews
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Admin access required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Review not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Pin or unpin review
+      tags:
+      - reviews
+  /reviews/{id}/status:
+    put:
+      consumes:
+      - application/json
+      description: Updates a review's approval status (admin only)
+      parameters:
+      - description: Review ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Status update details
+        in: body
+        name: status
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handlers.UpdateReviewStatusRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Review'
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Admin access required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: Review not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Update review status
+      tags:
+      - reviews
+  /reviews/me:
+    get:
+      description: Returns a paginated list of reviews created by the authenticated
+        user
+      parameters:
+      - default: 1
+        description: Page number
+        in: query
+        name: page
+        type: integer
+      - default: 10
+        description: Number of items per page
+        in: query
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.PaginatedResponse'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Review'
+                  type: array
+              type: object
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get user reviews
+      tags:
+      - reviews
+  /reviews/pinned:
+    get:
+      description: Returns all pinned reviews
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.Review'
+            type: array
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Get pinned reviews
+      tags:
+      - reviews
+  /users:
+    get:
+      description: Returns a paginated list of users (admin only)
+      parameters:
+      - default: 1
+        description: Page number
+        in: query
+        name: page
+        type: integer
+      - default: 10
+        description: Number of items per page
+        in: query
+        name: limit
+        type: integer
+      - description: Search term
+        in: query
+        name: search
+        type: string
+      - default: id
+        description: Field to sort by
+        in: query
+        name: sort
+        type: string
+      - default: asc
+        description: Sort direction ('asc' or 'desc')
+        in: query
+        name: order
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.PaginatedResponse'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.User'
+                  type: array
+              type: object
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Admin access required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get all users
+      tags:
+      - users
+    post:
+      consumes:
+      - application/json
+      description: Creates a new user (admin only)
+      parameters:
+      - description: User creation details
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handlers.CreateUserRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.User'
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Admin access required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Create user
+      tags:
+      - users
+  /users/{id}:
+    delete:
+      description: Deletes a user (admin only)
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/gin.H'
+            - properties:
+                message:
+                  type: string
+              type: object
+        "400":
+          description: Invalid user ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Admin access required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: User not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Delete user
+      tags:
+      - users
+    get:
+      description: Returns a user by ID (admin or own user only)
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.User'
+        "400":
+          description: Invalid user ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: User not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get user by ID
+      tags:
+      - users
+    put:
+      consumes:
+      - application/json
+      description: Updates a user's profile information (admin or own user only)
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Updated user information
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.User'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_models.User'
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: User not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Update user
+      tags:
+      - users
+  /users/{id}/password:
+    put:
+      consumes:
+      - application/json
+      description: Updates a user's password (admin or own user only)
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Password update details
+        in: body
+        name: password
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handlers.PasswordUpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/gin.H'
+            - properties:
+                message:
+                  type: string
+              type: object
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Authentication required or incorrect current password
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Permission denied
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: User not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Update password
+      tags:
+      - users
+  /users/{id}/questions:
+    get:
+      description: Retrieves a paginated list of questions created by a specific user
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - default: 1
+        description: Page number
+        in: query
+        name: params[page]
+        type: integer
+      - default: 10
+        description: Number of items per page
+        in: query
+        name: params[limit]
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.PaginatedResponse'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/internal_handlers.QuestionResponse'
+                  type: array
+              type: object
+        "400":
+          description: Invalid user ID
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      summary: Get user questions
+      tags:
+      - questions
+  /users/{id}/role:
+    put:
+      consumes:
+      - application/json
+      description: Updates a user's role (admin only)
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Role update details
+        in: body
+        name: role
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handlers.UpdateUserRoleRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/gin.H'
+            - properties:
+                message:
+                  type: string
+              type: object
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Admin access required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: User not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Update user role
+      tags:
+      - users
+  /users/{id}/status:
+    put:
+      consumes:
+      - application/json
+      description: Updates a user's active status (admin only)
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Status update details
+        in: body
+        name: status
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handlers.UpdateUserStatusRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/gin.H'
+            - properties:
+                message:
+                  type: string
+              type: object
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "403":
+          description: Admin access required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "404":
+          description: User not found
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Update user status
+      tags:
+      - users
+  /users/profile-image:
+    post:
+      consumes:
+      - multipart/form-data
+      description: Uploads or updates a user's profile image
+      parameters:
+      - description: Profile image file
+        in: formData
+        name: image
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/gin.H'
+            - properties:
+                profile_image:
+                  type: string
+              type: object
+        "400":
+          description: Missing or invalid image file
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "401":
+          description: Authentication required
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/github_com_kotolino_lawyer_internal_handlers_responses.APIErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Upload profile image
+      tags:
+      - users
+swagger: "2.0"

@@ -1,0 +1,18 @@
+# Terraform state files
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Variable files with potentially sensitive information
+terraform.tfvars
+*.auto.tfvars
+
+# Crash log files
+crash.log
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+# OS-specific files
+.DS_Store 

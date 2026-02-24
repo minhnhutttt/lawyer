@@ -1,0 +1,147 @@
+{
+  "hero": {
+    "title": "弁護士プラットフォーム",
+    "subtitle": "法律の専門家とつながる"
+  },
+  "cta": {
+    "findLawyer": "弁護士を探す",
+    "askQuestion": "法律相談",
+    "learnMore": "詳しく見る"
+  },
+  "services": {
+    "title": "サービス内容",
+    "subtitle": "必要な時にいつでも法律の専門家とつながることができます"
+  },
+  "steps": {
+    "title": "ご利用の流れ",
+    "subtitle": "3つの簡単なステップで法的サポートを受けられます",
+    "search": {
+      "title": "弁護士を探す",
+      "description": "資格を持った弁護士のネットワークから、あなたの法的ニーズに合った専門家を見つけましょう。"
+    },
+    "connect": {
+      "title": "法律相談する",
+      "description": "掲示板に法律相談を記載し、多様な弁護士から専門的な法的アドバイスを得ましょう。"
+    },
+    "book": {
+      "title": "チャット予約する",
+      "description": "選んだ弁護士と連絡を取り、チャットでご都合の良い時間に相談予約ができます。相性の合う弁護士がいれば、オンラインまたは対面での法律相談におすすめです。"
+    }
+  },
+  "testimonials": {
+    "title": "お客様の声",
+    "subtitle": "ご利用いただいたお客様から感想をいただきました"
+  },
+  "finalCta": {
+    "title": "困った時にお気軽に相談できる",
+    "subtitle": "便利なチャット予約をご利用ください！",
+    "button": "べんごしっちに無料登録して利用する"
+  },
+  "newCta": {
+    "bubble1": "訪問する勇気がない...",
+    "bubble2": "まずは気軽に相談してみたい！",
+    "forYou": "そんなあなたに",
+    "chatConsult": "チャットで相談できる弁護士検索サイト",
+    "siteName": "べんごレッチ"
+  },
+  "serviceCards": {
+    "findLawyer": {
+      "title": "弁護士を探す",
+      "description": "得意ジャンルやエリア実績など条件から<br>弁護士を簡単に探せます。"
+    },
+    "consultation": {
+      "title": "みんなの法律相談",
+      "description": "みなさまから寄せられた法律相談<br>弁護士が回答いたします。"
+    },
+    "blog": {
+      "title": "法律ブログ",
+      "description": "法律情報を記事にしてお届け<br>より詳しい情報収集ができます。"
+    },
+    "freeRegistration": "は無料ユーザー登録が便利です"
+  },
+  "stepsGuide": {
+    "step1": {
+      "title": "弁護士とのチャット予約",
+      "canDo": "ができます"
+    },
+    "step2": {
+      "title": "みんなの",
+      "canDo": "法律相談に投稿\nできます。"
+    },
+    "step3": {
+      "title": "みんな",
+      "canDo": "できます"
+    },
+    "registerButton": "べんごしっちに無料登録して利用する"
+  },
+  "lawyerRegistration": {
+    "forLawyers": "弁護士の方はこちら",
+    "registerAsLawyer": "べんごしっちに弁護士として登録する"
+  },
+  "features": {
+    "lawyers": {
+      "title": "弁護士検索",
+      "description": "経験豊富な法律の専門家を見つけて相談できます"
+    },
+    "questions": {
+      "title": "法律相談",
+      "description": "資格のある弁護士から法的質問への専門的な回答を得られます"
+    },
+    "appointments": {
+      "title": "チャット予約",
+      "description": "選んだ弁護士との相談を簡単に予約できます"
+    }
+  },
+  "articles": {
+    "title": "最新の法律ブログ",
+    "subtitle": "法律専門家からの専門的な洞察とガイド",
+    "readMore": "法律ブログをもっと見る",
+    "items": [
+      {
+        "id": 1,
+        "slug": "understanding-contract-law",
+        "title": "契約法の基本を理解する",
+        "summary": "契約法の基礎と日常生活への適用方法を包括的に解説するガイドです。",
+        "content": "内容はこちら...",
+        "category": "契約法",
+        "thumbnail": "https://blog.ipleaders.in/wp-content/uploads/2020/08/unit-5-aspects-of-contract-law-negligence-in-business-assignment-1.jpg",
+        "author": {
+          "name": "ジョン・スミス",
+          "avatar": "/images/avatars/john-smith.jpg"
+        },
+        "createdAt": "2023-07-15T10:30:00Z",
+        "status": "published"
+      },
+      {
+        "id": 2,
+        "slug": "family-law-essentials",
+        "title": "家族法の基本：知っておくべきこと",
+        "summary": "離婚、親権、財産分与に関する必須ガイドで家族法の複雑さを理解しましょう。",
+        "content": "内容はこちら...",
+        "category": "家族法",
+        "thumbnail": "https://www.familylawsandiego.com/images/blog/iStock-155391642.1).jpg",
+        "author": {
+          "name": "サラ・ジョンソン",
+          "avatar": "/images/avatars/sarah-johnson.jpg"
+        },
+        "createdAt": "2023-08-05T14:45:00Z",
+        "status": "published"
+      },
+      {
+        "id": 3,
+        "slug": "intellectual-property-rights",
+        "title": "知的財産権の保護について",
+        "summary": "創作物、発明、ビジネス資産を適切な知的財産保護で守る方法を学びましょう。",
+        "content": "内容はこちら...",
+        "category": "知的財産",
+        "thumbnail": "https://image3.luatvietnam.vn/uploaded/images/original/2024/07/26/assessing-intellectual-property-rights-infringement-in-vietnam-2_2607160625.jpg",
+        "author": {
+          "name": "マイケル・チェン",
+          "avatar": "/images/avatars/michael-chen.jpg"
+        },
+        "createdAt": "2023-09-10T09:15:00Z",
+        "status": "published"
+      }
+    ]
+  }
+}

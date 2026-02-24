@@ -1,0 +1,34 @@
+{
+  "title": "Legal Questions",
+  "newQuestion": "Ask a Question",
+  "searchPlaceholder": "Search questions...",
+  "allCategories": "All",
+  "postedBy": "Posted by",
+  "anonymous": "Anonymous",
+  "answers": " answers",
+  "answerCount": "answers",
+  "askQuestion": "Ask a Question",
+  "view": "View",
+  "views": "{{count}} views",
+  "status": {
+    "open": "Open",
+    "answered": "Answered",
+    "closed": "Closed"
+  },
+  "foundResults": "{{count}} questions found",
+  "empty": "No questions found.",
+  "errorLoading": "Failed to load questions. Please try again.",
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "editQuestion": "Edit Question",
+  "saveChanges": "Save Changes",
+  "cancel": "Cancel",
+  "titleRequired": "Title is required",
+  "titleMinLength": "Title must be at least {{length}} characters",
+  "contentRequired": "Content is required",
+  "contentMinLength": "Content must be at least {{length}} characters",
+  "updateError": "Failed to update question",
+  "content": "Content"
+}

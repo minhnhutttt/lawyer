@@ -1,0 +1,32 @@
+{
+  "title": "Legal Articles",
+  "subtitle": "Stay informed with our expert legal insights and information on various legal topics",
+  "readMore": "Read More",
+  "viewAll": "View All Articles",
+  "searchPlaceholder": "Search articles by title...",
+  "noArticles": "No articles available at this time.",
+  "noSearchResults": "No articles found matching your search.",
+  "filterByCategory": "Filter by Category",
+  "allCategories": "All Categories",
+  "categories": {
+    "debt_liabilities": "Debt / Liabilities",
+    "traffic_accidents": "Traffic Accidents",
+    "divorce_gender_issues": "Divorce / Gender Issues",
+    "inheritance_wills": "Inheritance / Wills",
+    "labor_issues": "Labor Issues",
+    "financial_troubles": "Financial Troubles",
+    "medical_issues": "Medical Issues",
+    "foreign_nationals_issues": "Foreign Nationals Issues",
+    "internet_issues": "Internet Issues",
+    "real_estate_corporate": "Real Estate / Corporate"
+  },
+  "article": {
+    "notFound": {
+      "title": "Article Not Found",
+      "message": "The article you are looking for could not be found or is no longer available."
+    },
+    "backToArticles": "Back to Articles",
+    "share": "Share this Article"
+  },
+  "recommendedArticles": "Recommended Articles"
+}

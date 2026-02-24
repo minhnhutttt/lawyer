@@ -1,0 +1,20 @@
+{
+  "reviewTitle": "評価とレビュー",
+  "ratingLabel": "評価",
+  "ratingLawyer": "{{name}}との経験を評価してください",
+  "commentLabel": "コメント（任意）",
+  "commentPlaceholder": "この弁護士との経験を共有してください...",
+  "invalidRating": "有効な評価を選択してください",
+  "reviewSubmitted": "レビューが正常に送信されました",
+  "submitError": "レビューの送信中にエラーが発生しました。もう一度お試しください。",
+  "anonymousUser": "匿名ユーザー",
+  "noComment": "コメントなし",
+  "fetchError": "レビューの読み込みに失敗しました",
+  "statusApproved": "承認済み",
+  "statusPending": "保留中",
+  "rating1": "悪い",
+  "rating2": "普通",
+  "rating3": "良い",
+  "rating4": "とても良い",
+  "rating5": "優れている"
+}

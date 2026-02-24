@@ -1,0 +1,106 @@
+name: Test
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      frontend_changed: ${{ steps.changes.outputs.frontend }}
+      backend_changed: ${{ steps.changes.outputs.backend }}
+    permissions:
+      contents: read
+      packages: read
+    # No environment variables needed at job level
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Determine changed components
+        id: changes
+        run: |
+          # Get the base branch of the PR or use the previous commit for workflow_dispatch
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            BASE_REF="${{ github.event.pull_request.base.sha }}"
+            HEAD_REF="${{ github.event.pull_request.head.sha }}"
+          else
+            BASE_REF=$(git rev-parse HEAD^1 || git rev-parse HEAD)
+            HEAD_REF="${{ github.sha }}"
+          fi
+          
+          echo "Comparing HEAD ($HEAD_REF) with BASE_REF ($BASE_REF)"
+
+          CHANGED_FRONTEND=false
+          CHANGED_BACKEND=false
+
+          # Check for frontend changes specifically in the front-end directory
+          if git diff --name-only $BASE_REF $HEAD_REF -- 'front-end/' | grep .; then
+            CHANGED_FRONTEND=true
+          fi
+
+          # Check for backend changes in root files excluding specific directories
+          if git diff --name-only $BASE_REF $HEAD_REF -- ':!front-end/' ':!.github/' ':!deploy/' ':!Dockerfile.frontend' ':!README.md' ':!.gitignore' '*.go' '*.yml' | grep .; then
+            CHANGED_BACKEND=true
+          fi
+
+          echo "Frontend changed: $CHANGED_FRONTEND"
+          echo "Backend changed: $CHANGED_BACKEND"
+          
+          # Use environment files syntax instead of set-output (deprecated)
+          echo "frontend=$CHANGED_FRONTEND" >> $GITHUB_OUTPUT
+          echo "backend=$CHANGED_BACKEND" >> $GITHUB_OUTPUT
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+        
+      - name: Cache Docker layers
+        uses: actions/cache@v3
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
+      
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build frontend (no push)
+        if: steps.changes.outputs.frontend == 'true'
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ./Dockerfile.frontend
+          push: false
+          tags: ghcr.io/${{ github.repository_owner }}/lawyer-frontend:test
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
+          secret-files: |
+            SECRETS=deploy/env/frontend/.env.staging
+      
+      - name: Build backend (no push)
+        if: steps.changes.outputs.backend == 'true'
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ./Dockerfile.backend
+          push: false
+          tags: ghcr.io/${{ github.repository_owner }}/lawyer-backend:test
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
+          
+      # Move cache to prevent it from growing indefinitely
+      - name: Move cache
+        run: |
+          if [ -d /tmp/.buildx-cache-new ]; then
+            rm -rf /tmp/.buildx-cache
+            mv /tmp/.buildx-cache-new /tmp/.buildx-cache
+          fi

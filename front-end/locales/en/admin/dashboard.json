@@ -1,0 +1,17 @@
+{
+  "title": "Dashboard Overview",
+  "totalUsers": "Total Users",
+  "totalLawyers": "Total Lawyers",
+  "totalQuestions": "Total Questions",
+  "totalMessages": "Total Messages",
+  "users": "Users",
+  "lawyers": "Lawyers",
+  "questions": "Questions",
+  "messages": "Messages",
+  "stats": {
+    "users": "User Statistics",
+    "lawyers": "Lawyer Statistics",
+    "questions": "Question Statistics",
+    "messages": "Message Statistics"
+  }
+} 

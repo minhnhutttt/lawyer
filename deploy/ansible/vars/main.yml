@@ -1,0 +1,11 @@
+---
+# Application settings
+app_name: lawyer
+app_dir: "/opt/lawyer"
+app_user: "ubuntu"
+app_group: "ubuntu"
+
+# Docker settings
+docker_registry: "{{ lookup('env', 'DOCKER_REGISTRY_SERVER') }}"
+docker_username: "{{ lookup('env', 'DOCKER_REGISTRY_USERNAME') }}"
+docker_password: "{{ lookup('env', 'DOCKER_REGISTRY_TOKEN') }}"

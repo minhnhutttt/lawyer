@@ -1,0 +1,2 @@
+ALTER TABLE appointments
+    ADD COLUMN title VARCHAR(255) NOT NULL;

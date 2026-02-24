@@ -1,0 +1,12 @@
+---
+# Production-specific settings
+frontend_domain: bengoshicchi.jp
+backend_domain: api.bengoshicchi.jp
+is_production: true
+certbot_email: support@bengoshicchi.jp
+
+# Basic Authentication - disabled by default in production
+enable_basic_auth: true
+nginx_basic_auth_user: admin
+# Generated with: htpasswd -nb admin m5dJWAd@TSk#huA^
+nginx_basic_auth_password_hash: "$apr1$Tvus6E.1$OcxvwO30ZVpOcDlA/24C1."

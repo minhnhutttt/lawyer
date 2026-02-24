@@ -1,0 +1,30 @@
+{
+  "title": "Lawyer Change History",
+  "noChanges": "No change history found",
+  "field": "Field",
+  "oldValue": "Old Value",
+  "newValue": "New Value",
+  "by": "by",
+  "booleanValues": {
+    "yes": "Yes",
+    "no": "No"
+  },
+  "refresh": "Refresh",
+  "close": "Close",
+  "fields": {
+    "FullName": "Full Name",
+    "Email": "Email",
+    "Phone": "Phone Number",
+    "OfficeName": "Office Name",
+    "Address": "Address",
+    "Gender": "Gender",
+    "FaxNumber": "Fax Number",
+    "Affiliation": "Affiliation",
+    "LawyerRegistrationNumber": "Registration Number",
+    "ProfileText": "Profile Text",
+    "Notes": "Notes",
+    "Status": "Status",
+    "Rating": "Rating",
+    "Specialties": "Specialties"
+  }
+}

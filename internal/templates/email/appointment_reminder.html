@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Reminder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .content {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .appointment-details {
+            background-color: #fff;
+            padding: 15px;
+            border-left: 4px solid #F59E0B;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>【リマインダー】ご予約の予定があります</h2>
+    </div>
+    
+    <div class="content">
+        <p>{{.LawyerName}} 様</p>
+        
+        <p>いつもご利用いただきありがとうございます。</p>
+        
+        <p>以下のご予約がまもなく予定されておりますので、リマインダーとしてお知らせいたします。</p>
+        
+        <div class="appointment-details">
+            <p><strong>予約の詳細:</strong></p>
+            <p>🗓 日付: {{.AppointmentDate}}</p>
+            <p>⏰ 時間: {{.AppointmentTime}}</p>
+            <p>👤 クライアント: {{.ClientName}}</p>
+        </div>
+        
+        <p>当日は、少し早めにログインしていただき、必要な資料などをご準備ください。</p>
+        
+        <p>万が一ご都合が悪くなった場合は、速やかに予約ステータスをご変更いただき、クライアントにご連絡をお願いいたします。</p>
+        
+        <p>今後ともよろしくお願いいたします。</p>
+        
+        <p>べんごしっちサポートチームより</p>
+    </div>
+</body>
+</html>

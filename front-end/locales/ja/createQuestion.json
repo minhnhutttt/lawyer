@@ -1,0 +1,21 @@
+{
+  "backLink": "質問一覧へ戻る",
+  "pageTitle": "法律に関する質問をする",
+  "titleLabel": "質問のタイトル",
+  "titlePlaceholder": "例：ビジネスを始めるための法的要件は何ですか？",
+  "titleHelpText": "具体的に、他の人に質問するつもりで書いてください",
+  "bodyLabel": "質問の詳細",
+  "bodyPlaceholder": "質問に答えるために必要な情報をすべて含めてください...",
+  "termsAgree": "この質問を送信することにより、当社の",
+  "termsLink": "利用規約",
+  "submitButton": "質問を投稿する",
+  "submittingButton": "送信中...",
+  "errors": {
+    "titleRequired": "質問のタイトルは必須です",
+    "titleMinLength": "質問のタイトルは{{length}}文字以上でなければなりません",
+    "bodyRequired": "質問の詳細は必須です",
+    "bodyMinLength": "詳細を{{length}}文字以上で入力してください",
+    "unexpectedSuccess": "質問は送信されましたが、予期しない応答がありました。",
+    "apiError": "質問の送信中にエラーが発生しました。もう一度お試しください。"
+  }
+}

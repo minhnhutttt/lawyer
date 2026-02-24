@@ -1,0 +1,72 @@
+{
+  "title": "レビュー管理",
+  "refresh": "更新",
+  "searchPlaceholder": "レビューを検索",
+  "viewTitle": "レビュー詳細",
+  "noReviews": "レビューが見つかりません",
+  "approved": "レビューが承認されました",
+  "rejected": "レビューが正常に拒否されました",
+  "reviewDeleted": "レビューが正常に削除されました",
+  "errorDeleting": "レビューの削除中にエラーが発生しました",
+  "reviewPinned": "レビューが正常に固定されました",
+  "reviewUnpinned": "レビューの固定が解除されました",
+  "pinUpdateError": "ピン留め可能なレビューの最大数は3です。",
+  "notFound": "レビューが見つかりません",
+  "rejectReasonPrompt": "拒否の理由を入力してください",
+  "rejectReasonTitle": "拒否理由",
+  "rejectReasonPlaceholder": "拒否理由をここに入力してください...",
+  "rejectingReviewFor": "次の弁護士のレビューを拒否",
+  "byUser": "投稿者",
+  "deleteConfirmTitle": "削除の確認",
+  "deleteConfirmMessage": "このレビューを削除してもよろしいですか？この操作は元に戻せません。",
+  "confirmDelete": "レビューを削除",
+  "lawyer": "弁護士",
+  "comment": "コメント",
+  "rating": "評価",
+  "pinned": "固定済み",
+  "filterByStatus": "ステータスでフィルタリング",
+  
+  "filters": {
+    "all": "すべてのレビュー",
+    "pending": "保留中",
+    "approved": "承認済み",
+    "rejected": "拒否済み"
+  },
+  
+  "table": {
+    "reviewer": "レビュアー",
+    "lawyer": "弁護士",
+    "rating": "評価",
+    "date": "日付",
+    "status": "ステータス",
+    "actions": "アクション"
+  },
+  
+  "status": {
+    "pending": "保留中",
+    "approved": "承認済み",
+    "rejected": "拒否済み"
+  },
+  
+  "actions": {
+    "view": "詳細を表示",
+    "approve": "承認",
+    "reject": "拒否",
+    "delete": "削除",
+    "pin": "レビューを固定",
+    "unpin": "固定を解除"
+  },
+  
+  "details": {
+    "title": "レビュー情報",
+    "subtitle": "レビューの詳細とステータス",
+    "reviewer": "レビュアー",
+    "lawyer": "弁護士",
+    "rating": "評価",
+    "date": "提出日",
+    "status": "ステータス",
+    "comment": "コメント",
+    "noComment": "コメントなし",
+    "rejectionReason": "拒否理由"
+  }
+} 

@@ -1,0 +1,88 @@
+{
+  "email": {
+    "required": "メールアドレスは必須です",
+    "invalid": "有効なメールアドレスを入力してください",
+    "maxLength": "メールアドレスは255文字以内で入力してください",
+    "unique": "このメールアドレスは既に使用されています"
+  },
+  "password": {
+    "required": "パスワードは必須です",
+    "minLength": "パスワードは8文字以上である必要があります",
+    "format": "パスワードには大文字、小文字、数字が少なくとも1つずつ含まれている必要があります",
+    "currentEmpty": "現在のパスワードは必須です。",
+    "newEmpty": "新しいパスワードは必須です。"
+  },
+  "confirmPassword": {
+    "required": "パスワードを確認してください",
+    "mismatch": "パスワードが一致しません"
+  },
+  "nickname": {
+    "required": "クライアントアカウントにはニックネームが必要です",
+    "minLength": "ニックネームは最低1文字必要です",
+    "maxLength": "ニックネームは50文字以内で入力してください"
+  },
+  "acceptTerms": {
+    "required": "利用規約に同意する必要があります"
+  },
+  "lawyerProfile": {
+    "required": "弁護士プロフィールは必須です"
+  },
+  "firstName": {
+    "required": "名前は必須です",
+    "maxLength": "名前は50文字以内で入力してください"
+  },
+  "lastName": {
+    "required": "姓は必須です",
+    "maxLength": "姓は50文字以内で入力してください"
+  },
+  "dateOfBirth": {
+    "required": "生年月日は必須です"
+  },
+  "gender": {
+    "required": "性別の選択は必須です"
+  },
+  "affiliation": {
+    "required": "所属は必須です",
+    "maxLength": "所属は100文字以内で入力してください"
+  },
+  "phone": {
+    "required": "電話番号は必須です",
+    "format": "電話番号は10桁から11桁の数字で入力してください"
+  },
+  "fax": {
+    "format": "ファックス番号は10桁から11桁の数字で入力してください"
+  },
+  "birthDate": {
+    "required": "生年月日は必須です",
+    "ageRestriction": "20歳以上である必要があります。"
+  },
+  "registrationNumber": {
+    "required": "登録番号は必須です",
+    "format": "登録番号は5桁の数字で入力してください"
+  },
+  "officeName": {
+    "required": "事務所名は必須です",
+    "maxLength": "事務所名は100文字以内で入力してください"
+  },
+  "profileText": {
+    "required": "プロフィールテキストは必須です"
+  },
+  "officeAddress": {
+    "required": "事務所住所は必須です",
+    "maxLength": "事務所住所は200文字以内で入力してください"
+  },
+  "specialties": {
+    "required": "少なくとも一つの専門分野を選択してください"
+  },
+  "notes": {
+    "maxLength": "備考は1000文字以内で入力してください"
+  },
+  "experienceYears": {
+    "required": "経験年数は必須です",
+    "format": "経験年数には有効な数字を入力してください"
+  },
+  "certificationDocument": {
+    "required": "資格証明書は必須です",
+    "fileType": "ドキュメントはPDF、JPEG、またはPNG形式で、5MB以下である必要があります"
+  }
+}

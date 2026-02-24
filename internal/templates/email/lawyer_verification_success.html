@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>弁護士アカウント認証完了のお知らせ</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #f59e0b;
+            padding-bottom: 20px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f59e0b;
+        }
+        h1 {
+            color: #333;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        .content {
+            padding: 20px 0;
+        }
+        .features {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        .features li {
+            margin-bottom: 10px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #f59e0b;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #e89000;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">べんごしっち</div>
+        </div>
+        
+        <h1>{{.LawyerName}} 様</h1>
+        
+        <div class="content">
+            <p>このたび、あなたの弁護士アカウントが管理者により認証されました。</p>
+            
+            <p>今後は以下の機能をご利用いただけます：</p>
+            <ul class="features">
+                <li>「弁護士を探す」画面にて公開される</li>
+                <li>法律相談（Q&A）への回答</li>
+                <li>クライアントからの予約受付・管理</li>
+            </ul>
+            
+            <p>ログイン後、プロフィール情報をご確認のうえ、活動を開始してください。</p>
+            
+            <div style="text-align: center;">
+                <a href="{{.LoginURL}}" class="button">ログインはこちら</a>
+            </div>
+            
+            <p>ご不明な点がありましたら、お気軽にサポートまでご連絡ください。</p>
+            
+            <p>よろしくお願いいたします。<br>
+            べんごしっちサポートチーム</p>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; {{.Year}} べんごしっち - All rights reserved</p>
+        </div>
+    </div>
+</body>
+</html>

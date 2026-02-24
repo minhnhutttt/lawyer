@@ -1,0 +1,311 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ develop ]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+          - staging
+          - production
+
+jobs:
+  determine-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      components_to_deploy: ${{ steps.deploy_components.outputs.components }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Determine changed components
+        id: changes
+        run: |
+          # Ensure we have a base ref for comparison, especially for workflow_dispatch or first push
+          BASE_REF=$(git rev-parse HEAD^1 || git rev-parse HEAD)
+          echo "Comparing HEAD (${{ github.sha }}) with BASE_REF ($BASE_REF)"
+
+          CHANGED_FRONTEND=false
+          CHANGED_BACKEND=false
+
+          # Check for frontend changes specifically in the front-end directory
+          if git diff --name-only $BASE_REF ${{ github.sha }} -- 'front-end/' | grep .; then
+            CHANGED_FRONTEND=true
+          fi
+
+          # Check for backend changes in root files (e.g., *.py, requirements.txt) excluding specific directories
+          # Adjust the paths and patterns based on your backend structure
+          if git diff --name-only $BASE_REF ${{ github.sha }} -- ':!front-end/' ':!.github/' ':!deploy/' ':!Dockerfile.frontend' ':!README.md' ':!.gitignore' '*.go' '*.sql' '*.yml' | grep .; then
+            CHANGED_BACKEND=true
+          fi
+
+          echo "Frontend changed: $CHANGED_FRONTEND"
+          echo "Backend changed: $CHANGED_BACKEND"
+          
+          # Use environment files syntax instead of set-output (deprecated)
+          echo "frontend=$CHANGED_FRONTEND" >> $GITHUB_OUTPUT
+          echo "backend=$CHANGED_BACKEND" >> $GITHUB_OUTPUT
+      
+      - name: Determine Components to Deploy
+        id: deploy_components
+        run: |
+          COMPONENTS=""
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            # Deploy all components for manual workflow dispatch
+            COMPONENTS="all"
+          elif [[ "${{ steps.changes.outputs.frontend }}" == "true" && "${{ steps.changes.outputs.backend }}" == "true" ]]; then
+            COMPONENTS="all"
+          elif [[ "${{ steps.changes.outputs.frontend }}" == "true" ]]; then
+            COMPONENTS="frontend"
+          elif [[ "${{ steps.changes.outputs.backend }}" == "true" ]]; then
+            COMPONENTS="backend"
+          fi
+          echo "Components to deploy: $COMPONENTS"
+          # Use environment files syntax instead of set-output (deprecated)
+          echo "components=$COMPONENTS" >> $GITHUB_OUTPUT
+
+  build:
+    runs-on: ubuntu-latest
+    needs: determine-changes
+    permissions:
+      packages: write
+      contents: read
+    env:
+      DOCKER_REGISTRY_SERVER: ${{ secrets.DOCKER_REGISTRY_SERVER }}
+      DEPLOY_ENV: ${{ github.ref == 'refs/heads/main' && 'production' || 'staging' }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+        
+      - name: Cache Docker layers
+        uses: actions/cache@v3
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
+      
+      - name: Login to Docker Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract environment variables
+        run: |
+          # Source the environment file to load all variables
+          echo "Loading environment variables from deploy/env/frontend/.env.${{ env.DEPLOY_ENV }}"
+          set -a
+          source deploy/env/frontend/.env.${{ env.DEPLOY_ENV }}
+          set +a
+          
+          # Export the variables we need for the build
+          echo "NODE_ENV=$NODE_ENV" >> $GITHUB_ENV
+          echo "NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL" >> $GITHUB_ENV
+          
+          # List all loaded environment variables (excluding secrets)
+          echo "Environment variables loaded successfully:"
+          echo "NODE_ENV=$NODE_ENV"
+          echo "NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL"
+
+      - name: Build and push frontend
+        if: contains(needs.determine-changes.outputs.components_to_deploy, 'frontend') || contains(needs.determine-changes.outputs.components_to_deploy, 'all')
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ./Dockerfile.frontend
+          push: true
+          tags: ${{ env.DOCKER_REGISTRY_SERVER }}/lawyer-frontend:${{ github.sha }},${{ env.DOCKER_REGISTRY_SERVER }}/lawyer-frontend:${{ env.DEPLOY_ENV }}-latest
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
+          build-args: |
+            NODE_ENV=${{ env.NODE_ENV }}
+            NEXT_PUBLIC_API_URL=${{ env.NEXT_PUBLIC_API_URL }}
+
+      - name: Build and push backend
+        if: contains(needs.determine-changes.outputs.components_to_deploy, 'backend') || contains(needs.determine-changes.outputs.components_to_deploy, 'all')
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ./Dockerfile.backend
+          push: true
+          tags: ${{ env.DOCKER_REGISTRY_SERVER }}/lawyer-backend:${{ github.sha }},${{ env.DOCKER_REGISTRY_SERVER }}/lawyer-backend:${{ env.DEPLOY_ENV }}-latest
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
+
+      # Move cache to prevent it from growing indefinitely
+      - name: Move cache
+        run: |
+          if [ -d /tmp/.buildx-cache-new ]; then
+            rm -rf /tmp/.buildx-cache
+            mv /tmp/.buildx-cache-new /tmp/.buildx-cache
+          fi
+
+  deploy-staging:
+    runs-on: ubuntu-latest
+    needs: [determine-changes, build]
+    if: (github.ref == 'refs/heads/develop' && needs.determine-changes.outputs.components_to_deploy != '') || (github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'staging')
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Write down ssh key to deploy/keys/lawyer-staging.pem
+        run: |
+          mkdir -p deploy/keys && \
+          echo "${{ secrets.STAGING_SSH_PRIVATE_KEY }}" > deploy/keys/lawyer-staging.pem && \
+            chmod 400 deploy/keys/lawyer-staging.pem
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install Ansible
+        run: |
+          python -m pip install --upgrade pip
+          pip install ansible
+
+      # Components to deploy are determined in the determine-changes job
+      - name: Show Components to Deploy
+        run: |
+          echo "Components to deploy: ${{ needs.determine-changes.outputs.components_to_deploy }}"
+
+      - name: Deploy to Staging
+        id: deploy
+        env:
+          DOCKER_REGISTRY_SERVER: ${{ secrets.DOCKER_REGISTRY_SERVER }}
+          DOCKER_REGISTRY_USERNAME: ${{ secrets.DOCKER_REGISTRY_USERNAME }}
+          DOCKER_REGISTRY_TOKEN: ${{ secrets.DOCKER_REGISTRY_TOKEN }}
+          DEPLOY_ENV: staging
+          COMPONENTS: ${{ needs.determine-changes.outputs.components_to_deploy }}
+        run: |
+          cd ./deploy
+          ./deploy.sh deploy $DEPLOY_ENV $COMPONENTS
+
+  deploy-production:
+    runs-on: ubuntu-latest
+    needs: [determine-changes, build]
+    if: (github.ref == 'refs/heads/main' && needs.determine-changes.outputs.components_to_deploy != '') || (github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'production')
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Write down ssh key to deploy/keys/lawyer-production.pem
+        run: |
+          mkdir -p deploy/keys && \
+          echo "${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}" > deploy/keys/lawyer-production.pem && \
+            chmod 400 deploy/keys/lawyer-production.pem
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install Ansible
+        run: |
+          python -m pip install --upgrade pip
+          pip install ansible
+
+      # Components to deploy are determined in the determine-changes job
+
+      - name: Deploy to Production
+        id: deploy
+        env:
+          DOCKER_REGISTRY_SERVER: ${{ secrets.DOCKER_REGISTRY_SERVER }}
+          DOCKER_REGISTRY_USERNAME: ${{ secrets.DOCKER_REGISTRY_USERNAME }}
+          DOCKER_REGISTRY_TOKEN: ${{ secrets.DOCKER_REGISTRY_TOKEN }}
+          DEPLOY_ENV: production
+          COMPONENTS: ${{ needs.determine-changes.outputs.components_to_deploy }}
+        run: |
+          cd ./deploy
+          ./deploy.sh deploy $DEPLOY_ENV $COMPONENTS
+      
+  slack-notify:
+    runs-on: ubuntu-latest
+    needs: [determine-changes, build, deploy-staging, deploy-production]
+    if: always()
+    env:
+      DEPLOY_ENV: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Staging' }}
+    steps:
+      - name: Get Components
+        id: deploy_components
+        run: |
+          COMPONENTS="${{ needs.determine-changes.outputs.components_to_deploy }}"
+          if [[ -z "$COMPONENTS" ]]; then
+            COMPONENTS="none"
+          fi
+          echo "Components to deploy: $COMPONENTS"
+          echo "components=$COMPONENTS" >> $GITHUB_OUTPUT
+
+      - name: Determine Deployment Status
+        id: deployment_status
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+            # For main branch, check production deployment
+            if [[ "${{ needs.deploy-production.result }}" == "success" ]]; then
+              echo "status=success" >> $GITHUB_OUTPUT
+            elif [[ "${{ needs.deploy-production.result }}" == "failure" ]]; then
+              echo "status=failure" >> $GITHUB_OUTPUT
+            else
+              echo "status=skipped" >> $GITHUB_OUTPUT
+            fi
+          else
+            # For develop branch, check staging deployment
+            if [[ "${{ needs.deploy-staging.result }}" == "success" ]]; then
+              echo "status=success" >> $GITHUB_OUTPUT
+            elif [[ "${{ needs.deploy-staging.result }}" == "failure" ]]; then
+              echo "status=failure" >> $GITHUB_OUTPUT
+            else
+              echo "status=skipped" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+      - name: Send Slack Notification
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
+          payload: |
+            blocks:
+              - type: "section"
+                text:
+                  type: "mrkdwn"
+                  text: "Deployment to ${{ env.DEPLOY_ENV }} ${{ steps.deployment_status.outputs.status == 'success' && 'completed successfully:rocket::rocket::rocket:' || (steps.deployment_status.outputs.status == 'failure' && 'failed :x::x::x:' || 'was skipped :warning::warning::warning:') }}"
+              - type: "section"
+                fields:
+                  - type: "mrkdwn"
+                    text: "*Environment:*\n${{ env.DEPLOY_ENV }}"
+                  - type: "mrkdwn"
+                    text: "*Components:*\n${{ steps.deploy_components.outputs.components }}"
+                  - type: "mrkdwn"
+                    text: "*Triggered by:*\n${{ github.actor }}"
+                  - type: "mrkdwn"
+                    text: "*Branch:*\n${{ github.ref_name }}"
+              - type: "section"
+                fields:
+                  - type: "mrkdwn"
+                    text: "*SHA:*\n <${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ github.sha }}>"
+                  - type: "mrkdwn"
+                    text: "*Status:*\n${{ steps.deployment_status.outputs.status }}"
+              - type: "actions"
+                elements:
+                  - type: "button"
+                    text:
+                      type: "plain_text"
+                      emoji: true
+                      text: "View action"
+                    style: "primary"
+                    url: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

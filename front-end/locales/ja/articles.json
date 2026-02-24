@@ -1,0 +1,32 @@
+{
+  "title": "法律記事",
+  "subtitle": "私たちの専門的な法的洞察と様々な法的トピックに関する情報を入手しましょう",
+  "readMore": "続きを読む",
+  "viewAll": "法律ブログをもっと見る",
+  "searchPlaceholder": "タイトルで記事を検索...",
+  "noArticles": "現在、利用可能な記事はありません。",
+  "noSearchResults": "該当する記事はありません。",
+  "filterByCategory": "カテゴリーでフィルター",
+  "allCategories": "すべてのカテゴリー",
+  "categories": {
+    "debt_liabilities": "借金・債務",
+    "traffic_accidents": "交通事故",
+    "divorce_gender_issues": "離婚・男女",
+    "inheritance_wills": "相続・遺言",
+    "labor_issues": "労働問題",
+    "financial_troubles": "金銭トラブル",
+    "medical_issues": "医療問題",
+    "foreign_nationals_issues": "外国人問題",
+    "internet_issues": "ネット問題",
+    "real_estate_corporate": "不動産・企業"
+  },
+  "article": {
+    "notFound": {
+      "title": "記事が見つかりません",
+      "message": "お探しの記事が見つからないか、利用できなくなっています。"
+    },
+    "backToArticles": "記事一覧に戻る",
+    "share": "この記事をシェアする"
+  },
+  "recommendedArticles": "おすすめの記事"
+}

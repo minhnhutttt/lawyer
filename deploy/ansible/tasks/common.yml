@@ -1,0 +1,128 @@
+---
+- name: Install required packages
+  apt:
+    name:
+      - docker.io
+      - python3-pip
+      - certbot
+      - python3-docker
+      - curl
+      - git
+      - jq
+    state: present
+    update_cache: true
+
+- name: Install latest Docker Compose
+  shell: |
+    curl -L "https://github.com/docker/compose/releases/download/v2.24.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    chmod +x /usr/local/bin/docker-compose
+  args:
+    creates: /usr/local/bin/docker-compose
+
+- name: Create application directory
+  file:
+    path: "{{ app_dir }}"
+    state: directory
+    mode: '0755'
+    owner: "{{ app_user }}"
+    group: "{{ app_group }}"
+
+- name: Create Nginx directories
+  file:
+    path: "{{ app_dir }}/nginx/{{ item }}"
+    state: directory
+    mode: '0755'
+    owner: "{{ app_user }}"
+    group: "{{ app_group }}"
+  with_items:
+    - conf.d
+    - ssl
+    - logs
+
+- name: Create env directory
+  file:
+    path: "{{ app_dir }}/env"
+    state: directory
+    mode: '0755'
+    owner: "{{ app_user }}"
+    group: "{{ app_group }}"
+
+# NOTE: Only locally deployment
+# - name: Copy environment files
+#   copy:
+#     src: '../../env/{{ item }}/.env.{{ deploy_env }}'
+#     dest: "{{ app_dir }}/env/.env.{{ item }}"
+#     mode: '0600'
+#     owner: "{{ app_user }}"
+#     group: "{{ app_group }}"
+#   with_items:
+#     - backend
+#     - frontend
+
+- name: Copy docker-compose file
+  copy:
+    src: '../docker-compose.yml'
+    dest: "{{ app_dir }}/docker-compose.yml"
+    mode: '0644'
+    owner: "{{ app_user }}"
+    group: "{{ app_group }}"
+
+- name: Copy Nginx configuration
+  template:
+    src: '../templates/nginx/default.conf.j2'
+    dest: "{{ app_dir }}/nginx/conf.d/default.conf"
+    mode: '0644'
+    owner: "{{ app_user }}"
+    group: "{{ app_group }}"
+
+- name: Copy Nginx htpasswd file
+  template:
+    src: '../templates/nginx/htpasswd.j2'
+    dest: "{{ app_dir }}/nginx/htpasswd"
+    mode: '0644'
+    owner: "{{ app_user }}"
+    group: "{{ app_group }}"
+  when: enable_basic_auth | default(false)
+
+- name: Ensure Docker service is running
+  service:
+    name: docker
+    state: started
+    enabled: true
+  become: true
+
+- name: Login to Docker registry
+  shell: "echo {{ docker_password }} | docker login {{ docker_registry }} -u {{ docker_username }} --password-stdin"
+  become: true
+  when: docker_username != '' and docker_password != ''
+
+- name: Docker remove unused images
+  shell: "docker image prune -a -f"
+  become: true
+
+- name: Force pull
+  shell: "cd {{ app_dir }} && DEPLOY_ENV={{ deploy_env }} docker-compose pull"
+  become: true
+
+- name: Start all containers
+  shell: "cd {{ app_dir }} && DEPLOY_ENV={{ deploy_env }} docker-compose up -d --force-recreate"
+  become: true
+  when: deploy_component == 'all'
+
+- name: Start components containers
+  shell: "cd {{ app_dir }} && DEPLOY_ENV={{ deploy_env }} docker-compose up {{ deploy_component }} -d --force-recreate"
+  become: true
+  when: deploy_component != 'all'
+
+# - name: Start nginx containers
+#   shell: "cd {{ app_dir }} && DEPLOY_ENV={{ deploy_env }} docker-compose up nginx -d --force-recreate"
+#   become: true
+#   when: deploy_component != 'all'
+
+- name: Wait for containers to be healthy
+  shell: "cd {{ app_dir }} && DEPLOY_ENV={{ deploy_env }} docker-compose ps"
+  register: container_status
+  until: container_status.rc == 0
+  retries: 6
+  delay: 10
+  become: true

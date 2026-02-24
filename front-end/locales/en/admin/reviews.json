@@ -1,0 +1,72 @@
+{
+  "title": "Reviews Management",
+  "refresh": "Refresh",
+  "searchPlaceholder": "Search reviews",
+  "viewTitle": "Review Details",
+  "noReviews": "No reviews found",
+  "approved": "Review approved successfully",
+  "rejected": "Review rejected successfully",
+  "reviewDeleted": "Review deleted successfully",
+  "errorDeleting": "Error deleting review",
+  "reviewPinned": "Review pinned successfully",
+  "reviewUnpinned": "Review unpinned successfully",
+  "pinUpdateError": "The maximum pinable reviews is 3",
+  "notFound": "Review not found",
+  "rejectReasonPrompt": "Please provide a reason for rejection",
+  "rejectReasonTitle": "Rejection Reason",
+  "rejectReasonPlaceholder": "Enter reason for rejection here...",
+  "rejectingReviewFor": "Rejecting review for",
+  "byUser": "By",
+  "deleteConfirmTitle": "Confirm Deletion",
+  "deleteConfirmMessage": "Are you sure you want to delete this review? This action cannot be undone.",
+  "confirmDelete": "Delete Review",
+  "lawyer": "Lawyer",
+  "comment": "Comment",
+  "rating": "Rating",
+  "pinned": "Pinned",
+  "filterByStatus": "Filter by status",
+  
+  "filters": {
+    "all": "All Reviews",
+    "pending": "Pending",
+    "approved": "Approved",
+    "rejected": "Rejected"
+  },
+  
+  "table": {
+    "reviewer": "Reviewer",
+    "lawyer": "Lawyer",
+    "rating": "Rating",
+    "date": "Date",
+    "status": "Status",
+    "actions": "Actions"
+  },
+  
+  "status": {
+    "pending": "Pending",
+    "approved": "Approved",
+    "rejected": "Rejected"
+  },
+  
+  "actions": {
+    "view": "View Details",
+    "approve": "Approve",
+    "reject": "Reject",
+    "delete": "Delete",
+    "pin": "Pin Review",
+    "unpin": "Unpin Review"
+  },
+  
+  "details": {
+    "title": "Review Information",
+    "subtitle": "Details and status of the review",
+    "reviewer": "Reviewer",
+    "lawyer": "Lawyer",
+    "rating": "Rating",
+    "date": "Date Submitted",
+    "status": "Status",
+    "comment": "Comment",
+    "noComment": "No comment provided",
+    "rejectionReason": "Rejection Reason"
+  }
+} 

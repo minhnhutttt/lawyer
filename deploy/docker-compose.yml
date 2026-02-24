@@ -1,0 +1,45 @@
+services:
+  nginx:
+    image: nginx:alpine
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    env_file:
+      - env/.env.frontend
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/ssl:/etc/nginx/ssl
+      - ./nginx/logs:/var/log/nginx
+      - ./nginx/htpasswd:/etc/nginx/htpasswd
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - lawyer-network
+
+  frontend:
+    image: ${DOCKER_REGISTRY_SERVER:-ghcr.io/linnoedge/lawyer}/lawyer-frontend:${DEPLOY_ENV:-staging}-latest
+    restart: always
+    env_file:
+      - env/.env.frontend
+    expose:
+      - "3000"
+    depends_on:
+      - backend
+    networks:
+      - lawyer-network
+
+  backend:
+    image: ${DOCKER_REGISTRY_SERVER:-ghcr.io/linnoedge/lawyer}/lawyer-backend:${DEPLOY_ENV:-staging}-latest
+    restart: always
+    env_file:
+      - env/.env.backend
+    expose:
+      - "8080"
+    networks:
+      - lawyer-network
+
+networks:
+  lawyer-network:
+    driver: bridge

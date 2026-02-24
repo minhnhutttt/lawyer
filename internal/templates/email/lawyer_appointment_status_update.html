@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>予約ステータスが変更されました</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .content {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+        }
+        .details {
+            margin: 20px 0;
+        }
+        .reason {
+            background-color: #fff;
+            padding: 15px;
+            border-left: 4px solid #0055a5;
+            margin: 15px 0;
+        }
+        h2 {
+            color: #0055a5;
+        }
+        .status {
+            font-weight: bold;
+            color: #0055a5;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>予約ステータスが変更されました</h2>
+    </div>
+    <div class="content">
+        <p>{{.ClientName}} 様</p>
+        
+        <p>{{.LawyerName}}との予約ステータスが更新されましたので、お知らせいたします。</p>
+        
+        <div class="details">
+            <p>🗓 予約の詳細:</p>
+            <ul>
+                <li>日付: <strong>{{.AppointmentDate}}</strong></li>
+                <li>時間: <strong>{{.AppointmentTime}}</strong></li>
+                <li>弁護士: <strong>{{.LawyerName}}</strong></li>
+                <li>新しいステータス: <span class="status">{{.NewStatus}}</span></li>
+                {{if .ShowRejectReason}}
+                <li>理由: <strong>{{.RejectReason}}</strong></li>
+                {{end}}
+            </ul>
+        </div>
+        
+        <p>マイページより予約状況をいつでもご確認いただけます。</p>
+        
+        <p>ご不明な点がございましたら、お気軽にお問い合わせください。</p>
+        
+        <p>べんごしっちサポートチーム</p>
+    </div>
+</body>
+</html>

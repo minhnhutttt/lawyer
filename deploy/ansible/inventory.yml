@@ -1,0 +1,16 @@
+---
+all:
+  children:
+    staging_servers:
+      hosts:
+        staging:
+          ansible_host: 57.180.120.245
+          ansible_user: ubuntu
+          ansible_ssh_private_key_file: ../keys/lawyer-staging.pem
+    
+    production_servers:
+      hosts:
+        production:
+          ansible_host: 57.183.52.228
+          ansible_user: ubuntu
+          ansible_ssh_private_key_file: ../keys/lawyer-production.pem

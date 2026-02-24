@@ -1,0 +1,22 @@
+{
+  "invalidId": "Invalid question ID.",
+  "notFound": "Question not found.",
+  "errorLoading": "Failed to load question details or answers. Please try again.",
+  "backLink": "Back to Questions",
+  "postedBy": "Posted by",
+  "answerSingular": "Answer",
+  "answerPlural": "{{number}} Answers",
+  "noAnswersYet": "No answers yet. Be the first to answer!",
+  "yourAnswer": "{{name}} Answer",
+  "answerPlaceholder": "Write your answer here...",
+  "submitAnswer": "Submit Answer",
+  "verifiedLawyer": "Verified Lawyer",
+  "unknownUser": "Unknown User",
+  "anonymous": "Anonymous",
+  "answerSubmitErrorUnknown": "",
+  "saveAnswer": "Save Answer",
+  "cancel": "Cancel",
+  "updateError": "Failed to update answer. Please try again.",
+  "loginRequired": "You need to login to see the answer",
+  "verificationRequired": "Your lawyer account must be verified before you can answer questions. Please wait for an administrator to verify your account."
+}
