@@ -21,7 +21,7 @@ export default function BssQuestion() {
       </div>
       <div className="w-full max-w-[720px] mx-auto px-6 mb-16 mt-10">
         <p className="md:text-[22px] text-[20px] font-bold mb-4">相談内容を入力する</p>
-        <p className="md:text-[14px] text-[12px] mb-4">相談内容はどなたでもご覧になれますので、<span className="font-bold">個人を特定されることのないよう</span>入力内容は十分ご注意ください。また、<span className="font-bold underline decoration-[#f7723e] underline-offset-4">投稿後の修正・削除はできません</span>のでご注意ください。</p>
+        <p className="md:text-[14px] text-[12px] mb-4">相談内容はどなたでもご覧になれますので、<span className="font-bold">個人を特定されることのないよう</span>入力内容は十分ご注意ください。また、<span className="font-bold underline decoration-[#0276AE] underline-offset-4">投稿後の修正・削除はできません</span>のでご注意ください。</p>
         <div className="mt-[56px] space-y-9">
           <div>
             <div className="flex justify-between mb-2">
@@ -97,13 +97,13 @@ export default function BssQuestion() {
         <div className="flex justify-between">
           <p className="font-bold md:text-[16px] text-[14px]">弁護士回答がついたらメールで知らせる</p>
           <div className="">
-            <input type="checkbox" className="duration-300 relative border-[#f0ebe9] bg-[#f0ebe9] border w-[78px] h-[32px] md:text-[14px] text-[12px] appearance-none rounded-full before:border before:border-[#e9e5e4] before:[box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] before:rounded-full before:px-1 before:leading-none before:f;ex before:items-center before:justify-center before:font-bold before:py-1.5 before:w-1/2 before:absolute before:top-0 before:bg-white before:h-full before:content-['OFF'] before:text-center checked:before:content-['ON'] checked:bg-[#f7723e] checked:border-[#f7723e] checked:before:left-1/2 before:duration-300 before:left-0 before:transition-all" />
+            <input type="checkbox" className="duration-300 relative border-[#f0ebe9] bg-[#f0ebe9] border w-[78px] h-[32px] md:text-[14px] text-[12px] appearance-none rounded-full before:border before:border-[#e9e5e4] before:[box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] before:rounded-full before:px-1 before:leading-none before:f;ex before:items-center before:justify-center before:font-bold before:py-1.5 before:w-1/2 before:absolute before:top-0 before:bg-white before:h-full before:content-['OFF'] before:text-center checked:before:content-['ON'] checked:bg-[#0276AE] checked:border-[#0276AE] checked:before:left-1/2 before:duration-300 before:left-0 before:transition-all" />
           </div>
         </div>
           <p className="text-left text-[#716c6b] md:text-[14px] text-[12px] mt-3">通知のメールは会員登録時のメールアドレスに送信されます</p>
         <p className="text-left text-[#716c6b] md:text-[14px] text-[12px] mt-6">利用規約・プライバシーの考え方・ みんなの法律相談ガイドラインをお読みのうえ、「同意して確認画面へ進む」ボタンを押してください。</p>
         <div className="flex justify-center mt-6">
-          <button className="w-full gap-1 flex items-center justify-center max-w-[400px] border border-[#bbb3af] [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] rounded-full h-[58px] bg-[#f7723e] text-white font-bold">
+          <button className="w-full gap-1 flex items-center justify-center max-w-[400px] border border-[#bbb3af] [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] rounded-full h-[58px] bg-[#0276AE] text-white font-bold">
                   同意して確認画面へ進む
               </button>
         </div>

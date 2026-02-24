@@ -160,7 +160,7 @@ export default function Header() {
             <div className="w-full max-w-[960px] mx-auto flex items-center justify-between pr-2">
               <button
                 onClick={() => setOpen(false)}
-                className="text-[#639] py-3 text-sm underline md:text-base font-bold  before:border-solid before:border-t-2 before:border-r-2 before:content-[''] before:inline-block before:h-2 before:-translate-y-1/4 before:-rotate-[135deg] before:w-2 before:mr-1 before:border-[#f7723e]"
+                className="text-[#639] py-3 text-sm underline md:text-base font-bold  before:border-solid before:border-t-2 before:border-r-2 before:content-[''] before:inline-block before:h-2 before:-translate-y-1/4 before:-rotate-[135deg] before:w-2 before:mr-1 before:border-[#0276AE]"
               >
                 弁護士ドットコム トップ
               </button>
@@ -194,7 +194,7 @@ export default function Header() {
                       <Link
                         href="/"
                         onClick={() => setOpen(false)}
-                        className="flex items-center justify-center w-full bg-[#f7723e] rounded-full text-xs font-bold px-4 py-3 text-white relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-white after:top-1/2 after:right-4"
+                        className="flex items-center justify-center w-full bg-[#0276AE] rounded-full text-xs font-bold px-4 py-3 text-white relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-white after:top-1/2 after:right-4"
                       >
                         新規会員登録
                         <span className="bg-white text-[#e94a00] rounded-[16px] text-[10px] font-normal ml-2 py-0.5 px-1">
@@ -206,7 +206,7 @@ export default function Header() {
                       <Link
                         href="/"
                         onClick={() => setOpen(false)}
-                        className="flex items-center justify-center w-full bg-white border-[#bbb3af] border rounded-full text-xs font-bold px-4 py-3 text-[#262221] relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 after:right-4"
+                        className="flex items-center justify-center w-full bg-white border-[#bbb3af] border rounded-full text-xs font-bold px-4 py-3 text-[#262221] relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#0276AE] after:top-1/2 after:right-4"
                       >
                         ログインする
                       </Link>
@@ -224,7 +224,7 @@ export default function Header() {
                       <Link
                         href="/"
                         onClick={() => setOpen(false)}
-                        className="flex items-center justify-center w-full bg-[#f7723e] rounded-full text-xs font-bold px-4 py-3 text-white relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-white after:top-1/2 after:right-4 before:size-[14px] before:bg-[url(/icons/link-p.svg)] before:bg-cover before:absolute before:left-4"
+                        className="flex items-center justify-center w-full bg-[#0276AE] rounded-full text-xs font-bold px-4 py-3 text-white relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-white after:top-1/2 after:right-4 before:size-[14px] before:bg-[url(/icons/link-p.svg)] before:bg-cover before:absolute before:left-4"
                       >
                         プレミアムサービスについて見る
                       </Link>
@@ -259,7 +259,7 @@ export default function Header() {
                           <Link
                             href={item.href}
                             onClick={() => setOpen(false)}
-                            className="p-4 pl-0 flex w-full relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 after:right-4 text-base font-bold text-[#005ebb] border-t border-[#e9e5e4] -mt-px"
+                            className="p-4 pl-0 flex w-full relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#0276AE] after:top-1/2 after:right-4 text-base font-bold text-[#005ebb] border-t border-[#e9e5e4] -mt-px"
                           >
                             {item.text}
                           </Link>

@@ -38,7 +38,7 @@ export default function SearchHistory() {
             <button
               className={cn(
                 "md:text-[18px] text-[16px] font-bold border-b border-[#e9e5e4] flex-1 py-4",
-                searchTab === 0 ? "border-[#f7723e] text-[#262221]" : "border-[#e9e5e4] text-[#315dbb]"
+                searchTab === 0 ? "border-[#0276AE] text-[#262221]" : "border-[#e9e5e4] text-[#315dbb]"
               )}
               onClick={() => setSearchTab(0)}
             >
@@ -47,7 +47,7 @@ export default function SearchHistory() {
             <button
               className={cn(
                 "text-[#315dbb] md:text-[18px] text-[16px] font-bold border-b border-[#e9e5e4] flex-1 py-4",
-                searchTab === 1 ? "border-[#f7723e] text-[#262221]" : "border-[#e9e5e4] text-[#315dbb] "
+                searchTab === 1 ? "border-[#0276AE] text-[#262221]" : "border-[#e9e5e4] text-[#315dbb] "
               )}
               onClick={() => setSearchTab(1)}
             >
@@ -72,7 +72,7 @@ export default function SearchHistory() {
                   <HistoryItem link="/lawyers/id" image="/images/124266_1.png" name="〇〇 〇〇" introduction="埼玉県 さいたま市浦和区常盤選択範囲のテキストを削除" />
                 </div>
               </div>
-              <Link href="/" className="relative flex items-center justify-center border border-[#bbb3af] font-bold [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] rounded-full w-full max-w-[400px] mx-auto py-4 md:py-4 px-5 md:px-8 bg-white md:text-[18px] text-[16px] after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 after:right-4">閲覧履歴をもっと見る
+              <Link href="/" className="relative flex items-center justify-center border border-[#bbb3af] font-bold [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] rounded-full w-full max-w-[400px] mx-auto py-4 md:py-4 px-5 md:px-8 bg-white md:text-[18px] text-[16px] after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#0276AE] after:top-1/2 after:right-4">閲覧履歴をもっと見る
               </Link>
             </div>
             <div className="border-y border-[#bbb3af]/40 mt-6 pt-6 mb-8 pb-4">
@@ -136,7 +136,7 @@ export default function SearchHistory() {
                   <div className="">
                     <select className="border border-[#bbb3af] rounded-lg w-full md:text-[18px] text-[16px] [box-shadow:inset_1px_1px_2px_rgba(38,_34,_33,_.08)] py-3 pr-10 pl-4 leading-snug appearance-none bg-[url(/icons/select.svg)] bg-[position:right_18px_top_50%] bg-no-repeat" aria-label="都道府県を選択"><option value="">相談内容</option><option value="rikon">離婚・男女問題</option><option value="shakkin">借金</option><option value="sozoku">相続</option><option value="kotsujiko">交通事故</option><option value="internet">インターネット</option><option value="shohishahigai">消費者被害</option><option value="hanzai">犯罪・刑事事件</option><option value="roudou">労働</option><option value="saiken">債権回収</option><option value="fudosan">不動産・建築</option><option value="kokusai">国際・外国人問題</option><option value="iryou">医療</option><option value="houmu">企業法務</option><option value="zeimu">税務訴訟</option><option value="gyosei">行政事件</option>                  </select>
                   </div>
-                  <Link href="/" className="relative flex items-center justify-center bg-[#f7723e] font-bold [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] rounded-full w-full max-w-[400px] mx-auto py-4 md:py-4 px-5 md:px-8 text-white md:text-[18px] text-[16px]">検索する
+                  <Link href="/" className="relative flex items-center justify-center bg-[#0276AE] font-bold [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] rounded-full w-full max-w-[400px] mx-auto py-4 md:py-4 px-5 md:px-8 text-white md:text-[18px] text-[16px]">検索する
                   </Link>
                 </div>
               </form>

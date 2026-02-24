@@ -86,7 +86,7 @@ export default function LawyersField() {
             <h3 className="md:text-[20px] text-[18px] md:py-[14px] font-bold py-3 px-6 bg-[#ececec]">分野から探す</h3>
             <div className="md:mt-8 mt-6 max-md:px-6 space-y-2.5 mb-4">
                 {fields.map((field, index) => (
-                    <Link href={field.link} key={index} className="relative flex justify-between rounded-lg items-center gap-2.5 bg-white border border-[#ededed] md:p-[18px] p-4 after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 after:right-4 md:pr-8 max-md:pr-6">
+                    <Link href={field.link} key={index} className="relative flex justify-between rounded-lg items-center gap-2.5 bg-white border border-[#ededed] md:p-[18px] p-4 after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#0276AE] after:top-1/2 after:right-4 md:pr-8 max-md:pr-6">
                         <span className="flex flex-col gap-2.5">
                             <span className="flex items-center gap-1.5 md:text-[18px] text-[16px] font-bold">
                                 <Image src={field.icon} alt="" width={18} height={18} className="md:size-[18px] size-4" />

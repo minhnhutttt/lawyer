@@ -18,7 +18,7 @@ export const QuestionSearch = () => {
               </div>
               <div className="border-b border-[#f0ebe9] mb-[56px]">
                 <div className="flex justify-center">
-                  <button onClick={() => setExpand(true)} className={cn("justify-center items-center gap-2 border-t border-[#e9e5e4] py-6 flex relative after:block after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-[135deg] after:border-[#f7723e] after:right-4 md:text-[18px] text-[16px] font-bold text-[#315dbb] px-6", expand && 'hidden')}>
+                  <button onClick={() => setExpand(true)} className={cn("justify-center items-center gap-2 border-t border-[#e9e5e4] py-6 flex relative after:block after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-[135deg] after:border-[#0276AE] after:right-4 md:text-[18px] text-[16px] font-bold text-[#315dbb] px-6", expand && 'hidden')}>
                     もっと詳しく絞り込む
                   </button>
                 </div>
@@ -26,7 +26,7 @@ export const QuestionSearch = () => {
                   <div>
                     <label className="flex items-center gap-2 py-2 relative md:text-[18px] text-[16px]">
                       <input type="checkbox" className="peer sr-only" />
-                      <span className="flex justify-center relative aspect-square border-2 border-[#bbb3af] rounded h-4 w-4 peer-checked:bg-[#f7723e] peer-checked:border-transparent after:border-l-[3px] after:border-b-[3px] after:border-white after:h-1.5 after:w-2.5 after:absolute after:top-0.5 after:-rotate-45"></span>
+                      <span className="flex justify-center relative aspect-square border-2 border-[#bbb3af] rounded h-4 w-4 peer-checked:bg-[#0276AE] peer-checked:border-transparent after:border-l-[3px] after:border-b-[3px] after:border-white after:h-1.5 after:w-2.5 after:absolute after:top-0.5 after:-rotate-45"></span>
                       ベストアンサーあり
                     </label>
                   </div>
@@ -90,7 +90,7 @@ export const QuestionSearch = () => {
                       <span className="font-bold">597399</span>件見つかりました
                     </div>
                     <div className="flex justify-center">
-                      <button className="max-w-[400px] w-full bg-[#f7723e] rounded-full text-white p-4 font-bold md:text-[18px] text-[14px]">絞り込み検索する</button>
+                      <button className="max-w-[400px] w-full bg-[#0276AE] rounded-full text-white p-4 font-bold md:text-[18px] text-[14px]">絞り込み検索する</button>
                     </div>
                   </div>
                 </div>

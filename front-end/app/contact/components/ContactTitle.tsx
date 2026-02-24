@@ -15,7 +15,7 @@ export default function ContactTitle({ children, variant = 2, className = '' }: 
 
   return (
     <h2 
-      className={`bg-[#efe5d9] rounded-[3px] text-[#74542b] text-[18px] font-bold py-[8px] px-[15px] ${className}`}
+      className={`bg-[#efe5d9] rounded-[3px] text-[#375165] text-[18px] font-bold py-[8px] px-[15px] ${className}`}
       style={{ textShadow: '0 1px 0 #fff' }}
     >
       {children}

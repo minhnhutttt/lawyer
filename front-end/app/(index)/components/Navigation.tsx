@@ -4,7 +4,7 @@ import Link from "next/link";
 const HeadLink = ({ text, href }: { text: string; href: string }) => {
   return (
     <li className="">
-      <Link href={href} className="font-bold items-center text-sm text-[#333] flex gap-1 after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45  after:border-[#f7723e] h-[42px] whitespace-nowrap">
+      <Link href={href} className="font-bold items-center text-sm text-[#333] flex gap-1 after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45  after:border-[#0276AE] h-[42px] whitespace-nowrap">
         {text}
       </Link>
     </li>

@@ -12,7 +12,7 @@ export default function LawyersInformation() {
                     <div className="md:text-[16px] text-[14px] font-bold">法テラスとは？</div>
                     <p className="md:text-[14px] text-[12px]">法テラスとは、法律トラブルを抱えた人が気軽に利用できる公的なサービスです。気軽に無料で法律に関する情報提供を受けられ、役立つ法制度や適切な窓口を紹介してくれます。</p>
                     <p className="md:text-[14px] text-[12px]">経済的に余裕のない人も一定の条件を満たせば、無料で法律相談をしたり費用を立て替えてもらったりすることができます。弁護士や司法書士などの専門家に依頼しやすい環境を整えているのです。</p>
-                    <Link href="#" className="relative rounded-md max-w-[340px] w-full min-h-[88px] bg-white flex gap-3 border border-[#ededed] p-4 pl-[106px] mx-auto after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 after:right-4">
+                    <Link href="#" className="relative rounded-md max-w-[340px] w-full min-h-[88px] bg-white flex gap-3 border border-[#ededed] p-4 pl-[106px] mx-auto after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#0276AE] after:top-1/2 after:right-4">
 
                         <Image src="/images/lawyers/what-is-houterasu.png" alt="" width={132} height={132} className="absolute w-[88px] left-0 top-0" />
                         <span className="md:text-[14px] text-[12px] font-bold">

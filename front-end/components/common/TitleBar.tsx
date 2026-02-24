@@ -9,7 +9,7 @@ interface TitleBarProps {
 
 const TitleBar: React.FC<TitleBarProps> = ({ children, icon, right }) => {
   return (
-    <div className="bg-[#efe5d9] justify-between rounded-[3px] text-[#74542b] text-[16px] md:text-[18px] font-bold mb-[15px] px-[15px] py-[7px] [text-shadow:0_1px_0_#fff] flex items-center gap-1 max-md:flex-col max-md:items-center">
+    <div className="bg-[#E3F8FF] justify-between rounded-[3px] text-[#375165] text-[16px] md:text-[18px] font-bold mb-[15px] px-[15px] py-[7px] [text-shadow:0_1px_0_#fff] flex items-center gap-1 max-md:flex-col max-md:items-center">
       <span className='flex items-center gap-1'>
         {icon &&
         <Image
@@ -22,7 +22,7 @@ const TitleBar: React.FC<TitleBarProps> = ({ children, icon, right }) => {
       }
         <span>{children}</span>
       </span>
-      {right && <span className='text-[10px] text-[#74542b]'>{right}</span>}
+      {right && <span className='text-[10px] text-[#375165]'>{right}</span>}
       
     </div>
   );

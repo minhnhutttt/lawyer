@@ -38,7 +38,7 @@ export default function EstimateRequirement() {
       <div className="flex flex-col md:flex-row gap-5">
         {data.map((category, index) => (
           <div key={index} className="flex-1 border border-[#eee] p-[30px]">
-            <h3 className="text-center text-[#74542b] mb-[30px] text-[14px]"><b className="text-[18px]">{category.title}</b>でのご依頼をご検討の方</h3>
+            <h3 className="text-center text-[#375165] mb-[30px] text-[14px]"><b className="text-[18px]">{category.title}</b>でのご依頼をご検討の方</h3>
             <ul className="text-[12px] flex gap-x-4 gap-y-3 flex-wrap">
               {category.list.map((item, idx) => (
                 <li key={idx} className="flex items-center w-[calc(50%_-_10px)]">
@@ -50,7 +50,7 @@ export default function EstimateRequirement() {
           </div>
         ))}
       </div>
-      <p className="text-[#74542b] text-[16px] md:text-[18px] text-center mt-[30px]">
+      <p className="text-[#375165] text-[16px] md:text-[18px] text-center mt-[30px]">
         一括見積りのご利用には、<br className="md:hidden"/><b className="text-[#f90]">無料</b>会員登録が必要です。
       </p>
       <div className="flex flex-col items-center gap-4 mt-4">

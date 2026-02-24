@@ -99,7 +99,7 @@ export default function EstimateQuotation({ type = 1, className }: QuotationProp
         )}
         <div className="text-center pt-10 md:pt-16">
           <h2 className="
-              text-[#74542b] inline-block mx-auto text-center text-[18px]
+              text-[#375165] inline-block mx-auto text-center text-[18px]
               relative
               px-5
               mb-5
@@ -132,7 +132,7 @@ export default function EstimateQuotation({ type = 1, className }: QuotationProp
 
       {type === 1 && (
         <div className="w-full max-w-[660px] mx-auto px-2.5 bg-white p-[30px] mt-10 text-center">
-          <h2 className="text-[#74542b] text-center text-[16px] md:text-[18px]">
+          <h2 className="text-[#375165] text-center text-[16px] md:text-[18px]">
             <strong className="text-[#f90]">依頼するほどでもないかも</strong>とお悩みの方には、<br />
             <strong>みんなの法律相談がお勧めです</strong>
           </h2>
@@ -150,7 +150,7 @@ export default function EstimateQuotation({ type = 1, className }: QuotationProp
 
       {type === 2 && (
         <div className="w-full max-w-[660px] mx-auto bg-white p-[30px] mt-10 text-center">
-          <h2 className="text-[#74542b] text-[18px]">
+          <h2 className="text-[#375165] text-[18px]">
             <strong className="text-[#f90]">今すぐ相談にのって欲しい</strong>場合には <br />
             <strong >直接弁護士に問い合わせるのがお勧め</strong>です
           </h2>
@@ -181,7 +181,7 @@ export default function EstimateQuotation({ type = 1, className }: QuotationProp
                   ">
                   <div className="flex items-center justify-center w-[65px] flex-shrink-0 p-1 border-r border-[#ddd]">
                     <Image src={selectData.iconUrl} alt={selectData.title} width={15} height={15} className="mr-1 flex-shrink-0" />
-                    <span className="text-[#74542b] text-[13px] font-bold">{selectData.title}</span>
+                    <span className="text-[#375165] text-[13px] font-bold">{selectData.title}</span>
                   </div>
                   <div className="flex-1 text-[13px] font-bold
                     after:content-['']

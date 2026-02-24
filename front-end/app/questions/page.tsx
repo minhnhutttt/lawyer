@@ -160,7 +160,7 @@ export default function QuestionsPage() {
               <div className="mb-[56px]">
                 <div className="flex justify-between items-center md:text-[18px] text-[16px] font-bold mb-4">
                   <p>離婚・男女問題の新着相談</p>
-                  <Link href="#" className="flex relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 after:right-4 md:text-[16px] text-[14px] font-bold text-[#315dbb] px-6">
+                  <Link href="#" className="flex relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#0276AE] after:top-1/2 after:right-4 md:text-[16px] text-[14px] font-bold text-[#315dbb] px-6">
                     一覧へ
                   </Link>
                 </div>
@@ -176,7 +176,7 @@ export default function QuestionsPage() {
               <div className="mb-[56px]">
                 <div className="flex justify-between items-center md:text-[18px] text-[16px] font-bold mb-4">
                   <p>離婚・男女問題の新着相談</p>
-                  <Link href="#" className="flex relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 after:right-4 md:text-[16px] text-[14px] font-bold text-[#315dbb] px-6">
+                  <Link href="#" className="flex relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#0276AE] after:top-1/2 after:right-4 md:text-[16px] text-[14px] font-bold text-[#315dbb] px-6">
                     一覧へ
                   </Link>
                 </div>
@@ -201,7 +201,7 @@ export default function QuestionsPage() {
               </div>
               <div className="flex justify-center">
                 <Link href="/" className="relative flex items-center justify-center gap-2 border border-[#bbb3af] font-bold [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] rounded-full w-full max-w-[400px] mx-auto py-4 md:py-4 px-5 md:px-8 bg-white md:text-[18px] text-[16px]">
-                  新しく相談をする <span className="text-[#f7723e] md:text-[14px] text-[12px]">無料</span>
+                  新しく相談をする <span className="text-[#0276AE] md:text-[14px] text-[12px]">無料</span>
                 </Link>
               </div>
               <div className="mt-6">
@@ -224,7 +224,7 @@ export default function QuestionsPage() {
             <p className="md:text-[18px] text-[16px] font-bold mb-6">カテゴリから相談を探す</p>
             <div className="">
               {categories.map((category, i) => (
-                <Link href={category.href} className="flex items-center relative gap-4 md:text-[18px] text-[16px] font-bold text-[#315dbb] after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 after:right-4 border-b border-[#e9e5e4] py-4 pr-4">
+                <Link href={category.href} className="flex items-center relative gap-4 md:text-[18px] text-[16px] font-bold text-[#315dbb] after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#0276AE] after:top-1/2 after:right-4 border-b border-[#e9e5e4] py-4 pr-4">
                   <Image
                     src={category.icon}
                     alt=""

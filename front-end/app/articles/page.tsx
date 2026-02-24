@@ -46,7 +46,7 @@ export default function ArticlesPage() {
         <div className="w-full max-w-[1104px] mx-auto">
           <div className="py-3 flex items-center justify-between md:text-[16px] text-[14px] font-bold max-md:flex-col">
             <div className="flex overflow-auto w-full whitespace-nowrap">
-              <button className="p-4 border-b-2 border-[#f7723e] hover:bg-[hsla(17,19%,93%,.55)] duration-150">総合</button>
+              <button className="p-4 border-b-2 border-[#0276AE] hover:bg-[hsla(17,19%,93%,.55)] duration-150">総合</button>
               <button className="p-4 border-b-2 border-[#e9e5e4] hover:bg-[hsla(17,19%,93%,.55)] duration-150">法曹</button>
               <span className="px-2.5 border-b-2 border-[#e9e5e4] after:bg-[#eee] after:h-6 after:w-px flex items-center justify-center"></span>
               <button className="flex items-center gap-1 p-4 border-b-2 border-[#e9e5e4] after:size-[14px] after:bg-[url(/icons/icon_external_link.svg)] after:bg-cover hover:bg-[hsla(17,19%,93%,.55)] duration-150">
@@ -132,7 +132,7 @@ export default function ArticlesPage() {
               <ArticleItem link="/articles/id" title="コインパーキングに7年放置で逮捕、「長期無断駐車」どうすれば…弁護士が教える撃退法" desc="神戸市内のコインパーキングで約7年にわたり、料金を支払わずに車を停め続け、管理会社の業務を妨害したと" time="2026年02月10日 12時27分" image="/images/articles/22686_2_11.jpg" />
               <ArticleItem link="/articles/id" title="コインパーキングに7年放置で逮捕、「長期無断駐車」どうすれば…弁護士が教える撃退法" desc="神戸市内のコインパーキングで約7年にわたり、料金を支払わずに車を停め続け、管理会社の業務を妨害したと" time="2026年02月10日 12時27分" image="/images/articles/22686_2_11.jpg" />
             </div>
-            <Link href="/articles/" className="border-t border-[#e9e5e4] py-6 flex relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 after:right-4 md:text-[18px] text-[16px] font-bold text-[#315dbb] px-6">
+            <Link href="/articles/" className="border-t border-[#e9e5e4] py-6 flex relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#0276AE] after:top-1/2 after:right-4 md:text-[18px] text-[16px] font-bold text-[#315dbb] px-6">
               もっと見る
             </Link>
           </div>

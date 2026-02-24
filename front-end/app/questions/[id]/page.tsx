@@ -134,7 +134,7 @@ export default function QuestionDetailPage() {
                   </div>
                 </div>
                 <div className="flex justify-center border-t border-[#e9e5e4]">
-                  <Link href="#" className="flex justify-center items-center gap-2 relative w-full md:text-[16px] text-[14px] font-bold text-[#315dbb] px-6 after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:border-[#f7723e] py-6">岡村 茂樹 弁護士のプロフィールを見る</Link>
+                  <Link href="#" className="flex justify-center items-center gap-2 relative w-full md:text-[16px] text-[14px] font-bold text-[#315dbb] px-6 after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:border-[#0276AE] py-6">岡村 茂樹 弁護士のプロフィールを見る</Link>
                 </div>
               </div>
               <div className="border border-[#ededed] bg-[#fbf9f8] md:p-5 p-4 rounded-md md:text-[14px] text-[12px] text-[#716c6b]">
@@ -152,15 +152,15 @@ export default function QuestionDetailPage() {
             </div>
             <div className="flex justify-center my-[56px]">
               <Link href="/" className="relative flex items-center justify-center gap-2 border border-[#bbb3af] font-bold [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] rounded-full w-full max-w-[400px] mx-auto py-4 md:py-4 px-5 md:px-8 bg-white md:text-[18px] text-[16px]">
-                新しく相談をする <span className="text-[#f7723e] md:text-[14px] text-[12px]">無料</span>
+                新しく相談をする <span className="text-[#0276AE] md:text-[14px] text-[12px]">無料</span>
               </Link>
             </div>
             <div className="flex justify-between gap-5">
-              <Link href="#" className="flex justify-start relative w-full md:text-[18px] text-[16px] font-bold text-[#315dbb] py-2.5 px-6 before:absolute before:border-t-[2px] before:border-r-[2px] before:h-2 before:w-2 before:-rotate-[135deg] before:-translate-y-1/2 before:border-[#f7723e] before:top-1/2 before:left-3">子どもの車内置き去りについて</Link>
-              <Link href="#" className="flex justify-end relative w-full md:text-[18px] text-[16px] font-bold text-[#315dbb] py-2.5 px-6 after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 after:right-3">水虫の薬をあげた件の告訴リスク</Link>
+              <Link href="#" className="flex justify-start relative w-full md:text-[18px] text-[16px] font-bold text-[#315dbb] py-2.5 px-6 before:absolute before:border-t-[2px] before:border-r-[2px] before:h-2 before:w-2 before:-rotate-[135deg] before:-translate-y-1/2 before:border-[#0276AE] before:top-1/2 before:left-3">子どもの車内置き去りについて</Link>
+              <Link href="#" className="flex justify-end relative w-full md:text-[18px] text-[16px] font-bold text-[#315dbb] py-2.5 px-6 after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#0276AE] after:top-1/2 after:right-3">水虫の薬をあげた件の告訴リスク</Link>
             </div>
             <div className="flex justify-center my-[56px]">
-              <Link href="/" className="relative flex items-center justify-center gap-2 border border-[#bbb3af] font-bold [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] rounded-full w-full max-w-[400px] mx-auto py-4 md:py-4 px-5 md:px-8 bg-white md:text-[18px] text-[16px] before:absolute before:border-t-[2px] before:border-r-[2px] before:h-2 before:w-2 before:-rotate-[135deg] before:-translate-y-1/2 before:border-[#f7723e] before:top-1/2 before:left-5">
+              <Link href="/" className="relative flex items-center justify-center gap-2 border border-[#bbb3af] font-bold [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] rounded-full w-full max-w-[400px] mx-auto py-4 md:py-4 px-5 md:px-8 bg-white md:text-[18px] text-[16px] before:absolute before:border-t-[2px] before:border-r-[2px] before:h-2 before:w-2 before:-rotate-[135deg] before:-translate-y-1/2 before:border-[#0276AE] before:top-1/2 before:left-5">
                 法律相談トップへ
               </Link>
             </div>

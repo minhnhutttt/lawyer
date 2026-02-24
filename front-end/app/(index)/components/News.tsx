@@ -151,7 +151,7 @@ export default function News() {
                   <button onClick={() => setNewsTab(0)}
                     className={cn(
                       'rounded-[5px] text-[15px] w-[206px] [box-shadow:inset_-1px_-1px_#d8d8d8,_inset_0_0_0_1px_#e9e9e9,_inset_2px_2px_#fff] flex items-center justify-center gap-1 top-px relative',
-                      newsTab === 0 ? 'bg-white border-b-none rounded-tl-[5px] rounded-br-none rounded-tr-[5px] rounded-bl-none [box-shadow:0_0_0_#fff,_inset_1px_0_0_#ddd,_inset_0_1px_0_#ddd,_inset_-1px_0_0_#ddd] text-[#74542b] py-3' : 'py-2 bg-[linear-gradient(#fdfdfd,_#f8f8f8)]'
+                      newsTab === 0 ? 'bg-white border-b-none rounded-tl-[5px] rounded-br-none rounded-tr-[5px] rounded-bl-none [box-shadow:0_0_0_#fff,_inset_1px_0_0_#ddd,_inset_0_1px_0_#ddd,_inset_-1px_0_0_#ddd] text-[#375165] py-3' : 'py-2 bg-[linear-gradient(#fdfdfd,_#f8f8f8)]'
                     )}>
                     <Image
                       src="/images/icn-newitem_1x.webp"
@@ -164,7 +164,7 @@ export default function News() {
                   <button onClick={() => setNewsTab(1)}
                     className={cn(
                       'rounded-[5px] text-[15px] w-[206px] [box-shadow:inset_-1px_-1px_#d8d8d8,_inset_0_0_0_1px_#e9e9e9,_inset_2px_2px_#fff] flex items-center justify-center gap-1 top-px relative',
-                      newsTab === 1 ? 'bg-white border-b-none rounded-tl-[5px] rounded-br-none rounded-tr-[5px] rounded-bl-none [box-shadow:0_0_0_#fff,_inset_1px_0_0_#ddd,_inset_0_1px_0_#ddd,_inset_-1px_0_0_#ddd] text-[#74542b] py-3' : 'py-2 bg-[linear-gradient(#fdfdfd,_#f8f8f8)]'
+                      newsTab === 1 ? 'bg-white border-b-none rounded-tl-[5px] rounded-br-none rounded-tr-[5px] rounded-bl-none [box-shadow:0_0_0_#fff,_inset_1px_0_0_#ddd,_inset_0_1px_0_#ddd,_inset_-1px_0_0_#ddd] text-[#375165] py-3' : 'py-2 bg-[linear-gradient(#fdfdfd,_#f8f8f8)]'
                     )}>
                     <Image
                       src="/images/icn-ranking_1x.webp"

@@ -14,7 +14,7 @@ export default function Sidebar() {
                   width={15}
                   height={15}
                 />
-                <span className="text-[11px] text-[#74542b]">会員弁護士数</span>
+                <span className="text-[11px] text-[#375165]">会員弁護士数</span>
                 <span className="text-[14px] font-bold">23,256</span>
                 <span className="text-[10px] text-[#999]">人</span>
               </div>
@@ -25,7 +25,7 @@ export default function Sidebar() {
                   width={15}
                   height={15}
                 />
-                <span className="text-[11px] text-[#74542b]">相談数</span>
+                <span className="text-[11px] text-[#375165]">相談数</span>
                 <span className="text-[14px] font-bold">1,478,852</span>
                 <span className="text-[10px] text-[#999]">件</span>
               </div>

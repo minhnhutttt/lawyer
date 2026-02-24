@@ -15,7 +15,7 @@ const AreaMap = ({ className, title, items }: { className: string, title: string
         className
       )}
     >
-      <p className=" text-[#74542b] block text-[15px] md:text-[10px] md:text-center w-full">{title}</p>
+      <p className=" text-[#375165] block text-[15px] md:text-[10px] md:text-center w-full">{title}</p>
       <div className="flex flex-wrap gap-x-2">
         {items.map((item, index) => (
           <p className="inline-block leading-[1.2]" key={index}>

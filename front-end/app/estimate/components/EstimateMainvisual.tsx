@@ -32,7 +32,7 @@ export default function EstimateMainvisual() {
         before:z-0
         ">
       <div className="w-full max-w-[980px] mx-auto px-2.5 text-center relative z-10">
-        <p className="text-[20px] md:text-[24px] text-[#74542b]">
+        <p className="text-[20px] md:text-[24px] text-[#375165]">
           <span>「対処方針」</span>と<span>「費用」</span>から、<br className='md:hidden'/><strong className="text-[#f90]">自分にあった弁護士</strong>を選べる
         </p>
         <h2>

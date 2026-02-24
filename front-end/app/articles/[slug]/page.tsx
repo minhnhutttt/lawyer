@@ -59,10 +59,10 @@ export default function ArticlePageDetail() {
               <p className="md:text-[18px] text-[16px] font-bold mb-4">編集部からのお知らせ</p>
               <p className="md:text-[18px] text-[16px] mb-4">現在、編集部では協力ライターと情報提供を募集しています。詳しくは下記リンクをご確認ください。</p>
               <div className="">
-                <Link href="#" className="border-t border-[#e9e5e4] py-6 flex relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 after:right-4 md:text-[18px] text-[16px] font-bold text-[#315dbb] px-6">
+                <Link href="#" className="border-t border-[#e9e5e4] py-6 flex relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#0276AE] after:top-1/2 after:right-4 md:text-[18px] text-[16px] font-bold text-[#315dbb] px-6">
                   協力ライター募集詳細
                 </Link>
-                <Link href="#" className="border-t border-[#e9e5e4] py-6 flex relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 after:right-4 md:text-[18px] text-[16px] font-bold text-[#315dbb] px-6">
+                <Link href="#" className="border-t border-[#e9e5e4] py-6 flex relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#0276AE] after:top-1/2 after:right-4 md:text-[18px] text-[16px] font-bold text-[#315dbb] px-6">
                   情報提供はこちら
                 </Link>
               </div>
@@ -118,7 +118,7 @@ export default function ArticlePageDetail() {
                 </Link>
               </div>
               <div className="flex justify-center">
-                <Link href="#" className="max-w-[300px] w-full [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] flex items-center justify-center md:text-[14px] text-[12px] border border-[#bbb3af] bg-white py-4 px-3 rounded-full relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 after:right-4">Googleニュースをフォロー</Link>
+                <Link href="#" className="max-w-[300px] w-full [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] flex items-center justify-center md:text-[14px] text-[12px] border border-[#bbb3af] bg-white py-4 px-3 rounded-full relative after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#0276AE] after:top-1/2 after:right-4">Googleニュースをフォロー</Link>
               </div>
             </div>
           </div>

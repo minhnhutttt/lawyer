@@ -155,27 +155,27 @@ export default function LawyersPage() {
           <div className="flex-grow">
             <div className="w-full">
               <div ref={tabHeaderRef} className="flex bg-white border-y border-[#d9d9d9] overflow-visible sticky top-0 z-10 max-md:divide-x">
-                <button onClick={() => setTab(0)} className={cn("flex-1 font-bold flex flex-col items-center gap-1 md:gap-2.5 text-[10px] md:text-[clamp(12px,2vw,16px)] leading-none relative py-3 md:py-4 after:absolute after:h-1 after:bg-[#f7723e] after:bottom-0 after:inset-x-0 after:w-full", tab === 0 ? 'after:opacity-100 text-[#f7723e]' : 'after:opacity-0')}>
+                <button onClick={() => setTab(0)} className={cn("flex-1 font-bold flex flex-col items-center gap-1 md:gap-2.5 text-[10px] md:text-[clamp(12px,2vw,16px)] leading-none relative py-3 md:py-4 after:absolute after:h-1 after:bg-[#0276AE] after:bottom-0 after:inset-x-0 after:w-full", tab === 0 ? 'after:opacity-100 text-[#0276AE]' : 'after:opacity-0')}>
                   <Image src="/images/lawyers/lawyer-ic-01.svg" alt="" width={28} height={28} className="max-md:size-5" />
                   <p>人物紹介</p>
                 </button>
-                <button onClick={() => setTab(1)} className={cn("flex-1 font-bold flex flex-col items-center gap-1 md:gap-2.5 text-[10px] md:text-[clamp(12px,2vw,16px)] leading-none relative py-3 md:py-4 after:absolute after:h-1 after:bg-[#f7723e] after:bottom-0 after:inset-x-0 after:w-full", tab === 1 ? 'after:opacity-100 text-[#f7723e]' : 'after:opacity-0')}>
+                <button onClick={() => setTab(1)} className={cn("flex-1 font-bold flex flex-col items-center gap-1 md:gap-2.5 text-[10px] md:text-[clamp(12px,2vw,16px)] leading-none relative py-3 md:py-4 after:absolute after:h-1 after:bg-[#0276AE] after:bottom-0 after:inset-x-0 after:w-full", tab === 1 ? 'after:opacity-100 text-[#0276AE]' : 'after:opacity-0')}>
                   <Image src="/images/lawyers/lawyer-ic-02.svg" alt="" width={28} height={28} className="max-md:size-5" />
                   <p>注力分野</p>
                 </button>
-                <button onClick={() => setTab(2)} className={cn("flex-1 font-bold flex flex-col items-center gap-1 md:gap-2.5 text-[10px] md:text-[clamp(12px,2vw,16px)] leading-none relative py-3 md:py-4 after:absolute after:h-1 after:bg-[#f7723e] after:bottom-0 after:inset-x-0 after:w-full", tab === 2 ? 'after:opacity-100 text-[#f7723e]' : 'after:opacity-0')}>
+                <button onClick={() => setTab(2)} className={cn("flex-1 font-bold flex flex-col items-center gap-1 md:gap-2.5 text-[10px] md:text-[clamp(12px,2vw,16px)] leading-none relative py-3 md:py-4 after:absolute after:h-1 after:bg-[#0276AE] after:bottom-0 after:inset-x-0 after:w-full", tab === 2 ? 'after:opacity-100 text-[#0276AE]' : 'after:opacity-0')}>
                   <Image src="/images/lawyers/lawyer-ic-03.svg" alt="" width={28} height={28} className="max-md:size-5" />
                   <p>解決事例</p>
                 </button>
-                <button onClick={() => setTab(3)} className={cn("flex-1 font-bold flex flex-col items-center gap-1 md:gap-2.5 text-[10px] md:text-[clamp(12px,2vw,16px)] leading-none relative py-3 md:py-4 after:absolute after:h-1 after:bg-[#f7723e] after:bottom-0 after:inset-x-0 after:w-full", tab === 3 ? 'after:opacity-100 text-[#f7723e]' : 'after:opacity-0')}>
+                <button onClick={() => setTab(3)} className={cn("flex-1 font-bold flex flex-col items-center gap-1 md:gap-2.5 text-[10px] md:text-[clamp(12px,2vw,16px)] leading-none relative py-3 md:py-4 after:absolute after:h-1 after:bg-[#0276AE] after:bottom-0 after:inset-x-0 after:w-full", tab === 3 ? 'after:opacity-100 text-[#0276AE]' : 'after:opacity-0')}>
                   <Image src="/images/lawyers/lawyer-ic-04.svg" alt="" width={28} height={28} className="max-md:size-5" />
                   <p>料金表</p>
                 </button>
-                <button onClick={() => setTab(4)} className={cn("flex-1 font-bold flex flex-col items-center gap-1 md:gap-2.5 text-[10px] md:text-[clamp(12px,2vw,16px)] leading-none relative py-3 md:py-4 after:absolute after:h-1 after:bg-[#f7723e] after:bottom-0 after:inset-x-0 after:w-full", tab === 4 ? 'after:opacity-100 text-[#f7723e]' : 'after:opacity-0')}>
+                <button onClick={() => setTab(4)} className={cn("flex-1 font-bold flex flex-col items-center gap-1 md:gap-2.5 text-[10px] md:text-[clamp(12px,2vw,16px)] leading-none relative py-3 md:py-4 after:absolute after:h-1 after:bg-[#0276AE] after:bottom-0 after:inset-x-0 after:w-full", tab === 4 ? 'after:opacity-100 text-[#0276AE]' : 'after:opacity-0')}>
                   <Image src="/images/lawyers/lawyer-ic-05.svg" alt="" width={28} height={28} className="max-md:size-5" />
                   <p>感謝の声</p>
                 </button>
-                <button onClick={() => setTab(5)} className={cn("flex-1 font-bold flex flex-col items-center gap-1 md:gap-2.5 text-[10px] md:text-[clamp(12px,2vw,16px)] leading-none relative py-3 md:py-4 after:absolute after:h-1 after:bg-[#f7723e] after:bottom-0 after:inset-x-0 after:w-full", tab === 5 ? 'after:opacity-100 text-[#f7723e]' : 'after:opacity-0')}>
+                <button onClick={() => setTab(5)} className={cn("flex-1 font-bold flex flex-col items-center gap-1 md:gap-2.5 text-[10px] md:text-[clamp(12px,2vw,16px)] leading-none relative py-3 md:py-4 after:absolute after:h-1 after:bg-[#0276AE] after:bottom-0 after:inset-x-0 after:w-full", tab === 5 ? 'after:opacity-100 text-[#0276AE]' : 'after:opacity-0')}>
                   <Image src="/images/lawyers/lawyer-ic-06.svg" alt="" width={28} height={28} className="max-md:size-5" />
                   <p>アクセス</p>
                 </button>
@@ -243,7 +243,7 @@ export default function LawyersPage() {
                             </p>
                           </div>
                           <div className="flex justify-center py-4">
-                            <button onClick={() => openTabAndScroll(1)} className="flex items-center gap-1 md:text-[16px] text-[14px] font-bold text-[#315dbb]  after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:border-[#f7723e]">続きを見る</button>
+                            <button onClick={() => openTabAndScroll(1)} className="flex items-center gap-1 md:text-[16px] text-[14px] font-bold text-[#315dbb]  after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:border-[#0276AE]">続きを見る</button>
                           </div>
                         </AreasPracticeTab>
                         <AreasPracticeTab icon="/icons/resolve-02.svg" text="労働問題" solved>
@@ -259,7 +259,7 @@ export default function LawyersPage() {
                             </p>
                           </div>
                           <div className="flex justify-center py-4">
-                            <button onClick={() => openTabAndScroll(2)} className="flex items-center gap-1 md:text-[16px] text-[14px] font-bold text-[#315dbb]  after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:border-[#f7723e]">続きを見る</button>
+                            <button onClick={() => openTabAndScroll(2)} className="flex items-center gap-1 md:text-[16px] text-[14px] font-bold text-[#315dbb]  after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:border-[#0276AE]">続きを見る</button>
                           </div>
                         </AreasPracticeTab>
                       </div>
@@ -378,7 +378,7 @@ export default function LawyersPage() {
                           </span>
                         </Link>
                       </div>
-                      <Link href="#" className="flex justify-end relative w-full md:text-[16px] text-[14px] font-bold text-[#315dbb] py-2.5 px-6 after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 after:right-3">回答をもっと見る</Link>
+                      <Link href="#" className="flex justify-end relative w-full md:text-[16px] text-[14px] font-bold text-[#315dbb] py-2.5 px-6 after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#0276AE] after:top-1/2 after:right-3">回答をもっと見る</Link>
                     </div>
                     <div className="mt-6">
                       <h3 className="md:text-[20px] text-[18px] md:py-[14px] font-bold py-3 px-6 bg-[#ececec]">上月 裕紀 弁護士の解決事例一覧</h3>
@@ -395,7 +395,7 @@ export default function LawyersPage() {
                           </span>
                         </Link>
                       </div>
-                      <Link href="#" className="flex justify-end relative w-full md:text-[16px] text-[14px] font-bold text-[#315dbb] py-2.5 px-6 after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 after:right-3">解決事例をもっと見る</Link>
+                      <Link href="#" className="flex justify-end relative w-full md:text-[16px] text-[14px] font-bold text-[#315dbb] py-2.5 px-6 after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#0276AE] after:top-1/2 after:right-3">解決事例をもっと見る</Link>
                     </div>
                   </div>
                 </div>
@@ -511,7 +511,7 @@ export default function LawyersPage() {
               </div>
               <p className="md:text-[16px] text-[14px] font-bold mb-4 max-md:hidden">上月 裕紀 弁護士へ面談予約</p>
               <div className="flex items-center  max-md:hidden">
-                <div className="relative mr-4 before:size-[20px] before:bg-[#f7723e] before:absolute before:-bottom-1 before:-right-1 before:rounded-full before:bg-[url(/icons/tel.svg)] before:bg-[size:60%] before:bg-center before:bg-no-repeat">
+                <div className="relative mr-4 before:size-[20px] before:bg-[#0276AE] before:absolute before:-bottom-1 before:-right-1 before:rounded-full before:bg-[url(/icons/tel.svg)] before:bg-[size:60%] before:bg-center before:bg-no-repeat">
                   <Image src="/images/lawyers/741830_1.png" alt="" width={150} height={200} className="rounded-lg block w-[60px]" />
                 </div>
                 <div className="">
@@ -534,7 +534,7 @@ export default function LawyersPage() {
                 <Link href="#" className="flex items-center justify-center bg-[linear-gradient(180deg,_#1bd667,_#0bb24f)] border border-[#0cb451] rounded-[6px] text-white font-bold text-[10px] md:text-[12px] hover:bg-[linear-gradient(180deg,_#32ba60,_#14903d)] flex-1 h-[60px] md:min-h-[52px]">
                   <span><span><span className="max-md:text-[15px]">LINE</span><br className="md:hidden" />で面談予約</span></span>
                 </Link>
-                <Link href="#" className="flex items-center justify-center max-md:flex-col max-md:gap-1 bg-[#f7723e] rounded-[6px] text-white font-bold text-[10px] md:text-[12px] hover:bg-[linear-gradient(180deg,_#32ba60,_#14903d)] flex-1 before:size-[17px] gap-2 before:bg-[url(/icons/tel.svg)] before:bg-contain before:bg-center before:bg-no-repeat md:hidden h-[60px] md:min-h-[52px]">
+                <Link href="#" className="flex items-center justify-center max-md:flex-col max-md:gap-1 bg-[#0276AE] rounded-[6px] text-white font-bold text-[10px] md:text-[12px] hover:bg-[linear-gradient(180deg,_#32ba60,_#14903d)] flex-1 before:size-[17px] gap-2 before:bg-[url(/icons/tel.svg)] before:bg-contain before:bg-center before:bg-no-repeat md:hidden h-[60px] md:min-h-[52px]">
                   面談予約
                 </Link>
               </div>

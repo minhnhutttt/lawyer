@@ -257,7 +257,7 @@ export default function SearchPrefecture() {
                 }
                 className={cn(
                   'w-full relative text-[#315dbb] md:text-[18px] text-[16px] font-bold flex items-center p-4 md:p-[18px]',
-                  'after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:border-[#f7723e] after:right-4 after:top-1/2 after:-translate-y-1/2',
+                  'after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:border-[#0276AE] after:right-4 after:top-1/2 after:-translate-y-1/2',
                   isOpen
                     ? 'after:rotate-[-45deg]'
                     : 'after:rotate-[135deg]'

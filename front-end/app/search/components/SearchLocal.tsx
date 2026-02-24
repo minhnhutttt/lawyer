@@ -38,7 +38,7 @@ const HistoryLocalItem = ({ link, image, name, location, walk, time, introductio
       <span className="text-[12px] md:text-[14px] text-[#716c6b] p-4 border-t border-[#e9e5e4]">
         <span className="line-clamp-3 ">{introduction}</span>
       </span>
-      <span className="flex justify-end relative w-full md:text-[14px] text-[12px] text-[#315dbb] py-2.5 px-6 after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 after:right-3">続きを見る
+      <span className="flex justify-end relative w-full md:text-[14px] text-[12px] text-[#315dbb] py-2.5 px-6 after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#0276AE] after:top-1/2 after:right-3">続きを見る
       </span>
     </span>
   </Link>
@@ -54,7 +54,7 @@ export default function SearchLocal() {
             <HistoryLocalItem link="/lawyers/id" image="/images/124266_11.png" name="〇〇 〇〇" location="秋葉原駅" walk="4" time="00:00 - 24:00" introduction="【宅建士・マンション管理士・FP資格有り｜初回相談無料】【秋葉原駅徒歩５分】不動産の..." />
             <HistoryLocalItem link="/lawyers/id" image="/images/124266_11.png" name="〇〇 〇〇" location="秋葉原駅" walk="4" time="00:00 - 24:00" introduction="【宅建士・マンション管理士・FP資格有り｜初回相談無料】【秋葉原駅徒歩５分】不動産の..." />
           </div>
-          <Link href="/" className="relative flex items-center justify-center border border-[#bbb3af] font-bold [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] rounded-full w-full max-w-[400px] mx-auto py-4 md:py-4 px-5 md:px-8 bg-white md:text-[18px] text-[16px] after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#f7723e] after:top-1/2 after:right-4">もっと見る
+          <Link href="/" className="relative flex items-center justify-center border border-[#bbb3af] font-bold [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] rounded-full w-full max-w-[400px] mx-auto py-4 md:py-4 px-5 md:px-8 bg-white md:text-[18px] text-[16px] after:absolute after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:-translate-y-1/2 after:border-[#0276AE] after:top-1/2 after:right-4">もっと見る
           </Link>
         </div>
   )
