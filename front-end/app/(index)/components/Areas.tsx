@@ -272,63 +272,63 @@ export default function Areas() {
   const field = [
     {
       text: '借金・債務整理',
-      href: '/f_1'
+      href: '/lawyers/'
     },
     {
       text: '交通事故',
-      href: '/f_2'
+      href: '/lawyers/'
     },
     {
       text: '離婚・男女問題',
-      href: '/f_3'
+      href: '/lawyers/'
     },
     {
       text: '遺産相続',
-      href: '/f_4'
+      href: '/lawyers/'
     },
     {
       text: '労働問題',
-      href: '/f_5'
+      href: '/lawyers/'
     },
     {
       text: '債権回収',
-      href: '/f_6'
+      href: '/lawyers/'
     },
     {
       text: '医療問題',
-      href: '/f_6'
+      href: '/lawyers/'
     },
     {
       text: '債権回収',
-      href: '/f_7'
+      href: '/lawyers/'
     },
     {
       text: '詐欺被害・消費者被害',
-      href: '/f_8'
+      href: '/lawyers/'
     },
     {
       text: '国際・外国人問題',
-      href: '/f_9'
+      href: '/lawyers/'
     },
     {
       text: 'インターネット問題',
-      href: '/f_10'
+      href: '/lawyers/'
     },
     {
       text: '犯罪・刑事事件',
-      href: '/f_11'
+      href: '/lawyers/'
     },
     {
       text: '不動産・建築',
-      href: '/f_12'
+      href: '/lawyers/'
     },
     {
       text: '企業法務・顧問弁護士',
-      href: '/f_13'
+      href: '/lawyers/'
     },
     {
       text: '税務訴訟・行政事件',
-      href: '/f_14'
+      href: '/lawyers/'
     },
   ]
   return (
