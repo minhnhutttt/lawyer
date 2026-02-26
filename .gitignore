@@ -7,6 +7,7 @@ node_modules
 cmd/api
 !cmd/api/*.go
 front-end/.next
+front-end/out
 vendor
 .DS_Store
 deploy/keys/*.pem
