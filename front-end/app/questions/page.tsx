@@ -107,21 +107,21 @@ export default function QuestionsPage() {
       title: '反訴状に共同親権を記載する',
       desc: '【相談の背景】離婚裁判中です。私は被告側です。反訴状を提出するのですが、',
       count: '2',
-      link: '#'
+      link: '/questions/id'
     },
     {
       images: ['/images/1601175_1.png', '/images/1601175_1.png'],
       title: '反訴状に共同親権を記載する',
       desc: '【相談の背景】離婚裁判中です。私は被告側です。反訴状を提出するのですが、',
       count: '2',
-      link: '#'
+      link: '/questions/id'
     },
     {
       images: ['/images/1601175_1.png', '/images/1601175_1.png'],
       title: '反訴状に共同親権を記載する',
       desc: '【相談の背景】離婚裁判中です。私は被告側です。反訴状を提出するのですが、',
       count: '2',
-      link: '#'
+      link: '/questions/id'
     },
   ]
 

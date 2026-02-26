@@ -56,7 +56,7 @@ export default function SlidebarNews() {
                           ))}
                         </ul>
                         <div className="flex justify-end py-2.5">
-                          <ButtonLink link="/topic">もっと見る</ButtonLink>
+                          <ButtonLink link="/articles">もっと見る</ButtonLink>
                         </div>
                       </div>
                       :
