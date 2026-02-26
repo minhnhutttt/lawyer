@@ -56,7 +56,7 @@ function RootLayoutContent({
   return (
     <TranslationProvider>
       <AuthProvider>
-        <Header showLanguageSelector={false} />
+        <Header />
         <main className="flex-grow">
           <div className="">
             {children}
