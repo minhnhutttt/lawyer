@@ -116,7 +116,7 @@ export default function Header() {
         <div className="flex gap-2.5">
           <Link href="/sp/private/view/question/" className="flex flex-col items-center gap-2 min-w-10">
             <Image
-              src="/icons/history.svg"
+              src="/images/icons/history.svg"
               alt=""
               width={16}
               height={16}
@@ -126,7 +126,7 @@ export default function Header() {
           </Link>
           <Link href="/sp/private/bookmark/question/" className="flex flex-col items-center gap-2 min-w-10">
             <Image
-              src="/icons/favorite.svg"
+              src="/images/icons/favorite.svg"
               alt=""
               width={16}
               height={16}
@@ -142,7 +142,7 @@ export default function Header() {
             className="flex flex-col items-center gap-2 min-w-10"
           >
             <Image
-              src="/icons/menu.svg"
+              src="/images/icons/menu.svg"
               alt=""
               width={16}
               height={16}
@@ -170,7 +170,7 @@ export default function Header() {
                 className="flex flex-col items-center gap-2 min-w-10"
               >
                 <Image
-                  src="/icons/close.svg"
+                  src="/images/icons/close.svg"
                   alt=""
                   width={20}
                   height={20}

@@ -162,7 +162,7 @@ export default function SidebarRank() {
     ]
     return (
         <div className="my-[30px]">
-            <TitleBar icon="/images/icn-ranking_2x.webp">
+            <TitleBar icon="/images/icons/icn-ranking_1x.svg">
                 活躍中の弁護士ランキング
             </TitleBar>
             <p className="border-b border-[#eee] text-[14px] font-bold -mt-[5px] pb-[9px] text-center flex justify-center items-center gap-1">

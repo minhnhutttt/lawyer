@@ -23,7 +23,7 @@ export default function SlidebarNews() {
                       newsTab === 0 ? 'bg-white border-b-none rounded-tl-[5px] rounded-br-none rounded-tr-[5px] rounded-bl-none [box-shadow:0_0_0_#fff,_inset_1px_0_0_#ddd,_inset_0_1px_0_#ddd,_inset_-1px_0_0_#ddd] text-[#375165] py-3' : 'py-2 bg-[linear-gradient(#fdfdfd,_#f8f8f8)]'
                     )}>
                     <Image
-                      src="/images/icn-newitem_1x.webp"
+                      src="/images/icons/icn-newitem_1x.svg"
                       alt=""
                       width={15}
                       height={15}
@@ -36,7 +36,7 @@ export default function SlidebarNews() {
                       newsTab === 1 ? 'bg-white border-b-none rounded-tl-[5px] rounded-br-none rounded-tr-[5px] rounded-bl-none [box-shadow:0_0_0_#fff,_inset_1px_0_0_#ddd,_inset_0_1px_0_#ddd,_inset_-1px_0_0_#ddd] text-[#375165] py-3' : 'py-2  bg-[linear-gradient(#fdfdfd,_#f8f8f8)]'
                     )}>
                     <Image
-                      src="/images/icn-ranking_1x.webp"
+                      src="/images/icons/icn-ranking_1x.svg"
                       alt=""
                       width={15}
                       height={15}

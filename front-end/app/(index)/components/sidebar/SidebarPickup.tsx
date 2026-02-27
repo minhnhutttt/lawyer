@@ -5,7 +5,7 @@ import Link from "next/link";
 export const PickupItem = ({ image, name, href, position, address }: { image: string; name: string, href: string, position: string, address: string }) => {
     return (
         <div className="mb-6 w-[100px] px-1">
-            <Link href={href} className="text-center flex flex-col items-center">
+            <Link href={href} className="flex flex-col items-center text-center">
                 <figure>
                     <Image
                         src={image}
@@ -74,7 +74,7 @@ export default function SidebarPickup() {
     ]
     return (
         <div className="my-[30px]">
-            <TitleBar icon="/images/icn-push_1x.webp">
+            <TitleBar icon="/images/icons/icn-push_1x.svg">
                 ピックアップ弁護士
             </TitleBar>
             <div className=" mt-[5px] mb-[15px] py-1.5 flex flex-wrap max-md:max-w-[400px] max-md:mx-auto max-md:justify-center">

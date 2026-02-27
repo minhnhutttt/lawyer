@@ -9,7 +9,7 @@ interface ButtonLinkProps {
 
 const ButtonLink: React.FC<ButtonLinkProps> = ({ children, link }) => {
   return (
-    <Link href={link} className="text-sm font-bold pr-5 bg-[url(/images/icon_arrow_right_middle.png)] bg-no-repeat bg-right text-[#005ebb]">
+    <Link href={link} className="text-sm font-bold pr-5 bg-[url(/images/icons/icon_arrow_right_middle.svg)] bg-no-repeat bg-right text-[#005ebb]">
                             {children}</Link>
   );
 };

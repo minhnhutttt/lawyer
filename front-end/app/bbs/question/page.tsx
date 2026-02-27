@@ -55,9 +55,9 @@ export default function BssQuestion() {
               <textarea name="" id="" className="md:text-[16px] text-[14px] h-[100px] border border-[#bbb3af] [box-shadow:inset_1px_1px_2px_rgba(38,_34,_33,_.08)] block rounded-lg px-4 py-3 w-full"></textarea>
             </div>
             <div className="flex justify-between gap-2 mt-4">
-              <button className="w-full gap-1 flex items-center justify-center max-w-[400px] border border-[#bbb3af] [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] rounded-full h-[58px] before:size-5 before:bg-cover before:bg-[url(/icons/ic-minus.svg)] opacity-45">質問を削除
+              <button className="w-full gap-1 flex items-center justify-center max-w-[400px] border border-[#bbb3af] [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] rounded-full h-[58px] before:size-5 before:bg-cover before:bg-[url(/images/icons/ic-minus.svg)] opacity-45">質問を削除
               </button>
-              <button className="w-full gap-1 flex items-center justify-center max-w-[400px] border border-[#bbb3af] [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] rounded-full h-[58px] before:size-5 before:bg-cover before:bg-[url(/icons/ic-plus.svg)]">質問を追加
+              <button className="w-full gap-1 flex items-center justify-center max-w-[400px] border border-[#bbb3af] [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] rounded-full h-[58px] before:size-5 before:bg-cover before:bg-[url(/images/icons/ic-plus.svg)]">質問を追加
               </button>
             </div>
             <p className="text-center text-[#716c6b] md:text-[14px] text-[12px] mt-2">質問は最大4つまで</p>
@@ -85,7 +85,7 @@ export default function BssQuestion() {
                 <input name="" id="" className="md:text-[16px] text-[14px] h-[47px] border border-[#bbb3af] [box-shadow:inset_1px_1px_2px_rgba(38,_34,_33,_.08)] block rounded-lg px-4 py-3 w-full"></input>
               </div>
               <div className="flex justify-center mt-4">
-                <button className="w-full gap-1 flex items-center justify-center max-w-[400px] border border-[#bbb3af] [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] rounded-full h-[58px] before:size-5 before:bg-cover before:bg-[url(/icons/auto-fill.svg)]">
+                <button className="w-full gap-1 flex items-center justify-center max-w-[400px] border border-[#bbb3af] [box-shadow:0_2px_3px_rgba(38,_34,_33,_.08)] rounded-full h-[58px] before:size-5 before:bg-cover before:bg-[url(/images/icons/auto-fill.svg)]">
                   AIで自動入力
               </button>
               </div>

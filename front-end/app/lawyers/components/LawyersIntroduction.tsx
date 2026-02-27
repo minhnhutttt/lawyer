@@ -15,7 +15,7 @@ const [sumOpen, setSumOpen] = useState(false);
                 </span>
                 </p>
                   <button onClick={() => setSumOpen(!sumOpen)} className={cn('size-10 flex items-center justify-center', sumOpen && 'rotate-180')}>
-                  <Image src="/icons/arrow-down.svg" alt="" width={10} height={10} />
+                  <Image src="/images/icons/arrow-down.svg" alt="" width={10} height={10} />
                 </button>
               </div>
               <div className="flex justify-between">
@@ -25,7 +25,7 @@ const [sumOpen, setSumOpen] = useState(false);
                     463名
                   </span>
                 </p>
-                <Link href="/" className="md:text-[14px] text-[12px] text-[#72706e] gap-1 flex items-center"><Image src="/icons/ic-question.svg" alt="" width={16} height={16} />会員優先表示</Link>
+                <Link href="/" className="md:text-[14px] text-[12px] text-[#72706e] gap-1 flex items-center"><Image src="/images/icons/ic-question.svg" alt="" width={16} height={16} />会員優先表示</Link>
               </div>
             </div>
     )

@@ -46,7 +46,7 @@ export default function EstimateStep() {
         <h2 className="text-center text-[#333] text-[20px] md:text-[22px] mb-[40px] md:mb-[60px]">
           一括見積りの使い方
           <span className="text-[16px] text-[#999] mx-2">-</span>
-          <span className="text-[#f90] text-[16px]">簡単3ステップ</span>
+          <span className="text-[#255290] text-[16px]">簡単3ステップ</span>
           <span className="text-[16px] text-[#999] mx-2">-</span>
         </h2>
         <ol className="relative mt-5">
@@ -65,9 +65,9 @@ export default function EstimateStep() {
                 after:top-0 
                 after:bottom-0
                 after:z-[-1]">
-              <div className="text-[#f90] text-[20px] font-bold w-10 h-10 flex items-center justify-center border-[2px] border-[#f7d5a5] rounded-full bg-white flex-shrink-0 mt-[-5px]">{idx + 1}</div>
+              <div className="text-[#255290] text-[20px] font-bold w-10 h-10 flex items-center justify-center border-[2px] border-[#f7d5a5] rounded-full bg-white flex-shrink-0 mt-[-5px]">{idx + 1}</div>
               <div className="flex-1 px-4 pr-1 md:pr-4">
-                <h3 className="text-[#f90] text-[20px] md:text-[24px] leading-[1]">
+                <h3 className="text-[#255290] text-[20px] md:text-[24px] leading-[1]">
                   {step.header}
                 </h3>
                 <p className="text-[14px] md:text-[16px] mt-4">{step.description}</p>

@@ -47,7 +47,7 @@ const AreasPracticeTab = ({
             </span>
           )}
           <Image
-            src="/icons/arrow-down.svg"
+            src="/images/icons/arrow-down.svg"
             alt=""
             width={13}
             height={13}
@@ -230,7 +230,7 @@ export default function LawyersDetailPage() {
                     <div className="mt-6">
                       <h3 className="md:text-[20px] text-[18px] md:py-[14px] font-bold py-3 px-6 bg-[#ececec]">高橋 弁吾 弁護士の取り扱う分野</h3>
                       <div className="">
-                        <AreasPracticeTab icon="/icons/resolve-01.svg" text="離婚・男女問題" solved>
+                        <AreasPracticeTab icon="/images/icons/resolve-01.svg" text="離婚・男女問題" solved>
                           <p className="mb-4">
                             「Webで面談予約」「LINEで面談予約」からのお問い合わせに、迅速に受付し、面談・電話・Zoomの方法で法律相談に対応します。特に『女性からの離婚相談』『不貞慰謝料の請求・被請求事件』に専門的な対応をしています。過去の対応実績は、「解決事例」「感謝の声」をご覧ください。
                           </p>
@@ -246,7 +246,7 @@ export default function LawyersDetailPage() {
                             <button onClick={() => openTabAndScroll(1)} className="flex items-center gap-1 md:text-[16px] text-[14px] font-bold text-[#315dbb]  after:border-t-[2px] after:border-r-[2px] after:h-2 after:w-2 after:rotate-45 after:border-[#0276AE]">続きを見る</button>
                           </div>
                         </AreasPracticeTab>
-                        <AreasPracticeTab icon="/icons/resolve-02.svg" text="労働問題" solved>
+                        <AreasPracticeTab icon="/images/icons/resolve-02.svg" text="労働問題" solved>
                           <p className="mb-4">
                             「Webで面談予約」「LINEで面談予約」からのお問い合わせに、迅速に受付し、面談・電話・Zoomの方法で法律相談に対応します。特に『解雇事件』に専門的な対応をしており、労働者、使用者、いずれの対応も可能です。過去の対応実績は、「解決事例」「感謝の声」のページをご覧ください。
                           </p>
@@ -387,7 +387,7 @@ export default function LawyersDetailPage() {
                           <span className="flex flex-col gap-2">
                             <span className="flex items-start gap-2">
                               <span className="bg-[#e28d81] size-5 flex items-center justify-center rounded-full">
-                                <Image src="/icons/resolve-01.svg" alt="" width={16} height={16} className="size-3" />
+                                <Image src="/images/icons/resolve-01.svg" alt="" width={16} height={16} className="size-3" />
                               </span>
                               <span className="md:text-[14px] text-[12px]"> 労働問題 </span>
                             </span>
@@ -408,14 +408,14 @@ export default function LawyersDetailPage() {
                 <div className="mt-6">
                   <div className="rounded-md bg-[#ecf7f7] py-4 px-6 flex flex-col items-center">
                     <div className="flex justify-center items-center gap-3 mb-1.5">
-                      <p className="flex items-center gap-1 md:text-[16px] text-[14px] font-bold before:size-[18px] before:bg-[url(/icons/active.svg)] before:bg-contain before:bg-center before:bg-no-repeat">お急ぎの方はこちらから</p>
+                      <p className="flex items-center gap-1 md:text-[16px] text-[14px] font-bold before:size-[18px] before:bg-[url(/images/icons/active.svg)] before:bg-contain before:bg-center before:bg-no-repeat">お急ぎの方はこちらから</p>
                       <p className="md:text-[14px] text-[12px] font-bold text-[#0c6969]">受付時間 10:00 22:00</p>
                     </div>
-                    <div className="max-md:hidden flex items-center justify-center gap-2 md:text-[27px] font-bold before:mt-1 before:size-[24px] before:bg-[url(/icons/tel2.svg)] before:bg-contain before:bg-center before:bg-no-repeat">
+                    <div className="max-md:hidden flex items-center justify-center gap-2 md:text-[27px] font-bold before:mt-1 before:size-[24px] before:bg-[url(/images/icons/tel2.svg)] before:bg-contain before:bg-center before:bg-no-repeat">
                       050-1234-5678
                     </div>
                     <Link href={`tel:050-1234-5678`} className="md:hidden flex items-center justify-center bg-[linear-gradient(180deg,_#ff8139,_#fa5e06)] rounded-[6px] text-[#fff] text-[clamp(14px,1vw,18px)] p-4 md:p-[20px] font-bold border border-[#d24e10]">
-                      <span className="flex items-center before:size-[17px] gap-2 before:bg-[url(/icons/tel.svg)] before:bg-contain before:bg-center before:bg-no-repeat text-[12px]">電話で問い合わせ</span>
+                      <span className="flex items-center before:size-[17px] gap-2 before:bg-[url(/images/icons/tel.svg)] before:bg-contain before:bg-center before:bg-no-repeat text-[12px]">電話で問い合わせ</span>
                     </Link>
                   </div>
                 </div>
@@ -504,19 +504,19 @@ export default function LawyersDetailPage() {
               <div className="md:hidden flex justify-center absolute -top-3 inset-x-0">
                 <div className="bg-[#e0feff] rounded-md px-3 py-1">
                   <div className="flex items-center gap-2">
-                    <p className="flex items-center gap-1 md:text-[14px] text-[12px] font-bold before:mt-0.5 before:size-[14px] before:bg-[url(/icons/active.svg)] before:bg-contain before:bg-center before:bg-no-repeat text-[#0c6969]">現在営業中</p>
+                    <p className="flex items-center gap-1 md:text-[14px] text-[12px] font-bold before:mt-0.5 before:size-[14px] before:bg-[url(/images/icons/active.svg)] before:bg-contain before:bg-center before:bg-no-repeat text-[#0c6969]">現在営業中</p>
                     <p className="md:text-[14px] text-[12px] text-[#72706e]">10:00 22:00</p>
                   </div>
                 </div>
               </div>
               <p className="md:text-[16px] text-[14px] font-bold mb-4 max-md:hidden">高橋 弁吾 弁護士へ面談予約</p>
               <div className="flex items-center  max-md:hidden">
-                <div className="relative mr-4 before:size-[20px] before:bg-[#0276AE] before:absolute before:-bottom-1 before:-right-1 before:rounded-full before:bg-[url(/icons/tel.svg)] before:bg-[size:60%] before:bg-center before:bg-no-repeat">
+                <div className="relative mr-4 before:size-[20px] before:bg-[#0276AE] before:absolute before:-bottom-1 before:-right-1 before:rounded-full before:bg-[url(/images/icons/tel.svg)] before:bg-[size:60%] before:bg-center before:bg-no-repeat">
                   <Image src="/images/lawyers/741830_1.png" alt="" width={150} height={200} className="rounded-lg block w-[60px]" />
                 </div>
                 <div className="">
                   <div className="flex items-center gap-2">
-                    <p className="flex items-center gap-1 md:text-[14px] text-[12px] font-bold before:mt-0.5 before:size-[14px] before:bg-[url(/icons/active.svg)] before:bg-contain before:bg-center before:bg-no-repeat text-[#0c6969]">現在営業中</p>
+                    <p className="flex items-center gap-1 md:text-[14px] text-[12px] font-bold before:mt-0.5 before:size-[14px] before:bg-[url(/images/icons/active.svg)] before:bg-contain before:bg-center before:bg-no-repeat text-[#0c6969]">現在営業中</p>
                     <p className="md:text-[14px] text-[12px] text-[#72706e]">10:00 22:00</p>
                   </div>
                   <p className="md:text-[27px] text-[24px] font-bold">050-1234-5678</p>
@@ -529,19 +529,19 @@ export default function LawyersDetailPage() {
               </div>
               <div className="grid md:grid-cols-2 grid-cols-3 gap-3 mt-3 md:mt-6 text-center">
                 <Link href="#" className="flex items-center justify-center bg-[linear-gradient(180deg,_#fff,_#fafafa)] rounded-[6px] text-[clamp(14px,1vw,18px)] px-2 py-3 font-bold border border-[#d9d9d9] flex-1 h-[60px] md:min-h-[52px]">
-                  <span className="flex items-center max-md:before:hidden before:size-[17px] gap-2 before:bg-[url(/icons/mail.svg)] before:bg-contain before:bg-center before:bg-no-repeat text-[10px] md:text-[12px]"><span><span className="max-md:text-[15px]">Web</span><br className="md:hidden" />で面談予約</span></span>
+                  <span className="flex items-center max-md:before:hidden before:size-[17px] gap-2 before:bg-[url(/images/icons/mail.svg)] before:bg-contain before:bg-center before:bg-no-repeat text-[10px] md:text-[12px]"><span><span className="max-md:text-[15px]">Web</span><br className="md:hidden" />で面談予約</span></span>
                 </Link>
                 <Link href="#" className="flex items-center justify-center bg-[linear-gradient(180deg,_#1bd667,_#0bb24f)] border border-[#0cb451] rounded-[6px] text-white font-bold text-[10px] md:text-[12px] hover:bg-[linear-gradient(180deg,_#32ba60,_#14903d)] flex-1 h-[60px] md:min-h-[52px]">
                   <span><span><span className="max-md:text-[15px]">LINE</span><br className="md:hidden" />で面談予約</span></span>
                 </Link>
-                <Link href="#" className="flex items-center justify-center max-md:flex-col max-md:gap-1 bg-[#0276AE] rounded-[6px] text-white font-bold text-[10px] md:text-[12px] hover:bg-[linear-gradient(180deg,_#32ba60,_#14903d)] flex-1 before:size-[17px] gap-2 before:bg-[url(/icons/tel.svg)] before:bg-contain before:bg-center before:bg-no-repeat md:hidden h-[60px] md:min-h-[52px]">
+                <Link href="#" className="flex items-center justify-center max-md:flex-col max-md:gap-1 bg-[#0276AE] rounded-[6px] text-white font-bold text-[10px] md:text-[12px] hover:bg-[linear-gradient(180deg,_#32ba60,_#14903d)] flex-1 before:size-[17px] gap-2 before:bg-[url(/images/icons/tel.svg)] before:bg-contain before:bg-center before:bg-no-repeat md:hidden h-[60px] md:min-h-[52px]">
                   面談予約
                 </Link>
               </div>
               <div className="pt-4 pb-6 max-md:hidden">
                 <form action="">
                   <div className="flex justify-center">
-                    <button className="flex items-center justify-center gap-1 md:text-[14px] text-[12px] text-[#315dbb] font-bold after:size-[14px] after:bg-[url(/icons/link.svg)] after:bg-contain after:bg-center after:bg-no-repeat">スムーズなお問い合わせのポイント</button>
+                    <button className="flex items-center justify-center gap-1 md:text-[14px] text-[12px] text-[#315dbb] font-bold after:size-[14px] after:bg-[url(/images/icons/link.svg)] after:bg-contain after:bg-center after:bg-no-repeat">スムーズなお問い合わせのポイント</button>
                   </div>
                 </form>
               </div>

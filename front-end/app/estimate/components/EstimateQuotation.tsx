@@ -13,7 +13,7 @@ export default function EstimateQuotation({ type = 1, className }: QuotationProp
 
   const selectDatas = [
     {
-      iconUrl: '/icons/icn-map.svg',
+      iconUrl: '/images/icons/icn-map.svg',
       title: '地域',
       options:
         [
@@ -67,7 +67,7 @@ export default function EstimateQuotation({ type = 1, className }: QuotationProp
         ]
     },
     {
-      iconUrl: '/icons/icn-category_g_1x.png',
+      iconUrl: '/images/icons/icn-category_g_1x.png',
       title: '分野',
       options:
         [
@@ -133,7 +133,7 @@ export default function EstimateQuotation({ type = 1, className }: QuotationProp
       {type === 1 && (
         <div className="w-full max-w-[660px] mx-auto px-2.5 bg-white p-[30px] mt-10 text-center">
           <h2 className="text-[#375165] text-center text-[16px] md:text-[18px]">
-            <strong className="text-[#f90]">依頼するほどでもないかも</strong>とお悩みの方には、<br />
+            <strong className="text-[#255290]">依頼するほどでもないかも</strong>とお悩みの方には、<br />
             <strong>みんなの法律相談がお勧めです</strong>
           </h2>
           <Image src="/images/estimate_recommend_bbs.png" alt="みんなの法律相談" width={345} height={76} className="mx-auto my-5" />
@@ -142,7 +142,7 @@ export default function EstimateQuotation({ type = 1, className }: QuotationProp
               boxShadow: "inset -1px -1px #d8d8d8, inset 0 0 0 1px #e9e9e9, inset 2px 2px #fff"
             }}
             href="/bbs/">
-            <Image src="/icons/icn-q.svg" alt="" width={15} height={15} className="mr-1 inline-block" />
+            <Image src="/images/icons/icn-q.svg" alt="" width={15} height={15} className="mr-1 inline-block" />
             みんなの法律相談を見る
           </Link>
         </div>
@@ -151,7 +151,7 @@ export default function EstimateQuotation({ type = 1, className }: QuotationProp
       {type === 2 && (
         <div className="w-full max-w-[660px] mx-auto bg-white p-[30px] mt-10 text-center">
           <h2 className="text-[#375165] text-[18px]">
-            <strong className="text-[#f90]">今すぐ相談にのって欲しい</strong>場合には <br />
+            <strong className="text-[#255290]">今すぐ相談にのって欲しい</strong>場合には <br />
             <strong >直接弁護士に問い合わせるのがお勧め</strong>です
           </h2>
           <p className="text-[#777] text-[14px] mt-2">
@@ -173,7 +173,7 @@ export default function EstimateQuotation({ type = 1, className }: QuotationProp
                     md:before:-translate-x-0
                     before:w-[12px]
                     before:h-[12px]
-                    before:bg-[url('/icons/icn-mix.png')]
+                    before:bg-[url('/images/icons/icn-mix.png')]
                     before:bg-no-repeat
                     before:bg-center
                     before:bg-contain
@@ -191,7 +191,7 @@ export default function EstimateQuotation({ type = 1, className }: QuotationProp
                     after:-translate-y-1/2
                     after:w-2
                     after:h-2
-                    after:bg-[url('/icons/icon_arrow_downS.png')]
+                    after:bg-[url('/images/icons/icon_arrow_downS.png')]
                     after:bg-no-repeat
                     after:bg-center
                     after:bg-contain

@@ -29,7 +29,7 @@ export default function QA() {
   ]
   return (
     <div className="my-[30px]">
-              <TitleBar icon="/images/icn-interview_2x.webp" right="無料で弁護士に法律相談ができるQ&Aサービス">
+              <TitleBar icon="/images/icons/icn-interview_2x.svg" right="無料で弁護士に法律相談ができるQ&Aサービス">
                 みんなの法律相談
               </TitleBar>
               <ul className="">

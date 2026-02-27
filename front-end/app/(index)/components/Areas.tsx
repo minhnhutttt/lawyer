@@ -334,7 +334,7 @@ export default function Areas() {
   return (
     
             <div>
-              <TitleBar icon="/images/icn-lawyer_2x.webp">
+              <TitleBar icon="/images/icons/icn-lawyer_middle.svg">
                 弁護士を探す
               </TitleBar>
               <div className="p-4 flex max-md:flex-col bg-[#fffbf6]">
@@ -355,7 +355,7 @@ export default function Areas() {
                   </p>
                   <ul className="grid flex-col gap-1 max-md:grid-cols-2 md:flex">
                     {field.map((item, i) => (
-                      <li className="text-[12px] bg-[url(/images/icon_arrowS.png)] bg-[position:left_0.3em] bg-no-repeat pl-2.5 text-[#005ebb]" key={i}>
+                      <li className="text-[12px] bg-[url(/images/icons/icon_arrowS.svg)] bg-[position:left_0em] bg-no-repeat pl-4 text-[#005ebb]" key={i}>
                         <Link href={item.href}>{item.text}</Link>
                       </li>
                     ))}

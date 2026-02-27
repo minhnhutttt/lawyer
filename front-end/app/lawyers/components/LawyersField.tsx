@@ -6,7 +6,7 @@ export default function LawyersField() {
     const fields = [
         {
             link: "#",
-            icon: '/icons/field-01.svg',
+            icon: '/images/icons/field-01.svg',
             title: '離婚・男女問題',
             text: '離婚する際には、財産分与や、子供の親権、養育費など様々な条件を交渉する必要があります。不倫などが原因で離婚する場合には慰謝料の請求も可能です。弁護士に依頼することで、慰謝料の増額や親権の獲得など納得できる条件で離婚できる可能性が高まります。',
             images: [
@@ -25,7 +25,7 @@ export default function LawyersField() {
         },
         {
             link: "#",
-            icon: '/icons/field-02.svg',
+            icon: '/images/icons/field-02.svg',
             title: '遺産相続',
             text: '相続手続きは相続人同士の遺産分割の交渉、必要書類の用意、手続きなど多くの手間と時間がかかります。弁護士に依頼すれば、遺産分割の交渉や手続きをすべて任せることができ、納得できる相続を実現できる可能性が高まります。生前に遺言作成を弁護士に依頼すれば、そもそも相続争いが起きるリスクを減らすことが可能です。',
             images: [
@@ -44,7 +44,7 @@ export default function LawyersField() {
         },
         {
             link: "#",
-            icon: '/icons/field-03.svg',
+            icon: '/images/icons/field-03.svg',
             title: '交通事故',
             text: '交通事故の被害に遭った場合、弁護士が交渉すれば保険金を増額できる可能性があります。保険会社の保険金の算定基準は、弁護士や裁判所の算定基準よりも低額であることが一般的だからです。弁護士特約つき保険であれば弁護士費用も保険金でカバーできます。適正な保険金を獲得するために弁護士に相談しましょう。',
             images: [
@@ -63,7 +63,7 @@ export default function LawyersField() {
         },
         {
             link: "#",
-            icon: '/icons/field-04.svg',
+            icon: '/images/icons/field-04.svg',
             title: '犯罪・刑事事件',
             text: '起訴されると、99％の確率で有罪判決を受けるのが日本の刑事司法の実情です。そのため犯罪の容疑をかけられた場合、不起訴処分を目指すことが重要になります。不起訴処分の獲得には、被害者との示談交渉や捜査当局への対応など、弁護士の迅速なサポートが不可欠です。',
             images: [

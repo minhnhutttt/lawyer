@@ -73,7 +73,7 @@ export default function ArticlePageDetail() {
               <div className="flex justify-center gap-6 mb-[30px]">
                 <Link href="#" className="bg-[#00b900] rounded-full flex items-center justify-center size-10">
                   <Image
-                    src="/icons/topics-share-line.svg"
+                    src="/images/icons/topics-share-line.svg"
                     alt=""
                     width={40}
                     height={40}
@@ -82,7 +82,7 @@ export default function ArticlePageDetail() {
                 </Link>
                 <Link href="#" className="bg-[#14171a] rounded-full flex items-center justify-center size-10">
                   <Image
-                    src="/icons/topics-share-x.svg"
+                    src="/images/icons/topics-share-x.svg"
                     alt=""
                     width={15}
                     height={15}
@@ -91,7 +91,7 @@ export default function ArticlePageDetail() {
                 </Link>
                 <Link href="#" className="bg-[#1877f2] rounded-full flex items-center justify-center size-10">
                   <Image
-                    src="/icons/topics-share-facebook.svg"
+                    src="/images/icons/topics-share-facebook.svg"
                     alt=""
                     width={40}
                     height={40}
@@ -100,7 +100,7 @@ export default function ArticlePageDetail() {
                 </Link>
                 <Link href="#" className="bg-[#00a4de] rounded-full flex items-center justify-center size-10">
                   <Image
-                    src="/icons/topics-share-hatena.svg"
+                    src="/images/icons/topics-share-hatena.svg"
                     alt=""
                     width={40}
                     height={40}
@@ -109,7 +109,7 @@ export default function ArticlePageDetail() {
                 </Link>
                 <Link href="#" className="bg-white border border-[#e9e5e4] rounded-full flex items-center justify-center size-10">
                   <Image
-                    src="/icons/topics-share-clip.svg"
+                    src="/images/icons/topics-share-clip.svg"
                     alt=""
                     width={12}
                     height={12}

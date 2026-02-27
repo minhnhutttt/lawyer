@@ -32,7 +32,7 @@ export default function Lawyers() {
   ]
   return (
     <div className="my-[30px]">
-              <TitleBar icon="/images/icn-interview_2x.webp">
+              <TitleBar icon="/images/icons/icn-interview_2x.svg">
                 インタビューが掲載された弁護士を見る
               </TitleBar>
               <div className="text-[10px] text-[#777] mb-2.5">
@@ -43,7 +43,7 @@ export default function Lawyers() {
               <ul className="">
                 {lawyers.map((lawyer, index) => (
                   <li className="border-t border-[#eee]" key={index}>
-                    <Link href={lawyer.link} className="flex md:items-center py-5 pr-8 md:pr-[60px] bg-[url(/images/icon_arrow_right_middle.png)] bg-no-repeat bg-right hover:bg-[#f8f8f8]">
+                    <Link href={lawyer.link} className="flex md:items-center py-5 pr-8 md:pr-[60px] bg-[url(/images//images/icons/icon_arrow_right_middle.svg)] bg-no-repeat bg-right hover:bg-[#f8f8f8]">
                       <figure className="mr-5">
                         <Image
                           src={lawyer.image}

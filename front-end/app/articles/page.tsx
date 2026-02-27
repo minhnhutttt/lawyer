@@ -49,27 +49,27 @@ export default function ArticlesPage() {
               <button className="p-4 border-b-2 border-[#0276AE] hover:bg-[hsla(17,19%,93%,.55)] duration-150">総合</button>
               <button className="p-4 border-b-2 border-[#e9e5e4] hover:bg-[hsla(17,19%,93%,.55)] duration-150">法曹</button>
               <span className="px-2.5 border-b-2 border-[#e9e5e4] after:bg-[#eee] after:h-6 after:w-px flex items-center justify-center"></span>
-              <button className="flex items-center gap-1 p-4 border-b-2 border-[#e9e5e4] after:size-[14px] after:bg-[url(/icons/icon_external_link.svg)] after:bg-cover hover:bg-[hsla(17,19%,93%,.55)] duration-150">
+              <button className="flex items-center gap-1 p-4 border-b-2 border-[#e9e5e4] after:size-[14px] after:bg-[url(/images/icons/icon_external_link.svg)] after:bg-cover hover:bg-[hsla(17,19%,93%,.55)] duration-150">
                 <Image
-                  src="/icons/topics-share-youtube-mono.svg"
+                  src="/images/icons/topics-share-youtube-mono.svg"
                   alt=""
                   width={16}
                   height={16}
                 />
                 YouTube
               </button>
-              <button className="flex items-center gap-1 p-4 border-b-2 border-[#e9e5e4] after:size-[14px] after:bg-[url(/icons/icon_external_link.svg)] after:bg-cover hover:bg-[hsla(17,19%,93%,.55)] duration-150">
+              <button className="flex items-center gap-1 p-4 border-b-2 border-[#e9e5e4] after:size-[14px] after:bg-[url(/images/icons/icon_external_link.svg)] after:bg-cover hover:bg-[hsla(17,19%,93%,.55)] duration-150">
                 <Image
-                  src="/icons/topics-share-tiktok-mono.svg"
+                  src="/images/icons/topics-share-tiktok-mono.svg"
                   alt=""
                   width={16}
                   height={16}
                 />
                 TikTok
               </button>
-              <button className="flex items-center gap-1 p-4 border-b-2 border-[#e9e5e4] after:size-[14px] after:bg-[url(/icons/icon_external_link.svg)] after:bg-cover hover:bg-[hsla(17,19%,93%,.55)] duration-150">
+              <button className="flex items-center gap-1 p-4 border-b-2 border-[#e9e5e4] after:size-[14px] after:bg-[url(/images/icons/icon_external_link.svg)] after:bg-cover hover:bg-[hsla(17,19%,93%,.55)] duration-150">
                 <Image
-                  src="/icons/topics-share-spotify-mono.svg"
+                  src="/images/icons/topics-share-spotify-mono.svg"
                   alt=""
                   width={16}
                   height={16}

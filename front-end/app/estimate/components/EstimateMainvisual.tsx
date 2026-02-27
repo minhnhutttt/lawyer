@@ -33,7 +33,7 @@ export default function EstimateMainvisual() {
         ">
       <div className="w-full max-w-[980px] mx-auto px-2.5 text-center relative z-10">
         <p className="text-[20px] md:text-[24px] text-[#375165]">
-          <span>「対処方針」</span>と<span>「費用」</span>から、<br className='md:hidden'/><strong className="text-[#f90]">自分にあった弁護士</strong>を選べる
+          <span>「対処方針」</span>と<span>「費用」</span>から、<br className='md:hidden'/><strong className="text-[#255290]">自分にあった弁護士</strong>を選べる
         </p>
         <h2>
           <Image src="/images/estimate_header.png" alt="弁護士費用の一括見積り（無料）" width={449} height={145} className="mx-auto my-10 max-w-[92%]" />

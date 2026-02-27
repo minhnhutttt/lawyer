@@ -21,7 +21,7 @@ export default function ContactForm({ className = "" }: FormProps) {
       <div className="mt-4 border border-[#f0a35a] rounded-[4px] px-[15px] py-[15px] bg-white">
         <div className="flex items-start gap-3">
           <span className="flex-shrink-0 w-[30px] h-[30px] flex items-center justify-center">
-            <Image src="/icons/icon_check.png" alt="check" width={30} height={30} />
+            <Image src="/images/icons/icon_check.png" alt="check" width={30} height={30} />
           </span>
           <div>
             <p className="text-[#ff9900] font-bold text-[1rem]">
@@ -54,7 +54,7 @@ export default function ContactForm({ className = "" }: FormProps) {
         <div className="flex border-b border-[#ddd] py-4 focus-within:bg-[#fffdea] flex-col md:flex-row gap-2 md:gap-0">
           <label className="w-full md:w-[200px] text-[13px] font-bold text-[#333] pt-1 flex-shrink-0">
             お問い合わせ内容
-            <span className="ml-1 text-[10px] bg-[#f90] text-white px-[6px] py-[2px] rounded-[2px]">必須</span>
+            <span className="ml-1 text-[10px] bg-[#255290] text-white px-[6px] py-[2px] rounded-[2px]">必須</span>
           </label>
           <div>
             <select
@@ -87,7 +87,7 @@ export default function ContactForm({ className = "" }: FormProps) {
         <div className="flex border-b border-[#ddd] py-4 focus-within:bg-[#fffdea] flex-col md:flex-row gap-2 md:gap-0">
           <label className="w-full md:w-[200px] text-[13px] font-bold text-[#333] pt-1 flex-shrink-0">
             メールアドレス
-            <span className="ml-1 text-[10px] bg-[#f90] text-white px-[6px] py-[2px] rounded-[2px]">必須</span>
+            <span className="ml-1 text-[10px] bg-[#255290] text-white px-[6px] py-[2px] rounded-[2px]">必須</span>
           </label>
           <div>
             <div className="flex items-center gap-2 bg-[#fff3f3] border border-[#fae7e7] text-[13px] text-[#fb4d4d] p-3 rounded-[2px] max-w-[420px]">
@@ -108,7 +108,7 @@ export default function ContactForm({ className = "" }: FormProps) {
         <div className="flex border-b border-[#ddd] py-4 focus-within:bg-[#fffdea] flex-col md:flex-row gap-2 md:gap-0">
           <label className="w-full md:w-[200px] text-[13px] font-bold text-[#333] pt-1 flex-shrink-0">
             ご意見・ご質問
-            <span className="ml-1 text-[10px] bg-[#f90] text-white px-[6px] py-[2px] rounded-[2px]">必須</span>
+            <span className="ml-1 text-[10px] bg-[#255290] text-white px-[6px] py-[2px] rounded-[2px]">必須</span>
           </label>
           <div>
             <textarea

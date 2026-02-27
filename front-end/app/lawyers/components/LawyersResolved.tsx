@@ -2,17 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 export const RESOLVED_ICON_MAP = {
   1: {
-    icon: '/icons/resolve-01.svg',
+    icon: '/images/icons/resolve-01.svg',
     color: '#d87a55',
     text: '離婚・男女問題',
   },
   2: {
-    icon: '/icons/resolve-02.svg',
+    icon: '/images/icons/resolve-02.svg',
     color: '#53a292',
     text: '遺産相続',
   },
   3: {
-    icon: '/icons/resolve-03.svg',
+    icon: '/images/icons/resolve-03.svg',
     color: '#86989c',
     text: '犯罪・刑事事件',
   },
@@ -24,7 +24,7 @@ export type ResolvedIcon =
   (typeof RESOLVED_ICON_MAP)[ResolvedKey]
 
 const DEFAULT_ICON: ResolvedIcon = {
-  icon: '/icons/resolve-01.svg',
+  icon: '/images/icons/resolve-01.svg',
   color: '#d87a55',
   text: '離婚・男女問題',
 }

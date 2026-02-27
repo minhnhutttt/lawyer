@@ -61,7 +61,7 @@ export const ArticleRank = ({rank, image, link, title, time}: Item) => (
     <span className="flex flex-col items-center gap-2">
       {rank === 1 && 
         <Image
-          src="/icons/article-rank-01.svg"
+          src="/images/icons/article-rank-01.svg"
           alt=""
           width={20}
           height={20}
@@ -69,7 +69,7 @@ export const ArticleRank = ({rank, image, link, title, time}: Item) => (
       }
       {rank === 2 && 
         <Image
-          src="/icons/article-rank-02.svg"
+          src="/images/icons/article-rank-02.svg"
           alt=""
           width={20}
           height={20}
@@ -77,7 +77,7 @@ export const ArticleRank = ({rank, image, link, title, time}: Item) => (
       }
       {rank === 3 && 
         <Image
-          src="/icons/article-rank-03.svg"
+          src="/images/icons/article-rank-03.svg"
           alt=""
           width={20}
           height={20}

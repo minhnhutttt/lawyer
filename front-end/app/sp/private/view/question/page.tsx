@@ -38,7 +38,7 @@ export default function Question() {
         <div className="text-[14px] text-[#222]">
           {/* Header */}
           <div className="flex items-center gap-2 px-4 py-2 bg-[#eaeaea] font-bold mb-6">
-            <Image src="/icons/icon_find.svg" alt="相談を絞り込む" width={40} height={40} className="flex-shrink-0" />
+            <Image src="/images/icons/icon_find.svg" alt="相談を絞り込む" width={40} height={40} className="flex-shrink-0" />
             <span>相談を絞り込む</span>
           </div>
 
@@ -174,7 +174,7 @@ export default function Question() {
                   <button
                     className="w-full max-w-[400px] py-2.5 mx-auto text-white font-bold rounded bg-[linear-gradient(0deg,#c41c00,#9b1a00_49%,#b61b0b_50%,#e23a00)] border border-[#d38947] [text-shadow:0_-1px_1px_#d38947] hover:opacity-90 flex items-center justify-center gap-2 transition"
                   >
-                    <span><Image src="/icons/icon_premium.svg" alt="icon premium" width={15} height={22} /></span>
+                    <span><Image src="/images/icons/icon_premium.svg" alt="icon premium" width={15} height={22} /></span>
                     絞り込み検索する
                   </button>
                 </div>

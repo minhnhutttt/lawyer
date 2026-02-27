@@ -16,7 +16,7 @@ export default function EstimateFaq() {
                     <ul>
                         {data.map((item, index) => (
                             <li key={index} className="py-5 flex items-center gap-2 border-b border-[#eee] text-[16px]">
-                                <span className="flex-shrink-0 w-5 text-[#f90] text-[19px] font-bold">Q.</span>
+                                <span className="flex-shrink-0 w-5 text-[#255290] text-[19px] font-bold">Q.</span>
                                 <Link href={item.link} className="flex-1 hover:underline transition text-[#005ebb]">{item.question}</Link>
                             </li>
                         ))}
@@ -24,7 +24,7 @@ export default function EstimateFaq() {
                     <div className="text-right">
                         <Link href="/faq" className="text-[#005ebb] text-[16px] font-bold inline-flex items-center gap-1 hover:underline transition py-5">
                             もっと見る
-                            <Image src="/icons/icon_arrow_right_middle.png" alt="" width={13} height={13} className="flex-shrink-0" />
+                            <Image src="/images/icons/icon_arrow_right_middle.svg" alt="" width={13} height={13} className="flex-shrink-0" />
                         </Link>
                     </div>
                 </div>

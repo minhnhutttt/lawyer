@@ -16,7 +16,7 @@ export default function Search() {
           )}>
             <span className="flex items-center gap-1 max-md:h-20">
           <Image
-            src="/images/icn-lawyer_middle.webp"
+            src="/images/icons/icn-lawyer_middle.svg"
             alt=""
             width={22}
             height={22}
@@ -32,7 +32,7 @@ export default function Search() {
             <div className="flex items-center max-md:flex-col max-md:gap-2 max-md:h-20">
             <span className="flex items-center gap-1">
           <Image
-            src="/images/icn-bbs_middle.webp"
+            src="/images/icons/icn-bbs_middle.svg"
             alt=""
             width={22}
             height={22}
@@ -51,7 +51,7 @@ export default function Search() {
               <br />
               <span className="text-[#375165]">弁護士回答数</span>
               <span className="float-right ml-1">
-                <span className="text-[#f90]">8,926</span>件
+                <span className="text-[#255290]">8,926</span>件
               </span>
             </span>
           </span>
@@ -60,7 +60,7 @@ export default function Search() {
       </div>
       <div className="bg-white border border-[#e4d8cb] p-[13px]">
             <form action="" className={cn(tab == 0 ? 'block' : 'hidden')}>
-              <div className="flex justify-between items-center max-md:flex-col">
+              <div className="flex items-center justify-between max-md:flex-col">
                 <div className="flex items-center gap-3 md:gap-1 max-md:flex-col">
                   <div className="flex max-md:w-full">
                     <p className="size-[38px] text-[11px] text-[#375165] font-bold bg-white border border-[#ddd] flex items-center justify-center">地域</p>
@@ -104,7 +104,7 @@ export default function Search() {
                     </div>
                   </div>
                   <div className="">
-                    <button className="flex max-md:w-[236px] items-center justify-center p-3 text-sm leading-none text-white bg-[linear-gradient(#ffa113,_#ff8e08)] rounded-[3px]">
+                    <button className="flex max-md:w-[236px] items-center justify-center p-3 text-sm leading-none text-white bg-[linear-gradient(#005ebb,_#255290)] rounded-[3px]">
                       検索
                     </button>
                   </div>
@@ -115,10 +115,10 @@ export default function Search() {
               </div>
             </form>
             <form action=""  className={cn(tab == 1 ? 'block' : 'hidden')}>
-              <div className="flex justify-between items-center max-md:flex-col">
+              <div className="flex items-center justify-between max-md:flex-col">
                 <div className="flex items-center gap-3 md:gap-1">
                   <input type="text" placeholder="キーワードを入力" className="w-[240px] md:w-[350px] py-2 px-2.5 bg-[#f8f8f8] border border-[#ddd] text-sm [box-shadow:inset_2px_2px_3px_0_#eee]" />
-                  <button className="flex items-center justify-center p-3 text-sm leading-none text-white bg-[linear-gradient(#ffa113,_#ff8e08)] rounded-[3px]">
+                  <button className="flex items-center justify-center p-3 text-sm leading-none text-white bg-[linear-gradient(#005ebb,_#255290)] rounded-[3px]">
                     検索
                   </button>
                 </div>

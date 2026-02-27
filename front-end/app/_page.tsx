@@ -400,7 +400,7 @@ export default function Home() {
                   <div className="flex items-center mt-4">
                     {/* Medal (overlapping the bubble) */}
                     <div className="flex items-center h-full">
-                      <img src="/icons/medal.svg" alt="Medal" className="w-30 h-30"/>
+                      <img src="/images/icons/medal.svg" alt="Medal" className="w-30 h-30"/>
                     </div>
                     {/* Speech bubble tail */}
                     <div

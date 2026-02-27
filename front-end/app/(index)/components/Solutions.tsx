@@ -7,110 +7,110 @@ export default function Solutions() {
   const solutions = [
     {
       link: '/questions',
-      icon: '/images/icn-c3.png',
+      icon: '/images/icons/icn-c3.svg',
       title: '離婚・男女問題',
       text: ['離婚慰謝料', '財産分与', '年金分割', '養育費', '親権', '離婚届']
     },
     {
       link: '/questions',
-      icon: '/images/icn-c1.png',
+      icon: '/images/icons/icn-estimate2.svg',
       title: '借金',
       text: ['契約・借用書', '時効', '肩代わり', '取り立て', '債務整理', '過払い金', '住宅ローン']
     },
     {
       link: '/questions',
-      icon: '/images/icn-c4.png',
+      icon: '/images/icons/icn-estimate4.svg',
       title: '相続',
       text: ['贈与', '相続手続き', '遺言書', '相続放棄', '相続人', '相続分', '遺産分割']
     },
     {
       link: '/questions',
-      icon: '/images/icn-c2.webp',
+      icon: '/images/icons/icn-estimate5.svg',
       title: '交通事故',
       text: ['示談交渉', '後遺障害', '過失割合', '交通事故慰謝料・損害賠償', '交通事故裁判']
     },
     {
       link: '/questions',
-      icon: '/images/icn-c23.png',
+      icon: '/images/icons/icn-c23.svg',
       title: 'インターネット',
       text: ['削除要求', '誹謗中傷', '名誉毀損', 'アダルトサイト', 'わいせつ', '同人サイト', 'ポルノ',]
     },
     {
       link: '/questions',
-      icon: '/images/icn-c8.webp',
+      icon: '/images/icons/icn-c8.svg',
       title: '消費者被害',
       text: ['契約の解除・取消', '悪徳商法', '金融', '美容・健康', '暮らし・趣味', '冠婚葬祭サービス', '探偵・興信所',]
     },
     {
       link: '/questions',
-      icon: '/images/icn-c1009.webp',
+      icon: '/images/icons/icn-estimate9.svg',
       title: '犯罪・刑事事件',
       text: ['逮捕・刑事弁護', '犯罪被害', '少年事件', '脅迫・強要', '器物損壊', '公務執行妨害', '児童ポルノ・わいせつ物頒布等',]
     },
     {
       link: '/questions',
-      icon: '/images/icn-c5.png',
+      icon: '/images/icons/icn-estimate7.svg',
       title: '労働',
       text: ['ハラスメント', '給料', '労働時間', '残業', '休日・休暇', '規則・条件', '人事異動',]
     },
     {
       link: '/questions',
-      icon: '/images/icn-c6.webp',
+      icon: '/images/icons/icn-estimate13.svg',
       title: '債権回収',
       text: ['契約', '担保権', '回収方法', '強制執行', '手続き', '倒産']
     },
     {
       link: '/questions',
-      icon: '/images/icn-c1012.webp',
+      icon: '/images/icons/icn-c1012.svg',
       title: '不動産・建築',
       text: ['不動産契約', '不動産賃貸', '立ち退き・明け渡し', '建築', '不動産登記', '抵当権', '近隣トラブル',]
     },
     {
       link: '/questions',
-      icon: '/images/icn-c16.webp',
+      icon: '/images/icons/icn-c16.svg',
       title: '国際・外国人問題',
       text: ['ビザ', '留学', '奨学金', '旅行会社', ' 海外の法律']
     },
     {
       link: '/questions',
-      icon: '/images/icn-c7.webp',
+      icon: '/images/icons/icn-estimate8.svg',
       title: '医療',
       text: ['医療過誤', '医療事故', 'B型肝炎']
     },
     {
       link: '/questions',
-      icon: '/images/icn-c1015.webp',
+      icon: '/images/icons/f13_color.svg',
       title: '企業法務',
       text: ['組織・機関', '再編・倒産', '他社との取引や契約', '知的財産', '不祥事・クレーム対応', '人事・労務', '資金調達',]
     },
     {
       link: '/questions',
-      icon: '/images/icn-c15.webp',
+      icon: '/images/icons/icn-c15.svg',
       title: '税務訴訟',
       text: ['税金', '脱税', '税務調査']
     },
     {
       link: '/questions',
-      icon: '/images/icn-c1017.webp',
+      icon: '/images/icons/icn-c1017.svg',
       title: '行政事件',
       text: ['行政訴訟', '行政救済']
     },
     {
       link: '/questions',
-      icon: '/images/icn-c1018.webp',
+      icon: '/images/icons/icn-c1018.svg',
       title: '民事紛争の解決手続き',
       text: ['書面', '民事事件', '家事事件', '上訴・再審', '民事保全・民事執行', '公証制度・即決和解', '費用の援助']
     },
     {
       link: '/questions',
-      icon: '/images/icn-c18.webp',
+      icon: '/images/icons/icn-c19.svg',
       title: '民事・その他',
       text: ['保険', '年金', '成年後見', 'いじめ', '法律全般', '生活保護']
     },
   ]
   return (
     <div className="my-[30px]">
-      <TitleBar icon="/images/icn-category_2x.png">
+      <TitleBar icon="/images/icons/field.svg">
         お悩みから解決方法を探す
       </TitleBar>
       <ul className="grid max-md:grid-cols-2 md:flex flex-wrap -mt-[15px]">

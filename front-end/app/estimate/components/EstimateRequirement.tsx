@@ -6,29 +6,29 @@ export default function EstimateRequirement() {
     {
       title: '個人',
       list: [
-        { iconUrl: '/icons/icn-estimate1.svg', text: '離婚' },
-        { iconUrl: '/icons/icn-estimate2.svg', text: '借金' },
-        { iconUrl: '/icons/icn-estimate3.svg', text: '消費者被害' },
-        { iconUrl: '/icons/icn-estimate4.svg', text: '遺産相続' },
-        { iconUrl: '/icons/icn-estimate5.svg', text: '交通事故(死亡)' },
-        { iconUrl: '/icons/icn-estimate6.svg', text: '交通事故(負傷)' },
-        { iconUrl: '/icons/icn-estimate7.svg', text: '労働問題' },
-        { iconUrl: '/icons/icn-estimate8.svg', text: '医療過誤' },
-        { iconUrl: '/icons/icn-estimate9.svg', text: '刑事弁護' },
-        { iconUrl: '/icons/icn-estimate3.svg', text: '少年事件' },
-        { iconUrl: '/icons/icn-estimate11.svg', text: 'その他' }
+        { iconUrl: '/images/icons/icn-estimate1.svg', text: '離婚' },
+        { iconUrl: '/images/icons/icn-estimate2.svg', text: '借金' },
+        { iconUrl: '/images/icons/icn-estimate3.svg', text: '消費者被害' },
+        { iconUrl: '/images/icons/icn-estimate4.svg', text: '遺産相続' },
+        { iconUrl: '/images/icons/icn-estimate5.svg', text: '交通事故(死亡)' },
+        { iconUrl: '/images/icons/icn-estimate6.svg', text: '交通事故(負傷)' },
+        { iconUrl: '/images/icons/icn-estimate7.svg', text: '労働問題' },
+        { iconUrl: '/images/icons/icn-estimate8.svg', text: '医療過誤' },
+        { iconUrl: '/images/icons/icn-estimate9.svg', text: '刑事弁護' },
+        { iconUrl: '/images/icons/icn-estimate3.svg', text: '少年事件' },
+        { iconUrl: '/images/icons/icn-estimate11.svg', text: 'その他' }
       ]
     }
     ,
     {
       title: '法人',
       list: [
-        { iconUrl: '/icons/icn-estimate12.svg', text: '顧問弁護士探し' },
-        { iconUrl: '/icons/icn-estimate13.svg', text: '債権回収' },
-        { iconUrl: '/icons/icn-estimate14.svg', text: '内容証明書作成' },
-        { iconUrl: '/icons/icn-estimate14.svg', text: '契約書作成' },
-        { iconUrl: '/icons/icn-estimate14.svg', text: '契約書チェック' },
-        { iconUrl: '/icons/icn-estimate11.svg', text: 'その他' }
+        { iconUrl: '/images/icons/icn-estimate12.svg', text: '顧問弁護士探し' },
+        { iconUrl: '/images/icons/icn-estimate13.svg', text: '債権回収' },
+        { iconUrl: '/images/icons/icn-estimate14.svg', text: '内容証明書作成' },
+        { iconUrl: '/images/icons/icn-estimate14.svg', text: '契約書作成' },
+        { iconUrl: '/images/icons/icn-estimate14.svg', text: '契約書チェック' },
+        { iconUrl: '/images/icons/icn-estimate11.svg', text: 'その他' }
       ]
     }
   ]
@@ -51,7 +51,7 @@ export default function EstimateRequirement() {
         ))}
       </div>
       <p className="text-[#375165] text-[16px] md:text-[18px] text-center mt-[30px]">
-        一括見積りのご利用には、<br className="md:hidden"/><b className="text-[#f90]">無料</b>会員登録が必要です。
+        一括見積りのご利用には、<br className="md:hidden"/><b className="text-[#255290]">無料</b>会員登録が必要です。
       </p>
       <div className="flex flex-col items-center gap-4 mt-4">
         <Link className="min-w-[260px] bg-[linear-gradient(#ffa113,#ff8e08)] rounded text-[#fff] text-center text-[16px] font-bold inline-block p-[11px] hover:opacity-90 transition"

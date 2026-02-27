@@ -33,7 +33,7 @@ export default function Navigation() {
                     <li className="h-[42px] w-[132px]">
                       <Link href="/about" className="w-full h-full flex items-center justify-center bg-white rounded-full text-[10px] font-bold gap-2">
                         <Image
-                          src="/icons/shield.svg"
+                          src="/images/icons/shield.svg"
                           alt=""
                           width={11}
                           height={15}
@@ -45,7 +45,7 @@ export default function Navigation() {
                     <li className="h-[42px] w-[132px]">
                       <Link href="https://bengoshicchi.jp/auth/login" className="w-full h-full flex items-center justify-center bg-white rounded-full text-[10px] font-bold gap-2">
                         <Image
-                          src="/icons/shield.svg"
+                          src="/images/icons/shield.svg"
                           alt=""
                           width={11}
                           height={15}

@@ -69,9 +69,9 @@ import { useState } from "react";
 
 export const NewsItem = ({ text, href, isNew, sm }: { text: string; href: string, isNew: boolean,  sm?: boolean }) => {
   return (
-    <Link href={href} className={cn('block py-[5px] text-[#005ebb] bg-[url(/images/icon_arrowS.png)] bg-[position:left_0.3em] bg-no-repeat pl-2.5 text-[13px]', sm && 'flex items-center')}>
+    <Link href={href} className={cn('block py-[5px] text-[#005ebb] bg-[url(/images/icons/icon_arrowS.svg)] bg-[position:left_0.3em] bg-no-repeat pl-4 text-[13px]', sm && 'flex items-center')}>
      <span className={cn(sm && 'inline-block truncate line-clamp-1')}> {text}</span>
-      {isNew && <span className="bg-[#f90] rounded-[3px] text-[#fff] font-bold ml-[10px] px-[3px] py-px align-middle text-[9px]">NEW</span>}
+      {isNew && <span className="bg-[#255290] rounded-[3px] text-[#fff] font-bold ml-[10px] px-[3px] py-px align-middle text-[9px]">NEW</span>}
     </Link>
   )
 }
@@ -143,7 +143,7 @@ export default function News() {
 
   return (
     <div className="my-[30px]">
-              <TitleBar icon="/images/icn-interview_2x.webp" right="今話題の出来事を法律観点で解説するニュースコンテンツ">
+              <TitleBar icon="/images/icons/icn-interview_2x.svg" right="今話題の出来事を法律観点で解説するニュースコンテンツ">
                 べんごしっちニュース
               </TitleBar>
               <div className=" mt-[5px] mb-[15px] p-1.5">
@@ -154,7 +154,7 @@ export default function News() {
                       newsTab === 0 ? 'bg-white border-b-none rounded-tl-[5px] rounded-br-none rounded-tr-[5px] rounded-bl-none [box-shadow:0_0_0_#fff,_inset_1px_0_0_#ddd,_inset_0_1px_0_#ddd,_inset_-1px_0_0_#ddd] text-[#375165] py-3' : 'py-2 bg-[linear-gradient(#fdfdfd,_#f8f8f8)]'
                     )}>
                     <Image
-                      src="/images/icn-newitem_1x.webp"
+                      src="/images/icons/icn-newitem_1x.svg"
                       alt=""
                       width={15}
                       height={15}
@@ -167,7 +167,7 @@ export default function News() {
                       newsTab === 1 ? 'bg-white border-b-none rounded-tl-[5px] rounded-br-none rounded-tr-[5px] rounded-bl-none [box-shadow:0_0_0_#fff,_inset_1px_0_0_#ddd,_inset_0_1px_0_#ddd,_inset_-1px_0_0_#ddd] text-[#375165] py-3' : 'py-2 bg-[linear-gradient(#fdfdfd,_#f8f8f8)]'
                     )}>
                     <Image
-                      src="/images/icn-ranking_1x.webp"
+                      src="/images/icons/icn-ranking_1x.svg"
                       alt=""
                       width={15}
                       height={15}

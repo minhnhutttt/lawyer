@@ -110,7 +110,7 @@ export default function QuestionDetailPage() {
                     </figure>
                     <div className="text-[#315dbb]">
                       <Link href="#" className="md:text-[20px] text-[18px] font-bold">岡村 茂樹 <span className="md:text-[16px] taext-[14px] ml-2">弁護士</span></Link>
-                      <ul className="flex items-center flex-wrap md:text-[12px] text-[11px] before:size-[14px] before:bg-[url(/icons/location-line.svg)] before:bg-contain before:mr-1 before:bg-contain before:bg-no-repeat">
+                      <ul className="flex items-center flex-wrap md:text-[12px] text-[11px] before:size-[14px] before:bg-[url(/images/icons/location-line.svg)] before:bg-contain before:mr-1 before:bg-contain before:bg-no-repeat">
                         <li><Link href="#">埼玉</Link></li>
                         <li className="before:inline-block before:h-[8px] before:ml-[4px] before:mr-[10px] before:-translate-y-[20%] before:rotate-45 before:w-[8px] before:border-t before:border-r before:border-[#bbb3af]"><Link href="#">さいたま市</Link></li>
                         <li className="before:inline-block before:h-[8px] before:ml-[4px] before:mr-[10px] before:-translate-y-[20%] before:rotate-45 before:w-[8px] before:border-t before:border-r before:border-[#bbb3af]"><Link href="#">浦和区</Link></li>
